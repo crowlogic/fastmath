@@ -1,0 +1,9 @@
+Summary for /home/stephen/fastmath-7.4.jar
+Decompiled with CFR 0.144
+
+
+fastmath.optim.ExtendedBOBYQAOptimizer
+----------------------------
+
+bobyqb(double[] double[] )
+  Unable to fully structure code
