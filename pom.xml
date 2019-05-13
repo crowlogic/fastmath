@@ -19,6 +19,12 @@
 	</build>
 	<dependencies>
 		<dependency>
+			<groupId>com.sleepycat</groupId>
+			<artifactId>je</artifactId>
+			<version>7.5.11</version>
+		</dependency>
+
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
@@ -53,11 +59,11 @@
 			<artifactId>xchart</artifactId>
 			<version>3.5.4</version>
 		</dependency>
-<dependency>
-  <groupId>org.knowm.xchange</groupId>
-  <artifactId>xchange-core</artifactId>
-  <version>4.3.18</version>
-</dependency>
+		<dependency>
+			<groupId>org.knowm.xchange</groupId>
+			<artifactId>xchange-core</artifactId>
+			<version>4.3.18</version>
+		</dependency>
 	</dependencies>
 
 

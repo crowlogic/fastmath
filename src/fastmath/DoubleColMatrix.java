@@ -7,6 +7,7 @@
  */
 package fastmath;
 
+import com.sleepycat.persist.model.Persistent;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import fastmath.AbstractMatrix;
@@ -29,6 +30,7 @@ import java.util.function.ToDoubleFunction;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
+@Persistent
 public class DoubleColMatrix
 extends DoubleMatrix {
     private int columnCapacity;

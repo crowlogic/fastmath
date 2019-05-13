@@ -22,8 +22,12 @@ import java.nio.ByteBuffer;
 import java.util.Comparator;
 import java.util.function.Consumer;
 import java.util.function.Function;
+
+import com.sleepycat.persist.model.Persistent;
+
 import util.AutoHashMap;
 
+@Persistent
 public abstract class AbstractMatrix
 extends AbstractBufferedObject
 implements Writable {

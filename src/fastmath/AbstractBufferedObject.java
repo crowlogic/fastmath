@@ -7,6 +7,7 @@
  */
 package fastmath;
 
+import com.sleepycat.persist.model.Persistent;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import fastmath.BufferUtils;
@@ -16,6 +17,7 @@ import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
 
+@Persistent
 public abstract class AbstractBufferedObject
 implements Writable {
     public transient ByteBuffer buffer;

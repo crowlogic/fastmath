@@ -34,6 +34,9 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.IntFunction;
 
+import com.sleepycat.persist.model.Persistent;
+
+@Persistent
 public abstract class DoubleMatrix
 extends AbstractMatrix
 implements NamedWritable {

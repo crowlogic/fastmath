@@ -8,6 +8,7 @@
  */
 package fastmath;
 
+import com.sleepycat.persist.model.Persistent;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import fastmath.AbstractBufferedObject;
@@ -44,6 +45,7 @@ import java.util.stream.IntStream;
 import java.util.stream.StreamSupport;
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
+@Persistent
 public class Vector
 extends AbstractBufferedObject
 implements Writable,
