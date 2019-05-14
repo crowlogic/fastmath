@@ -417,10 +417,11 @@ Collection<Double> {
     public double fmax() {
         double max = Double.NEGATIVE_INFINITY;
         for (int i = 0; i < this.size; ++i) {
-            double d = 0;
-            double d2 = this.get(i);
-            if (!(d > max)) continue;
-            max = d2;
+            double x = this.get(i);
+            if ( x > max )
+            {
+            	max = x;
+            }
         }
         return max;
     }
