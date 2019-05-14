@@ -549,8 +549,23 @@ implements NamedWritable {
         return this;
     }
 
+    /**
+     * FIXME: replace this with JNI or JNA call
+     * @param b
+     * @return
+     */
     public DoubleColMatrix prod(DoubleMatrix b) {
-        throw new UnsupportedOperationException("TODO");
+    	DoubleColMatrix c = new DoubleColMatrix( numRows, b.numCols );
+        for ( int i = 0; i < numRows; i++ )
+        {
+        	final int _i = i;
+        	for ( int j = 0; j < numCols; j++ )
+        	{
+        		final int _j = j;
+        		c.set( i, j, Functions.sum( k-> get(_i,k) * b.get(k,_j), 1, numCols) );
+        	}
+        }
+        return c;
     }
 
     static class Sub
