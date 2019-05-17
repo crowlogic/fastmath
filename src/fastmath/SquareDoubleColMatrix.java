@@ -9,6 +9,9 @@ import fastmath.Pair;
 import java.nio.ByteBuffer;
 import java.util.List;
 
+import com.sleepycat.persist.model.Persistent;
+
+@Persistent
 public class SquareDoubleColMatrix
 extends DoubleColMatrix
 implements Cloneable {
