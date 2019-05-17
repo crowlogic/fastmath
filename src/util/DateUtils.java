@@ -10,6 +10,8 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
+import fastmath.Vector;
 import util.ThreadLocalDateFormat;
 
 public class DateUtils {
@@ -62,5 +64,15 @@ public class DateUtils {
         }
         return from / ratio;
     }
+
+	public static Vector convertTimeUnits(Vector w, TimeUnit from, TimeUnit to)
+	{
+		Vector x = new Vector( w.size() ).setName(w.getName());
+		for ( int i = 0; i < x.size(); i++ )
+		{
+			x.set(i, convertTimeUnits( w.get(i), from, to ) );
+		}
+		return x;
+	}
 }
 
