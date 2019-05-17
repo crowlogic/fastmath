@@ -559,10 +559,10 @@ implements NamedWritable {
         for ( int i = 0; i < numRows; i++ )
         {
         	final int _i = i;
-        	for ( int j = 0; j < numCols; j++ )
+        	for ( int j = 0; j < b.numCols; j++ )
         	{
         		final int _j = j;
-        		c.set( i, j, Functions.sum( k-> get(_i,k) * b.get(k,_j), 1, numCols) );
+        		c.set( i, j, Functions.sum( k-> get(_i,k) * b.get(k,_j), 0, numCols-1) );
         	}
         }
         return c;
