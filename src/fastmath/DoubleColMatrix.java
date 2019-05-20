@@ -1,34 +1,16 @@
-/*
- * Decompiled with CFR 0.144.
- * 
- * Could not load the following classes:
- *  com.sun.jna.Native
- *  com.sun.jna.Pointer
- */
 package fastmath;
 
-import com.sleepycat.persist.model.Persistent;
-import com.sun.jna.Native;
-import com.sun.jna.Pointer;
-import fastmath.AbstractMatrix;
-import fastmath.ColIterator;
-import fastmath.DoubleMatrix;
-import fastmath.IntVector;
-import fastmath.LAPACK;
-import fastmath.Pair;
-import fastmath.RowIterator;
-import fastmath.Vector;
-import fastmath.exceptions.NotInvertableException;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.List;
-import java.util.OptionalDouble;
 import java.util.function.BiFunction;
-import java.util.function.DoubleUnaryOperator;
-import java.util.function.ToDoubleFunction;
-import java.util.stream.DoubleStream;
-import java.util.stream.Stream;
+
+import com.sleepycat.persist.model.Persistent;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+
+import fastmath.exceptions.NotInvertableException;
 
 @Persistent
 public class DoubleColMatrix
@@ -36,7 +18,7 @@ extends DoubleMatrix {
     private int columnCapacity;
     private final int baseOffset;
     private double incrementalCapacityExpasionFactor = 1.75;
-    private HashMap<String, Vector> columnMap = new HashMap();
+    private HashMap<String, Vector> columnMap = new HashMap<>();
 
     public DoubleColMatrix() {
         this(0, 0);
@@ -109,7 +91,8 @@ extends DoubleMatrix {
         this.setName(string);
     }
 
-    public DoubleColMatrix copy(boolean reuseBuffer) {
+    @SuppressWarnings("unchecked")
+	public DoubleColMatrix copy(boolean reuseBuffer) {
         return reuseBuffer ? new DoubleColMatrix(this.buffer, this.getBaseOffset(), this.numRows, this.numCols) : new DoubleColMatrix(this);
     }
 
@@ -159,7 +142,8 @@ extends DoubleMatrix {
         return Math.max(1, (int)((double)this.numCols * this.incrementalCapacityExpasionFactor));
     }
 
-    public DoubleColMatrix divide(double x) {
+    @SuppressWarnings("unchecked")
+	public DoubleColMatrix divide(double x) {
         for (Vector col : this.cols()) {
             col.divide(x);
         }

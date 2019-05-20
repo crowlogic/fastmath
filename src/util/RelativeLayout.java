@@ -14,7 +14,8 @@ import java.util.HashMap;
 public class RelativeLayout
 implements LayoutManager2,
 Serializable {
-    public static final int X_AXIS = 0;
+	private static final long serialVersionUID = 1L;
+	public static final int X_AXIS = 0;
     public static final int Y_AXIS = 1;
     public static final float LEADING = 0.0f;
     public static final float CENTER = 0.5f;
@@ -25,9 +26,7 @@ Serializable {
     public static final int LAST = 2;
     public static final int LARGEST = 3;
     public static final int EQUAL = 4;
-    private static final int MINIMUM = 0;
-    private static final int PREFERRED = 1;
-    private HashMap<Component, Float> constraints = new HashMap();
+	private HashMap<Component, Float> constraints = new HashMap<>();
     private int axis;
     private float alignment = 0.5f;
     private int gap;

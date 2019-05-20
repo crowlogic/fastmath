@@ -474,7 +474,7 @@ implements NamedWritable {
         NumberFormat format = ThreadLocalNumberFormat.getFormat();
         int maxLength = 0;
         int maxDecimal = 0;
-        for (int i = 0; i < this.numRows; ++i) {
+        for (int i = 0; i < Math.min(100, this.numRows); ++i) {
             for (int j = 0; j < this.numCols; ++j) {
                 String string = Double.toString(this.get(i, j));
                 int decimal = string.indexOf(46);

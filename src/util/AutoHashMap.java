@@ -1,12 +1,7 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package util;
 
-import java.lang.reflect.Constructor;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
-import util.AutoMap;
 
 public class AutoHashMap<K, V>
 extends ConcurrentHashMap<K, V>
@@ -28,14 +23,13 @@ implements AutoMap<K, V> {
         this.valueClass = null;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
-    @Override
+
+    @SuppressWarnings("unchecked")
+	@Override
     public V getOrCreate(K key) {
         V value = this.get(key);
         if (value == null) {
-            AutoHashMap autoHashMap = this;
+            AutoHashMap<K, V> autoHashMap = this;
             synchronized (autoHashMap) {
                 try {
                     value = this.valueClass == null ? this.newValueInstance(key) : (V) this.valueClass.getConstructor(new Class[0]).newInstance(new Object[0]);
