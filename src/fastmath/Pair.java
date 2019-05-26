@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package fastmath;
 
 import java.io.Serializable;
@@ -19,11 +16,12 @@ implements Serializable {
         this.right = secondValue;
     }
 
-    public boolean equals(Object obj) {
+    @SuppressWarnings("unchecked")
+	public boolean equals(Object obj) {
         if (!(obj instanceof Pair)) {
             return false;
         }
-        Pair otherPair = (Pair)obj;
+        Pair<A, B> otherPair = (Pair<A, B>)obj;
         return this.leftEquals(otherPair) && this.rightEquals(otherPair);
     }
 

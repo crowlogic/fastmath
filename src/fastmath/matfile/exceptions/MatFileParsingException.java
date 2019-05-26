@@ -3,8 +3,6 @@
  */
 package fastmath.matfile.exceptions;
 
-import fastmath.matfile.exceptions.MatFileException;
-
 public class MatFileParsingException
 extends MatFileException {
     private static final long serialVersionUID = 1L;

@@ -6,14 +6,8 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.DoubleRowMatrix;
-import fastmath.Vector;
 import fastmath.exceptions.IllegalValueError;
 import fastmath.exceptions.SingularFactorException;
-import java.io.PrintStream;
 import junit.framework.TestCase;
 
 public class DoubleMatrixTest

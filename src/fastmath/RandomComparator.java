@@ -7,7 +7,6 @@ import java.util.Comparator;
 import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.Random;
-import java.util.function.Function;
 
 public final class RandomComparator<T>
 implements Comparator<T> {

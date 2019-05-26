@@ -3,11 +3,6 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.DoubleRowMatrix;
-import fastmath.Vector;
 import java.nio.ByteBuffer;
 
 public class DoubleSubMatrix

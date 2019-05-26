@@ -6,8 +6,6 @@
  */
 package fastmath;
 
-import fastmath.ExpandableVector;
-import fastmath.Vector;
 import junit.framework.TestCase;
 
 public class ExpandableVectorTest

@@ -3,7 +3,6 @@
  */
 package fastmath.matfile;
 
-import fastmath.matfile.MiElement;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 

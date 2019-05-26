@@ -3,11 +3,6 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import java.nio.ByteBuffer;
-
 public class ExpandableDenseDoubleMatrix
 extends DoubleColMatrix {
     private int currentRow = -1;

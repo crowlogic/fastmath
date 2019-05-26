@@ -6,7 +6,6 @@
  */
 package fastmath;
 
-import fastmath.IntVector;
 import junit.framework.TestCase;
 
 public class IntVectorTest

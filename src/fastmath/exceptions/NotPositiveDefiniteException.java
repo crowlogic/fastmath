@@ -4,7 +4,6 @@
 package fastmath.exceptions;
 
 import fastmath.AbstractMatrix;
-import fastmath.exceptions.FastMathException;
 
 public class NotPositiveDefiniteException
 extends FastMathException {

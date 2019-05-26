@@ -3,8 +3,6 @@
  */
 package fastmath.exceptions;
 
-import fastmath.exceptions.FastMathException;
-
 public class NotInvertableException
 extends FastMathException {
     private static final long serialVersionUID = 1L;

@@ -3,8 +3,9 @@
  */
 package util;
 
-import fastmath.Pair;
 import java.util.Comparator;
+
+import fastmath.Pair;
 
 public class DoublePair
 extends Pair<Double, Double> {

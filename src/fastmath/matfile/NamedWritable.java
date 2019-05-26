@@ -3,8 +3,6 @@
  */
 package fastmath.matfile;
 
-import fastmath.matfile.Writable;
-
 public interface NamedWritable
 extends Writable {
     public String getName();

@@ -12,7 +12,6 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 import fastmath.Vector;
-import util.ThreadLocalDateFormat;
 
 public class DateUtils {
     static final ThreadLocalDateFormat millisecondTimeFormat = new ThreadLocalDateFormat("HH:mm:ss.SSS");

@@ -3,22 +3,14 @@
  */
 package fastmath.matfile;
 
-import fastmath.BufferUtils;
-import fastmath.io.ByteUtils;
-import fastmath.matfile.MatFile;
-import fastmath.matfile.MiDouble;
-import fastmath.matfile.MiElement;
-import fastmath.matfile.MiInt32;
-import fastmath.matfile.MiInt8;
-import fastmath.matfile.MiMatrix;
-import fastmath.matfile.MiUInt16;
-import fastmath.matfile.MiUInt32;
-import fastmath.matfile.MiUInt8;
-import fastmath.matfile.exceptions.MatFileParsingException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
+import fastmath.BufferUtils;
+import fastmath.io.ByteUtils;
+import fastmath.matfile.exceptions.MatFileParsingException;
 
 public class MiIterator
 implements Iterator<MiElement>,

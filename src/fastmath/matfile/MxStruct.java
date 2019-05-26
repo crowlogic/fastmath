@@ -3,26 +3,13 @@
  */
 package fastmath.matfile;
 
-import fastmath.matfile.MiElement;
-import fastmath.matfile.MiInt32;
-import fastmath.matfile.MiInt8;
-import fastmath.matfile.MxClass;
-import fastmath.matfile.NamedWritable;
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.OptionalInt;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.function.Consumer;
-import java.util.function.ToIntFunction;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class MxStruct
 extends MxClass

@@ -3,9 +3,9 @@
  */
 package fastmath.matfile;
 
-import fastmath.Vector;
-import fastmath.matfile.MiElement;
 import java.nio.ByteBuffer;
+
+import fastmath.Vector;
 
 public class MiDouble
 extends MiElement {

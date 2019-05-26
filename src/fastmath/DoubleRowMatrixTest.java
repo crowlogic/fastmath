@@ -6,8 +6,6 @@
  */
 package fastmath;
 
-import fastmath.DoubleRowMatrix;
-import java.io.PrintStream;
 import junit.framework.TestCase;
 
 public class DoubleRowMatrixTest

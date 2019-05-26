@@ -3,9 +3,6 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.DoubleColMatrix;
-import fastmath.Pair;
 import java.nio.ByteBuffer;
 import java.util.List;
 

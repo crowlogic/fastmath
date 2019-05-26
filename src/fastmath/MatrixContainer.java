@@ -3,8 +3,6 @@
  */
 package fastmath;
 
-import fastmath.DoubleColMatrix;
-
 public class MatrixContainer {
     private DoubleColMatrix matrix;
 

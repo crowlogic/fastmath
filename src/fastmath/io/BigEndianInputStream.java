@@ -3,8 +3,6 @@
  */
 package fastmath.io;
 
-import fastmath.io.BufferTools;
-import fastmath.io.UnsignedDataInput;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;

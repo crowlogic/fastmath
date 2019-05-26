@@ -3,8 +3,6 @@
  */
 package util;
 
-import java.io.PrintStream;
-
 public class Console {
     public static void println(Object str) {
         System.out.println(str);

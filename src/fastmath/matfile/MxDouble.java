@@ -3,19 +3,14 @@
  */
 package fastmath.matfile;
 
-import fastmath.AbstractBufferedObject;
-import fastmath.AbstractMatrix;
-import fastmath.DoubleColMatrix;
-import fastmath.Vector;
-import fastmath.matfile.MiDouble;
-import fastmath.matfile.MiElement;
-import fastmath.matfile.MiInt32;
-import fastmath.matfile.MxClass;
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.SeekableByteChannel;
 import java.util.Iterator;
+
+import fastmath.AbstractBufferedObject;
+import fastmath.AbstractMatrix;
+import fastmath.DoubleColMatrix;
 
 public class MxDouble
 extends MxClass {

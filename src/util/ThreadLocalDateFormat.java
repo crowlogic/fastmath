@@ -1,13 +1,11 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package util;
 
-import fastmath.Pair;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import fastmath.Pair;
 
 public class ThreadLocalDateFormat
 extends ThreadLocal<Pair<Date, DateFormat>> {
@@ -52,17 +50,17 @@ extends ThreadLocal<Pair<Date, DateFormat>> {
     }
 
     public String format(Date date) {
-        return ((DateFormat)((Pair)this.get()).right).format(date);
+        return ((DateFormat)((Pair<?, ?>)this.get()).right).format(date);
     }
 
     public String format(long time) {
-        Pair pair = (Pair)this.get();
+        Pair<?, ?> pair = (Pair<?, ?>)this.get();
         ((Date)pair.left).setTime(time);
         return ((DateFormat)pair.right).format((Date)pair.left);
     }
 
     public Date parse(String timeString) throws ParseException {
-        return ((DateFormat)((Pair)this.get()).right).parse(timeString);
+        return ((DateFormat)((Pair<?, ?>)this.get()).right).parse(timeString);
     }
 }
 

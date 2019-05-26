@@ -3,10 +3,6 @@
  */
 package fastmath;
 
-import fastmath.BLAS1;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.Vector;
 import fastmath.exceptions.FastMathException;
 
 public class EigenDecomposition {

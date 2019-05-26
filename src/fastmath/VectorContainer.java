@@ -3,7 +3,6 @@
  */
 package fastmath;
 
-import fastmath.Vector;
 import java.io.Serializable;
 
 public class VectorContainer

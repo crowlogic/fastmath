@@ -3,9 +3,9 @@
  */
 package fastmath.matfile;
 
-import fastmath.BufferUtils;
-import fastmath.matfile.MiElement;
 import java.nio.ByteBuffer;
+
+import fastmath.BufferUtils;
 
 public class MiUInt32
 extends MiElement {

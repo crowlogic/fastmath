@@ -3,14 +3,13 @@
  */
 package fastmath.matfile;
 
-import fastmath.AbstractBufferedObject;
-import fastmath.BufferUtils;
-import fastmath.matfile.MatFile;
-import fastmath.matfile.NamedWritable;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.SeekableByteChannel;
+
+import fastmath.AbstractBufferedObject;
+import fastmath.BufferUtils;
 
 public abstract class MiElement
 extends AbstractBufferedObject

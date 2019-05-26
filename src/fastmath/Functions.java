@@ -7,17 +7,12 @@
  */
 package fastmath;
 
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.Pair;
-import fastmath.Vector;
-import java.util.function.DoubleBinaryOperator;
 import java.util.function.IntFunction;
-import java.util.function.IntPredicate;
 import java.util.function.IntToDoubleFunction;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+
 import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.commons.math3.random.RandomGenerator;
 

@@ -6,10 +6,6 @@
  */
 package fastmath;
 
-import fastmath.DoubleMatrix;
-import fastmath.Functions;
-import fastmath.Pair;
-import fastmath.Vector;
 import junit.framework.TestCase;
 
 public class FunctionsTest

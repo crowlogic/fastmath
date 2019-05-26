@@ -3,10 +3,6 @@
  */
 package fastmath.matfile;
 
-import fastmath.matfile.MiElement;
-import fastmath.matfile.MiUInt16;
-import fastmath.matfile.MxClass;
-import java.nio.ByteBuffer;
 import java.util.Iterator;
 
 public class MxChar

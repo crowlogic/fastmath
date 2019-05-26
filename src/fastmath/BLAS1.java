@@ -3,12 +3,9 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.IntVector;
-import fastmath.Vector;
-import fastmath.exceptions.FastMathException;
 import java.nio.ByteBuffer;
+
+import fastmath.exceptions.FastMathException;
 
 public class BLAS1 {
     public static int dgetri(boolean colMajor, int n, ByteBuffer A, int offA, int ldA, ByteBuffer ipiv) {

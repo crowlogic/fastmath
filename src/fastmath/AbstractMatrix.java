@@ -3,28 +3,18 @@
  */
 package fastmath;
 
-import fastmath.AbstractBufferedObject;
-import fastmath.BufferUtils;
-import fastmath.ColIterator;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.RowIterator;
-import fastmath.Vector;
+import java.io.PrintWriter;
+import java.nio.ByteBuffer;
+import java.util.Comparator;
+
+import com.sleepycat.persist.model.Persistent;
+
 import fastmath.exceptions.FastMathException;
 import fastmath.matfile.MiDouble;
 import fastmath.matfile.MiInt32;
 import fastmath.matfile.MiMatrix;
-import fastmath.matfile.MxClass;
 import fastmath.matfile.MxDouble;
 import fastmath.matfile.Writable;
-import java.io.PrintWriter;
-import java.nio.ByteBuffer;
-import java.util.Comparator;
-import java.util.function.Consumer;
-import java.util.function.Function;
-
-import com.sleepycat.persist.model.Persistent;
-
 import util.AutoHashMap;
 
 @Persistent

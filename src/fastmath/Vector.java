@@ -8,42 +8,32 @@
  */
 package fastmath;
 
-import com.sleepycat.persist.model.Persistent;
-import com.sun.jna.Native;
-import com.sun.jna.Pointer;
-import fastmath.AbstractBufferedObject;
-import fastmath.AbstractMatrix;
-import fastmath.BufferUtils;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleMatrix;
-import fastmath.Functions;
-import fastmath.IntVector;
-import fastmath.VectorContainer;
-import fastmath.matfile.MiMatrix;
-import fastmath.matfile.Writable;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.io.Writer;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.OptionalDouble;
 import java.util.PrimitiveIterator;
 import java.util.Spliterator;
 import java.util.Spliterators;
 import java.util.TreeSet;
 import java.util.function.Consumer;
 import java.util.function.DoubleConsumer;
-import java.util.function.DoubleUnaryOperator;
 import java.util.function.IntFunction;
-import java.util.function.IntToDoubleFunction;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.StreamSupport;
+
 import org.apache.commons.math3.util.CombinatoricsUtils;
+
+import com.sleepycat.persist.model.Persistent;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+
+import fastmath.matfile.MiMatrix;
+import fastmath.matfile.Writable;
 
 @Persistent
 public class Vector

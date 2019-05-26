@@ -7,15 +7,16 @@
  */
 package fastmath;
 
-import com.sleepycat.persist.model.Persistent;
-import com.sun.jna.Native;
-import com.sun.jna.Pointer;
-import fastmath.BufferUtils;
-import fastmath.matfile.Writable;
 import java.io.IOException;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
+
+import com.sleepycat.persist.model.Persistent;
+import com.sun.jna.Native;
+import com.sun.jna.Pointer;
+
+import fastmath.matfile.Writable;
 
 @Persistent
 public abstract class AbstractBufferedObject

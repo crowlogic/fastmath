@@ -3,13 +3,12 @@
  */
 package fastmath.matfile;
 
-import fastmath.BufferUtils;
-import fastmath.matfile.MiElement;
-import fastmath.matfile.exceptions.MatFileException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+
+import fastmath.BufferUtils;
+import fastmath.matfile.exceptions.MatFileException;
 
 public class MiInt8
 extends MiElement {

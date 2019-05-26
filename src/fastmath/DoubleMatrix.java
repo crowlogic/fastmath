@@ -6,35 +6,23 @@
  */
 package fastmath;
 
-import dnl.utils.text.table.TextTable;
-import fastmath.AbstractMatrix;
-import fastmath.BLAS1;
-import fastmath.ColIterator;
-import fastmath.DoubleColMatrix;
-import fastmath.DoubleRowMatrix;
-import fastmath.EigenDecomposition;
-import fastmath.Functions;
-import fastmath.IntVector;
-import fastmath.RowIterator;
-import fastmath.Vector;
-import fastmath.VectorContainer;
-import fastmath.exceptions.FastMathException;
-import fastmath.exceptions.IllegalValueError;
-import fastmath.exceptions.SingularFactorException;
-import fastmath.io.ThreadLocalNumberFormat;
-import fastmath.matfile.NamedWritable;
 import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import java.text.NumberFormat;
 import java.util.function.BiFunction;
-import java.util.function.Consumer;
 import java.util.function.IntFunction;
 
 import com.sleepycat.persist.model.Persistent;
+
+import dnl.utils.text.table.TextTable;
+import fastmath.exceptions.FastMathException;
+import fastmath.exceptions.IllegalValueError;
+import fastmath.exceptions.SingularFactorException;
+import fastmath.io.ThreadLocalNumberFormat;
+import fastmath.matfile.NamedWritable;
 
 @Persistent
 public abstract class DoubleMatrix

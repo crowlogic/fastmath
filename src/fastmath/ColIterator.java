@@ -3,10 +3,7 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.Vector;
 import java.util.Iterator;
-import java.util.Spliterator;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 

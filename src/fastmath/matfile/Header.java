@@ -3,9 +3,10 @@
  */
 package fastmath.matfile;
 
+import java.nio.ByteBuffer;
+
 import fastmath.AbstractBufferedObject;
 import fastmath.BufferUtils;
-import java.nio.ByteBuffer;
 
 public class Header
 extends AbstractBufferedObject {

@@ -3,23 +3,13 @@
  */
 package fastmath.matfile;
 
-import fastmath.AbstractBufferedObject;
-import fastmath.AbstractMatrix;
-import fastmath.matfile.MatFile;
-import fastmath.matfile.MiElement;
-import fastmath.matfile.MiInt32;
-import fastmath.matfile.MiInt8;
-import fastmath.matfile.MiIterator;
-import fastmath.matfile.MiUInt32;
-import fastmath.matfile.MxChar;
-import fastmath.matfile.MxClass;
-import fastmath.matfile.MxDouble;
-import fastmath.matfile.MxInt32;
-import fastmath.matfile.MxStruct;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
 import java.util.Iterator;
+
+import fastmath.AbstractBufferedObject;
+import fastmath.AbstractMatrix;
 
 public class MiMatrix extends MiElement {
 	public static final int miMATRIX = 14;

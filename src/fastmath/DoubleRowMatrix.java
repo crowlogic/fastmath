@@ -3,11 +3,6 @@
  */
 package fastmath;
 
-import fastmath.AbstractMatrix;
-import fastmath.BLAS1;
-import fastmath.DoubleMatrix;
-import fastmath.RowIterator;
-import fastmath.Vector;
 import java.util.function.Consumer;
 
 import com.sleepycat.persist.model.Persistent;

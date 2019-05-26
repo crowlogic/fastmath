@@ -3,9 +3,6 @@
  */
 package fastmath;
 
-import fastmath.Vector;
-import java.nio.ByteBuffer;
-
 public class ExpandableVector
 extends Vector {
     @Override

@@ -3,12 +3,12 @@
  */
 package fastmath.matfile;
 
-import fastmath.AbstractBufferedObject;
-import fastmath.AbstractMatrix;
-import fastmath.matfile.MiInt32;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
+
+import fastmath.AbstractBufferedObject;
+import fastmath.AbstractMatrix;
 
 public abstract class MxClass
 extends AbstractBufferedObject {

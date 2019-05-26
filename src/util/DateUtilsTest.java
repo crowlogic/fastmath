@@ -7,11 +7,9 @@
 package util;
 
 import java.util.Calendar;
-import java.util.Date;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
 import junit.framework.TestCase;
-import util.DateUtils;
 
 public class DateUtilsTest
 extends TestCase {

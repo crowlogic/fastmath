@@ -3,10 +3,10 @@
  */
 package fastmath.matfile;
 
-import fastmath.BufferUtils;
-import fastmath.matfile.MiElement;
 import java.nio.ByteBuffer;
 import java.nio.ShortBuffer;
+
+import fastmath.BufferUtils;
 
 public class MiUInt16
 extends MiElement {
