@@ -2,6 +2,9 @@ package fastmath;
 
 import java.io.Serializable;
 
+import com.sleepycat.persist.model.Persistent;
+
+@Persistent
 public class Pair<A, B>
 implements Serializable {
     private static final long serialVersionUID = 1L;
