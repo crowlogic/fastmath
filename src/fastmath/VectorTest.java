@@ -6,6 +6,12 @@
  */
 package fastmath;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 import junit.framework.TestCase;
 
 public class VectorTest
@@ -73,6 +79,17 @@ extends TestCase {
         Vector b = new Vector(new double[]{1.0, 5.0, 3.0, 10.0, 6.0});
         Vector c = new Vector(new double[]{5.0, 2.0, 5.0, 2.0, 5.0});
         VectorTest.assertEquals((Object)c, (Object)a.divide(b));
+    }
+    
+    public void testSerialization() throws IOException, ClassNotFoundException
+    {
+    	ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    	ObjectOutputStream oos = new ObjectOutputStream(baos);
+    	Vector ass = new Vector( new double[] { 1.2, 3.4, 5.6 } );
+    	oos.writeObject(ass);
+    	ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(baos.toByteArray()));
+    	Vector butt = (Vector) ois.readObject();
+    	assertEquals( ass, butt );
     }
 }
 

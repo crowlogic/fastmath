@@ -8,6 +8,7 @@ package fastmath;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -27,7 +28,7 @@ import fastmath.matfile.NamedWritable;
 @Persistent
 public abstract class DoubleMatrix
 extends AbstractMatrix
-implements NamedWritable {
+implements NamedWritable, Serializable {
     private static final long serialVersionUID = 1L;
     protected static IntVector tmpIvec1 = new IntVector(1);
     protected IntVector ipiv;

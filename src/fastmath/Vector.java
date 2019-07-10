@@ -9,7 +9,10 @@
 package fastmath;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.io.StringWriter;
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
@@ -40,7 +43,7 @@ public class Vector
 extends AbstractBufferedObject
 implements Writable,
 Iterable<Double>,
-Collection<Double> {
+Collection<Double>, Serializable {
     private static final long serialVersionUID = 1L;
     private String name;
     protected int size;
@@ -889,5 +892,25 @@ Collection<Double> {
         }
     }
 
+    private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException
+    {      
+    	size = ois.readInt();
+    	buffer = BufferUtils.newNativeBuffer(size * 8);    	
+    	setName(ois.readUTF());
+    	for ( int i = 0; i < size; i++ )
+    	{
+    		set( i, ois.readDouble() );
+    	}
+    }
+ 
+    private void writeObject(ObjectOutputStream oos) throws IOException
+    {
+    	oos.writeInt(size);
+    	oos.writeUTF(name == null ? "" : name);
+    	for ( int i = 0; i < size; i++ )
+    	{
+    		oos.writeDouble(get(i));
+    	}
+    }
 }
 
