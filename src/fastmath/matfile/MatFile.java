@@ -81,17 +81,17 @@ public class MatFile implements Iterable<MiElement> {
 		if (file.exists()) {
 			this.backupFile = new File(file.getAbsolutePath() + ".bak");
 			file.renameTo(this.backupFile);
-			Runtime.getRuntime().addShutdownHook(new Thread() {
-
-				@Override
-				public void run() {
-					if (MatFile.this.backupFile != null) {
-						System.err.println("Restoring " + MatFile.this.backupFile + " to " + file);
-						file.delete();
-						MatFile.this.backupFile.renameTo(file);
-					}
-				}
-			});
+//			Runtime.getRuntime().addShutdownHook(new Thread() {
+//
+//				@Override
+//				public void run() {
+//					if (MatFile.this.backupFile != null) {
+//						System.err.println("Restoring " + MatFile.this.backupFile + " to " + file);
+//						file.delete();
+//						MatFile.this.backupFile.renameTo(file);
+//					}
+//				}
+//			});
 		}
 		RandomAccessFile raf = new RandomAccessFile(file, "rw");
 		this.file = file;
