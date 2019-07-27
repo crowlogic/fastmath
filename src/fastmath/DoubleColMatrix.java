@@ -73,11 +73,12 @@ extends DoubleMatrix {
         this.baseOffset = 0;
         this.columnCapacity = this.getColCount();
         this.setName(x.getName());
-        for (int i = 0; i < this.numCols; ++i) {
-            Vector src = x.col(i);
-            Vector dst = this.col(i);
-            dst.assign(src);
-        }
+        this.assign(x);
+//        for (int i = 0; i < this.numCols; ++i) {
+//            Vector src = x.col(i);
+//            Vector dst = this.col(i);
+//            dst.assign(src);
+//        }
     }
 
     public DoubleColMatrix(ByteBuffer buffer, int baseOffset, int numRows, int numCols) {
@@ -241,5 +242,13 @@ extends DoubleMatrix {
         }
         return this;
     }
+
+	public void ensureRowCount(int rows)
+	{
+		if ( getRowCount() < rows + 1 )
+		{
+			resize( rows + 1, getColCount() );
+		}
+	}
 }
 
