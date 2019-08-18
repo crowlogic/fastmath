@@ -21,11 +21,15 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import com.sleepycat.persist.model.NotPersistent;
+import com.sleepycat.persist.model.Persistent;
+
 import fastmath.AbstractBufferedObject;
 import fastmath.BufferUtils;
 import fastmath.DoubleColMatrix;
 import fastmath.DoubleMatrix;
 
+@Persistent
 public class MatFile implements Iterable<MiElement> {
 	protected static final int HEADER_OFFSET = 128;
 	public static final short BIG_ENDIAN = 18765;
@@ -34,14 +38,19 @@ public class MatFile implements Iterable<MiElement> {
 	private static final int SIXTY_FOUR_BITS = 8;
 	public static final short VERSION = 256;
 	public static final short WRITE_MODE = 2;
-	private FileChannel fileChannel;
+	private transient FileChannel fileChannel;
 	private Header header;
-	private final File file;
-	private final boolean readOnly;
+	private transient File file;
+	private boolean readOnly;
 	private final TreeSet<String> writtenNames = new TreeSet<>();
 	private int elementsWritten = 0;
-	private File backupFile;
+	private transient  File backupFile;
 
+	public MatFile()
+	{
+		
+	}
+	
 	public static void main(String[] args) throws IOException {
 		MatFile matFile = new MatFile(new File(args[0]));
 		System.out.println("Parsing " + matFile);
@@ -274,6 +283,7 @@ public class MatFile implements Iterable<MiElement> {
 		}
 	}
 
+	@Persistent
 	public static class Header extends AbstractBufferedObject {
 		private static final long serialVersionUID = 1L;
 		public static final int HEADER_TEXT_LEN = 116;
