@@ -15,7 +15,7 @@ extends Pair<Double, Double> {
 
     @Override
     public String toString() {
-        return String.format("[%d,%f]", (int)((Double)this.left).doubleValue(), this.right);
+        return String.format("[%f,%f]", this.left, this.right);
     }
 
     public DoublePair() {
