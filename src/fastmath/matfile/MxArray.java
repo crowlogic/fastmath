@@ -3,8 +3,8 @@
  */
 package fastmath.matfile;
 
-public interface MxArray
-extends HasIntegerDimensions {
-    public MxClass.Type getArrayType();
+public interface MxArray extends
+                         HasIntegerDimensions
+{
+  public MxClass.Type getArrayType();
 }
-

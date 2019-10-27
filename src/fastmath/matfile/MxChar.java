@@ -5,42 +5,48 @@ package fastmath.matfile;
 
 import java.util.Iterator;
 
-public class MxChar
-extends MxClass {
-    private static final long serialVersionUID = 1L;
-    public static final int mxCHAR_CLASS = 4;
-    private MiElement realPart;
-    private MiElement imagPart;
+public class MxChar extends
+                    MxClass
+{
+  private static final long serialVersionUID = 1L;
+  public static final int mxCHAR_CLASS = 4;
+  private MiElement realPart;
+  private MiElement imagPart;
 
-    @Override
-    public MxClass.Type getArrayType() {
-        return MxClass.Type.CHAR;
-    }
+  @Override
+  public MxClass.Type getArrayType()
+  {
+    return MxClass.Type.CHAR;
+  }
 
-    public MxChar(Iterator<MiElement> iter, boolean isComplex) {
-        super(null);
-        this.realPart = iter.next();
-        this.imagPart = isComplex ? iter.next() : null;
-    }
+  public MxChar(Iterator<MiElement> iter, boolean isComplex)
+  {
+    super(null);
+    this.realPart = iter.next();
+    this.imagPart = isComplex ? iter.next() : null;
+  }
 
-    public MxChar(String values) {
-        super(null);
-        this.realPart = new MiUInt16(values);
-        this.imagPart = null;
-    }
+  public MxChar(String values)
+  {
+    super(null);
+    this.realPart = new MiUInt16(values);
+    this.imagPart = null;
+  }
 
-    @Override
-    public long numBytes(long pos) {
-        long startPos = pos;
-        pos += this.realPart.totalSize(pos);
-        if (this.imagPart != null) {
-            pos += this.imagPart.totalSize(pos);
-        }
-        return pos - startPos;
+  @Override
+  public long numBytes(long pos)
+  {
+    long startPos = pos;
+    pos += this.realPart.totalSize(pos);
+    if (this.imagPart != null)
+    {
+      pos += this.imagPart.totalSize(pos);
     }
+    return pos - startPos;
+  }
 
-    public Object toObject() {
-        throw new UnsupportedOperationException();
-    }
+  public Object toObject()
+  {
+    throw new UnsupportedOperationException();
+  }
 }
-
