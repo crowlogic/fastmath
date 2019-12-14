@@ -235,7 +235,7 @@ public abstract class AbstractMatrix extends
   public AbstractMatrix set(int i, int j, double x)
   {
     assert (i >= 0) : String.format("row i=%d must be non-negative", i);
-    assert (j >= 0) : String.format("col j=%d must be non-negative", i);
+    assert (j >= 0) : String.format("col j=%d must be non-negative", j);
     assert (i < this.numRows) : String.format("i=%d >= numRows=%d", i, this.numRows);
     assert (j < this.numCols) : String.format("j=%d >= numCols=%d", j, this.numCols);
     int offset = this.getOffset(i, j);
