@@ -85,7 +85,7 @@ public class MatFile implements
     try
     {
       RandomAccessFile raf = new RandomAccessFile(file,
-                                                  "r");
+                                                  "rw");
       this.file = file;
       this.setFileChannel(raf.getChannel());
       this.header = new Header(this.getFileChannel());
@@ -165,7 +165,7 @@ public class MatFile implements
       {
         throw new IOException(this.file.getName() + " is not a .mat file");
       }
-      MappedByteBuffer buffer = this.getFileChannel().map(FileChannel.MapMode.READ_ONLY, 128L, fileSize - 128L);
+      MappedByteBuffer buffer = this.getFileChannel().map(FileChannel.MapMode.READ_WRITE, 128L, fileSize - 128L);
       return new MiIterator(this,
                             buffer);
     }
