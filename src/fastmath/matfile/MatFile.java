@@ -3,6 +3,8 @@
  */
 package fastmath.matfile;
 
+import static java.lang.System.out;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -10,6 +12,7 @@ import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.channels.SeekableByteChannel;
+import java.nio.file.NoSuchFileException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -80,16 +83,24 @@ public class MatFile implements
     return pos + (long) (skip > 0 ? 8 - skip : 0);
   }
 
+  /**
+   * Open an existing file
+   * @param file
+   */
   public MatFile(File file)
   {
     try
     {
+      if ( !file.canRead() )
+      {
+        throw new NoSuchFileException(file.getAbsolutePath());
+      }
       RandomAccessFile raf = new RandomAccessFile(file,
                                                   "rw");
       this.file = file;
       this.setFileChannel(raf.getChannel());
       this.header = new Header(this.getFileChannel());
-      this.readOnly = true;
+      this.readOnly = false;
     }
     catch (IOException e)
     {
@@ -103,6 +114,7 @@ public class MatFile implements
     if (file.exists())
     {
       this.backupFile = new File(file.getAbsolutePath() + ".bak");
+      out.println( "Renaming " + file.getAbsolutePath() + " to " + backupFile.getAbsolutePath() );
       file.renameTo(this.backupFile);
 //			Runtime.getRuntime().addShutdownHook(new Thread() {
 //
@@ -267,14 +279,11 @@ public class MatFile implements
     return this.file;
   }
 
-  /*
-   * WARNING - Removed try catching itself - possible behaviour change.
-   */
   public static DoubleColMatrix loadMatrix(String filename, String variableName) throws IOException
   {
     MatFile matFile = new MatFile(new File(filename));
-    MiMatrix \u03c1 = matFile.readVariables(variableName).get(variableName);
-    DoubleColMatrix doubleColMatrix = \u03c1 != null ? (DoubleColMatrix) \u03c1.toDenseDoubleMatrix() : null;
+    MiMatrix vars = matFile.readVariables(variableName).get(variableName);
+    DoubleColMatrix doubleColMatrix = vars != null ? (DoubleColMatrix) vars.toDenseDoubleMatrix() : null;
     return doubleColMatrix;
   }
 
