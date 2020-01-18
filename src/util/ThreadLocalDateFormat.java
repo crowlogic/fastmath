@@ -47,6 +47,11 @@ public class ThreadLocalDateFormat extends
     return msFormat.format(time);
   }
 
+  public static final String formatHmsMillis(long l)
+  {
+    return hmsMillisFormat.format(l);
+  }
+  
   public ThreadLocalDateFormat(String format)
   {
     this.formatStr = format;
