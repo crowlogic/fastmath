@@ -24,14 +24,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import com.sleepycat.persist.model.Persistent;
 
 import fastmath.AbstractBufferedObject;
 import fastmath.BufferUtils;
 import fastmath.DoubleColMatrix;
 import fastmath.DoubleMatrix;
 
-@Persistent
 public class MatFile implements
                      Iterable<MiElement>
 {
@@ -360,7 +358,6 @@ public class MatFile implements
     }
   }
 
-  @Persistent
   public static class Header extends
                              AbstractBufferedObject
   {

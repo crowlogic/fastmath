@@ -31,14 +31,12 @@ import java.util.stream.StreamSupport;
 
 import org.apache.commons.math3.util.CombinatoricsUtils;
 
-import com.sleepycat.persist.model.Persistent;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 
 import fastmath.matfile.MiMatrix;
 import fastmath.matfile.Writable;
 
-@Persistent
 public class Vector extends
                     AbstractBufferedObject implements
                     Writable,

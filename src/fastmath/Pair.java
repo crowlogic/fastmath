@@ -2,9 +2,6 @@ package fastmath;
 
 import java.io.Serializable;
 
-import com.sleepycat.persist.model.Persistent;
-
-@Persistent
 public class Pair<A, B> implements
                  Serializable
 {

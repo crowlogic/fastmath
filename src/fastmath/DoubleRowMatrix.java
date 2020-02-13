@@ -5,9 +5,6 @@ package fastmath;
 
 import java.util.function.Consumer;
 
-import com.sleepycat.persist.model.Persistent;
-
-@Persistent
 public class DoubleRowMatrix extends
                              DoubleMatrix
 {

@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package fastmath;
 
 import java.nio.ByteBuffer;
@@ -9,9 +6,6 @@ import java.util.Iterator;
 import java.util.PrimitiveIterator;
 import java.util.TreeSet;
 
-import com.sleepycat.persist.model.Persistent;
-
-@Persistent
 public class IntVector extends
                        AbstractBufferedObject implements
                        Iterable<Integer>

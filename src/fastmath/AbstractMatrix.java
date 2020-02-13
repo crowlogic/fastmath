@@ -7,8 +7,6 @@ import java.io.PrintWriter;
 import java.nio.ByteBuffer;
 import java.util.Comparator;
 
-import com.sleepycat.persist.model.Persistent;
-
 import fastmath.exceptions.FastMathException;
 import fastmath.matfile.MiDouble;
 import fastmath.matfile.MiInt32;
@@ -17,7 +15,6 @@ import fastmath.matfile.MxDouble;
 import fastmath.matfile.Writable;
 import util.AutoHashMap;
 
-@Persistent
 public abstract class AbstractMatrix extends
                                      AbstractBufferedObject implements
                                      Writable

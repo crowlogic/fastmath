@@ -12,13 +12,11 @@ import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
 
-import com.sleepycat.persist.model.Persistent;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 
 import fastmath.matfile.Writable;
 
-@Persistent
 public abstract class AbstractBufferedObject implements
                                              Writable
 {
