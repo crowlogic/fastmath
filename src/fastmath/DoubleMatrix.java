@@ -16,7 +16,6 @@ import java.text.NumberFormat;
 import java.util.function.BiFunction;
 import java.util.function.IntFunction;
 
-
 import dnl.utils.text.table.TextTable;
 import fastmath.exceptions.FastMathException;
 import fastmath.exceptions.IllegalValueError;

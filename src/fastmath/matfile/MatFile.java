@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-
 import fastmath.AbstractBufferedObject;
 import fastmath.BufferUtils;
 import fastmath.DoubleColMatrix;
