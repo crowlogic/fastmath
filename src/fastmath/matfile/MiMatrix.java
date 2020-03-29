@@ -202,9 +202,6 @@ public class MiMatrix extends
     return totalLen;
   }
 
-  /*
-   * WARNING - Removed try catching itself - possible behaviour change.
-   */
   @Override
   public void write(SeekableByteChannel channel) throws IOException
   {
