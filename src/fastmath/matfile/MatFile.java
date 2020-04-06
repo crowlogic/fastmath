@@ -46,6 +46,7 @@ public class MatFile implements
   private final TreeSet<String> writtenNames = new TreeSet<>();
   private int elementsWritten = 0;
   private transient File backupFile;
+  private RandomAccessFile raf;
 
   public MatFile()
   {
@@ -108,24 +109,7 @@ public class MatFile implements
 
   public MatFile(final File file, String headerText) throws IOException
   {
-    if (file.exists())
-    {
-      this.backupFile = new File(file.getAbsolutePath() + ".bak");
-      out.println( "Renaming " + file.getAbsolutePath() + " to " + backupFile.getAbsolutePath() );
-      file.renameTo(this.backupFile);
-//			Runtime.getRuntime().addShutdownHook(new Thread() {
-//
-//				@Override
-//				public void run() {
-//					if (MatFile.this.backupFile != null) {
-//						System.err.println("Restoring " + MatFile.this.backupFile + " to " + file);
-//						file.delete();
-//						MatFile.this.backupFile.renameTo(file);
-//					}
-//				}
-//			});
-    }
-    RandomAccessFile raf = new RandomAccessFile(file,
+    raf = new RandomAccessFile(file,
                                                 "rw");
     this.file = file;
     raf.setLength(0L);
@@ -146,6 +130,7 @@ public class MatFile implements
     {
       this.getFileChannel().close();
       this.backupFile = null;
+      raf.close();
     }
     catch (IOException e)
     {
