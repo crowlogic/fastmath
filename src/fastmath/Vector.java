@@ -156,6 +156,12 @@ public class Vector extends
     }
   }
 
+  public Vector(DoubleStream mapToDouble, String string)
+  {
+    this(mapToDouble);
+    setName(string);
+  }
+
   public Vector abs()
   {
     for (int i = 0; i < this.size(); ++i)
