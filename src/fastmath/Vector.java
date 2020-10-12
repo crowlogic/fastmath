@@ -580,9 +580,25 @@ public class Vector extends
 
   public Vector multiply(Vector x)
   {
-    throw new UnsupportedOperationException("TODO");
+    for (int i = 0; i < this.size; ++i)
+    {
+      this.set(i, this.get(i) * x.get(i));
+    }
+
+    return this;
   }
 
+  public Vector besselI(double q, boolean exp )
+  {
+    for (int i = 0; i < this.size; ++i)
+    {
+      this.set(i, Bessel.i( q, this.get(i) , exp ) );
+    }
+
+    return this;
+  }
+
+  
   public Vector pow(double x)
   {
     for (int i = 0; i < this.size; ++i)
@@ -1156,4 +1172,5 @@ public class Vector extends
       oos.writeDouble(get(i));
     }
   }
+
 }

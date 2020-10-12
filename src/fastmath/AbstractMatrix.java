@@ -13,6 +13,7 @@ import fastmath.matfile.MiInt32;
 import fastmath.matfile.MiMatrix;
 import fastmath.matfile.MxDouble;
 import fastmath.matfile.Writable;
+import util.AutoArrayList;
 import util.AutoHashMap;
 
 public abstract class AbstractMatrix extends
@@ -22,12 +23,12 @@ public abstract class AbstractMatrix extends
   protected String name;
   protected int numCols;
   protected int numRows;
-  transient AutoHashMap<Integer, Vector> colVectors = new AutoHashMap<Integer, Vector>(i -> new Vector.Sub(this.buffer,
-                                                                                                           this.numRows,
-                                                                                                           this.getOffset(0,
-                                                                                                                          (int) i),
-                                                                                                           this.getRowIncrement(),
-                                                                                                           (int) i));
+  transient AutoArrayList<Vector> colVectors = new AutoArrayList<Vector>(i -> new Vector.Sub(this.buffer,
+                                                                                             this.numRows,
+                                                                                             this.getOffset(0,
+                                                                                                            (int) i),
+                                                                                             this.getRowIncrement(),
+                                                                                             (int) i));
   Vector tmpVec = new Vector(this.getColCount());
 
   public AbstractMatrix()
@@ -72,9 +73,21 @@ public abstract class AbstractMatrix extends
     }
   }
 
+  ThreadLocal<ColIterator<Vector>> colIter = new ThreadLocal<>()
+  {
+
+    @Override
+    protected ColIterator<Vector> initialValue()
+    {
+      return new ColIterator<Vector>(AbstractMatrix.this);
+    }
+  };
+
   public ColIterator<Vector> cols()
   {
-    return new ColIterator<Vector>(this);
+    ColIterator<Vector> iter = colIter.get();
+    iter.reset();
+    return iter;
   }
 
   public MiMatrix createMiMatrix()

@@ -17,9 +17,14 @@ public class ColIterator<V extends Vector> implements
   public ColIterator(AbstractMatrix x)
   {
     this.x = x;
-    this.i = 0;
+    reset();
   }
 
+  public void reset()
+  {
+    this.i = 0;
+  }
+  
   @Override
   public boolean hasNext()
   {

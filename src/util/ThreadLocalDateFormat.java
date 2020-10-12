@@ -3,7 +3,10 @@ package util;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import fastmath.Pair;
 
@@ -79,5 +82,13 @@ public class ThreadLocalDateFormat extends
   public Date parse(String timeString) throws ParseException
   {
     return ((DateFormat) ((Pair<?, ?>) this.get()).right).parse(timeString);
+  }
+
+  public static String formatNanos(double time)
+  {
+    long nanos = (long) (( time - Math.floor(time) ) * 1000000000.0);
+    
+    Instant instant = Instant.ofEpochMilli((long) time).plus(nanos, ChronoUnit.NANOS );
+    return instant.toString();
   }
 }
