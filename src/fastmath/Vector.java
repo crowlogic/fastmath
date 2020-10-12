@@ -592,7 +592,7 @@ public class Vector extends
   {
     for (int i = 0; i < this.size; ++i)
     {
-      this.set(i, Bessel.i( q, this.get(i) , exp ) );
+      this.set(i, Bessel.i( this.get(i) , q, exp ) );
     }
 
     return this;
