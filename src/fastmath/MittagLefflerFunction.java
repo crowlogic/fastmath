@@ -7,7 +7,7 @@ import com.sun.jna.ptr.DoubleByReference;
 public interface MittagLefflerFunction extends
                                        Library
 {
-  MittagLefflerFunction lib = (MittagLefflerFunction) Native.loadLibrary("mlf", MittagLefflerFunction.class);
+  static MittagLefflerFunction lib = (MittagLefflerFunction) Native.loadLibrary("mlf", MittagLefflerFunction.class);
 
   public ComplexValue mlf(double alpha, double beta, Complex z);
 
