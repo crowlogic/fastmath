@@ -9,6 +9,6 @@ public interface MittagLefflerFunction extends
 {
   static MittagLefflerFunction lib = (MittagLefflerFunction) Native.loadLibrary("mlf", MittagLefflerFunction.class);
 
-  public ComplexValue mlf(double alpha, double beta, Complex z);
+  public double mlf(double alpha, double beta, double z);
 
 }

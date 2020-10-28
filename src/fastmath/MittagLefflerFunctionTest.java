@@ -8,24 +8,26 @@ public class MittagLefflerFunctionTest extends
                                        TestCase
 {
 
+  /**
+   * fα,λ(t) ∼ αλΓ(1−α)t^(−α−1) as t →+∞
+   * 
+   * and
+   * 
+   * fα,λ(t) ∼ λΓ(α)*t^(α−1) as t →0+
+   * 
+   */
   public MittagLefflerFunctionTest()
   {
-    // TODO Auto-generated constructor stub
   }
 
   public static void testMLF()
   {
-    Complex z = new Complex(29.2,
-                            50);
-
+    double z = 29.2;
     double alpha = 4.5;
     double beta = 1.4;
-    Complex result = MittagLefflerFunction.lib.mlf(alpha, beta, z );
-    System.out.println("z=" + z);
-    System.out.println("result=" + result);
-    assertEquals( 1.4135659887023517, result.realPart, 0.00000000001 );
-    assertEquals( 0.49697099521531124, result.imaginaryPart, 0.00000000001 );
-    
+    double result = MittagLefflerFunction.lib.mlf(alpha, beta, z);
+    assertEquals(1.416345169927341, result, 0.00000001);
+
   }
 
 }
