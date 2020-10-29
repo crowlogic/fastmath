@@ -11,4 +11,9 @@ public interface MittagLefflerFunction extends
 
   public double mlf(double alpha, double beta, double z);
 
+  public static double mlf(double α, double λ)
+  {
+    return lib.mlf(α, α, λ);
+  }
+
 }
