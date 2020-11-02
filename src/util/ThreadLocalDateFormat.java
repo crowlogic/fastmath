@@ -14,6 +14,8 @@ public class ThreadLocalDateFormat extends
                                    ThreadLocal<Pair<Date, DateFormat>>
 {
   private final String formatStr;
+  public static final ThreadLocalDateFormat ymdFormat = new ThreadLocalDateFormat("yyyyMMdd");
+
   public static final ThreadLocalDateFormat dFormat = new ThreadLocalDateFormat("yyyy-MM-dd");
   public static final ThreadLocalDateFormat sFormat = new ThreadLocalDateFormat("yyyy-MM-dd kk:mm:ss");
   public static final ThreadLocalDateFormat msFormat = new ThreadLocalDateFormat("yyyy-MM-dd kk:mm:ss.SSS");
