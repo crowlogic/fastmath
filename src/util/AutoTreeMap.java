@@ -7,6 +7,12 @@ public class AutoTreeMap<K, V> extends
                         TreeMap<K, V> implements
                         AutoMap<K, V>
 {
+  @Override
+  public synchronized V get(Object key)
+  {
+    return super.get(key);
+  }
+
   private static final long serialVersionUID = 1L;
   final Class<? super V> valueClass;
   private Function<K, V> constructor;
@@ -29,7 +35,7 @@ public class AutoTreeMap<K, V> extends
 
   @SuppressWarnings("unchecked")
   @Override
-  public V getOrCreate(K key)
+  public synchronized V getOrCreate(K key)
   {
     V value = this.get(key);
     if (value == null)
