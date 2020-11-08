@@ -98,4 +98,12 @@ public class DateUtils
   {
     return convertTimeUnits(now.until(later, ChronoUnit.NANOS), TimeUnit.NANOSECONDS, TimeUnit.DAYS);
   }
+
+  // N365 = number of minutes in a 365-day year (365 x 1,440 = 525,600)
+  public static final double N365 = 525600;
+
+  public static double yearsBetween(LocalDateTime now, LocalDateTime later)
+  {
+    return convertTimeUnits(daysBetween(now, later), TimeUnit.DAYS, TimeUnit.MINUTES) / N365;
+  }
 }
