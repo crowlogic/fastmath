@@ -3,6 +3,10 @@
  */
 package util;
 
+import static java.time.LocalDateTime.now;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -83,5 +87,15 @@ public class DateUtils
       x.set(i, convertTimeUnits(w.get(i), from, to));
     }
     return x;
+  }
+
+  public static double daysUntil(LocalDateTime later)
+  {
+    return daysBetween(now(), later);
+  }
+
+  public static double daysBetween(LocalDateTime now, LocalDateTime later)
+  {
+    return convertTimeUnits(now.until(later, ChronoUnit.NANOS), TimeUnit.NANOSECONDS, TimeUnit.DAYS);
   }
 }
