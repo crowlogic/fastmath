@@ -89,6 +89,11 @@ public class DateUtils
     return x;
   }
 
+  public static double yearsUntil( LocalDateTime later)
+  {
+    return convertTimeUnits(daysBetween(now(), later), TimeUnit.DAYS, TimeUnit.MINUTES) / N365;
+  }
+  
   public static double daysUntil(LocalDateTime later)
   {
     return daysBetween(now(), later);
