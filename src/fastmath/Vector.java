@@ -335,16 +335,16 @@ public class Vector extends
   public double dotProduct(Vector x)
   {
     assert (x.size == this.size) : "Dimensions do not agree";
-    if (x.getIncrement() >= 0 && this.getIncrement() >= 0)
-    {
-      return Vector.ddot(x.size,
-                         x.getBuffer(),
-                         x.getOffset(0),
-                         x.getIncrement(),
-                         this.getBuffer(),
-                         this.getOffset(0),
-                         this.getIncrement());
-    }
+//    if (x.getIncrement() >= 0 && this.getIncrement() >= 0)
+//    {
+//      return Vector.ddot(x.size,
+//                         x.getBuffer(),
+//                         x.getOffset(0),
+//                         x.getIncrement(),
+//                         this.getBuffer(),
+//                         this.getOffset(0),
+//                         this.getIncrement());
+//    }
     return IntStream.range(0, this.size()).mapToDouble(i -> this.get(i) * x.get(i)).sum();
   }
 
