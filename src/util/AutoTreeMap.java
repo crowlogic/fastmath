@@ -1,11 +1,12 @@
 package util;
 
+import java.io.Serializable;
 import java.util.TreeMap;
 import java.util.function.Function;
 
 public class AutoTreeMap<K, V> extends
                         TreeMap<K, V> implements
-                        AutoMap<K, V>
+                        AutoMap<K, V>, Serializable
 {
   @Override
   public synchronized V get(Object key)
@@ -15,7 +16,7 @@ public class AutoTreeMap<K, V> extends
 
   private static final long serialVersionUID = 1L;
   final Class<? super V> valueClass;
-  private Function<K, V> constructor;
+  private transient Function<K, V> constructor;
 
   public AutoTreeMap(Class<? super V> valueClass)
   {
