@@ -16660,6 +16660,8795 @@ SWIGEXPORT jdouble JNICALL Java_arblib_arblibJNI__1acb_1vec_1estimate_1allocated
 }
 
 
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1struct_1coeffs_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  if (arg1) (arg1)->coeffs = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1struct_1coeffs_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  acb_ptr result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = (acb_ptr) ((arg1)->coeffs);
+  *(acb_ptr *)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1struct_1length_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->length = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1struct_1length_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result =  ((arg1)->length);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1struct_1alloc_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  if (arg1) (arg1)->alloc = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1struct_1alloc_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result =  ((arg1)->alloc);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_new_1acb_1poly_1struct(JNIEnv *jenv, jclass jcls) {
+  jlong jresult = 0 ;
+  acb_poly_struct *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (acb_poly_struct *)calloc(1, sizeof(acb_poly_struct));
+  *(acb_poly_struct **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_delete_1acb_1poly_1struct(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  acb_poly_struct *arg1 = (acb_poly_struct *) 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  free((char *) arg1);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  acb_poly_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  acb_poly_init(arg1);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1init2(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  acb_poly_init2(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  acb_poly_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  acb_poly_clear(arg1);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1fit_1length(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  acb_poly_fit_length(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1set_1length(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  _acb_poly_set_length(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1normalise(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  acb_poly_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  _acb_poly_normalise(arg1);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1swap(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  acb_poly_swap(arg1,arg2);
+  
+  
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1length(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = acb_poly_length((acb_poly_struct const (*))arg1);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1degree(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = acb_poly_degree((acb_poly_struct const (*))arg1);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1valuation(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = acb_poly_valuation((acb_poly_struct const (*))arg1);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1is_1zero(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = (int)acb_poly_is_zero((acb_poly_struct const (*))arg1);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1is_1one(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = (int)acb_poly_is_one((acb_poly_struct const (*))arg1);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1is_1x(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = (int)acb_poly_is_x((acb_poly_struct const (*))arg1);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1zero(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  acb_poly_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  acb_poly_zero(arg1);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1one(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  acb_poly_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  acb_poly_one(arg1);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1coeff_1si(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong arg3 ;
+  slong *argp2 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_set_coeff_si(arg1,arg2,arg3);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1coeff_1acb(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jobject jarg3_) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  acb_struct *arg3 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  acb_poly_set_coeff_acb(arg1,arg2,(acb_struct const (*))arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1get_1coeff_1acb(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_get_coeff_acb(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1shift_1right(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_shift_right(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1shift_1right(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_shift_right(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1shift_1left(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_shift_left(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1shift_1left(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_shift_left(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1truncate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  acb_poly_truncate(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1majorant(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  arb_ptr arg1 = (arb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(arb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_majorant(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1majorant(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  arb_poly_t arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  arb_poly_t *argp1 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  argp1 = *(arb_poly_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null arb_poly_t");
+    return ;
+  }
+  arg1 = *argp1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_majorant(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1fprintd(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  FILE *arg1 = (FILE *) 0 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  arg1 = *(FILE **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_fprintd(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1printd(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  acb_poly_printd((acb_poly_struct const (*))arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  acb_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_evaluate_horner(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_evaluate_horner(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate_1rectangular(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  acb_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_evaluate_rectangular(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate_1rectangular(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_evaluate_rectangular(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  acb_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_evaluate(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_evaluate(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate2_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jobject jarg5_, jlong jarg6) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  acb_struct *arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg5_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  arg5 = *(acb_struct **)&jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_evaluate2_horner(arg1,arg2,(acb_struct const *)arg3,arg4,(acb_struct const (*))arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate2_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_evaluate2_horner(arg1,arg2,(acb_poly_struct const (*))arg3,(acb_struct const (*))arg4,arg5);
+  
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate2_1rectangular(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jobject jarg5_, jlong jarg6) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  acb_struct *arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg5_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  arg5 = *(acb_struct **)&jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_evaluate2_rectangular(arg1,arg2,(acb_struct const *)arg3,arg4,(acb_struct const (*))arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate2_1rectangular(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_evaluate2_rectangular(arg1,arg2,(acb_poly_struct const (*))arg3,(acb_struct const (*))arg4,arg5);
+  
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate2(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jobject jarg5_, jlong jarg6) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  acb_struct *arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg5_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  arg5 = *(acb_struct **)&jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_evaluate2(arg1,arg2,(acb_struct const *)arg3,arg4,(acb_struct const (*))arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate2(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_evaluate2(arg1,arg2,(acb_poly_struct const (*))arg3,(acb_struct const (*))arg4,arg5);
+  
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1derivative(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_derivative(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1derivative(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_derivative(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1integral(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_integral(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1integral(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_integral(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1borel_1transform(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_borel_transform(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1borel_1transform(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_borel_transform(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1inv_1borel_1transform(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_inv_borel_transform(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1inv_1borel_1transform(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_inv_borel_transform(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1binomial_1transform_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_binomial_transform_basecase(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1binomial_1transform_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_binomial_transform_basecase(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1binomial_1transform_1convolution(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_binomial_transform_convolution(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1binomial_1transform_1convolution(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_binomial_transform_convolution(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1binomial_1transform(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_binomial_transform(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1binomial_1transform(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_binomial_transform(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  acb_poly_set(arg1,(acb_poly_struct const (*))arg2);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1round(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_set_round(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1trunc(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_set_trunc(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1trunc_1round(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_set_trunc_round(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1arb_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  arb_poly_t arg2 ;
+  arb_poly_t const *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(arb_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null arb_poly_t const");
+    return ;
+  }
+  arg2 = *argp2; 
+  acb_poly_set_arb_poly(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set2_1arb_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  arb_poly_t arg2 ;
+  arb_poly_t arg3 ;
+  arb_poly_t const *argp2 ;
+  arb_poly_t const *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(arb_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null arb_poly_t const");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(arb_poly_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null arb_poly_t const");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_set2_arb_poly(arg1,arg2,arg3);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1fmpq_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  fmpq_poly_t arg2 ;
+  slong arg3 ;
+  fmpq_poly_t const *argp2 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(fmpq_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpq_poly_t const");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_set_fmpq_poly(arg1,arg2,arg3);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set2_1fmpq_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  fmpq_poly_t arg2 ;
+  fmpq_poly_t arg3 ;
+  slong arg4 ;
+  fmpq_poly_t const *argp2 ;
+  fmpq_poly_t const *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(fmpq_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpq_poly_t const");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(fmpq_poly_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpq_poly_t const");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_set2_fmpq_poly(arg1,arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1fmpz_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  fmpz_poly_t arg2 ;
+  slong arg3 ;
+  fmpz_poly_t const *argp2 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(fmpz_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_poly_t const");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_set_fmpz_poly(arg1,arg2,arg3);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set2_1fmpz_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  fmpz_poly_t arg2 ;
+  fmpz_poly_t arg3 ;
+  slong arg4 ;
+  fmpz_poly_t const *argp2 ;
+  fmpz_poly_t const *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(fmpz_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_poly_t const");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(fmpz_poly_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_poly_t const");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_set2_fmpz_poly(arg1,arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1get_1unique_1fmpz_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_) {
+  jint jresult = 0 ;
+  fmpz_poly_t arg1 ;
+  acb_poly_struct *arg2 ;
+  fmpz_poly_t *argp1 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  argp1 = *(fmpz_poly_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_poly_t");
+    return 0;
+  }
+  arg1 = *argp1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  result = (int)acb_poly_get_unique_fmpz_poly(arg1,(acb_poly_struct const (*))arg2);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1acb(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  acb_poly_struct *arg1 ;
+  acb_struct *arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  acb_poly_set_acb(arg1,(acb_struct const (*))arg2);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1set_1si(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  acb_poly_struct *arg1 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  acb_poly_set_si(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1randtest(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  flint_rand_t arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  flint_rand_t *argp2 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(flint_rand_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null flint_rand_t");
+    return ;
+  }
+  arg2 = *argp2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_randtest(arg1,arg2,arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1equal(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  result = (int)acb_poly_equal((acb_poly_struct const (*))arg1,(acb_poly_struct const (*))arg2);
+  jresult = (jint)result; 
+  
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1contains_1fmpz_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  fmpz_poly_t arg2 ;
+  fmpz_poly_t const *argp2 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(fmpz_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_poly_t const");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)acb_poly_contains_fmpz_poly((acb_poly_struct const (*))arg1,arg2);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1contains_1fmpq_1poly(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  fmpq_poly_t arg2 ;
+  fmpq_poly_t const *argp2 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  argp2 = *(fmpq_poly_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpq_poly_t const");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (int)acb_poly_contains_fmpq_poly((acb_poly_struct const (*))arg1,arg2);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI__1acb_1poly_1overlaps(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  jint jresult = 0 ;
+  acb_srcptr arg1 = (acb_srcptr) 0 ;
+  slong arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong *argp2 ;
+  slong *argp4 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg3_;
+  arg1 = *(acb_srcptr *)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg2 = *argp2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg4 = *argp4; 
+  result = (int)_acb_poly_overlaps((acb_struct const *)arg1,arg2,(acb_struct const *)arg3,arg4);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1overlaps(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  result = (int)acb_poly_overlaps((acb_poly_struct const (*))arg1,(acb_poly_struct const (*))arg2);
+  jresult = (jint)result; 
+  
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1contains(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  result = (int)acb_poly_contains((acb_poly_struct const (*))arg1,(acb_poly_struct const (*))arg2);
+  jresult = (jint)result; 
+  
+  
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1is_1real(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = (int)acb_poly_is_real((acb_poly_struct const (*))arg1);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_add(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1add(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_add(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1add_1si(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_add_si(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sub(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_sub(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sub(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_sub(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1add_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_add_series(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sub_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_sub_series(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1neg(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  acb_poly_neg(arg1,(acb_poly_struct const (*))arg2);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1scalar_1mul_12exp_1si(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  acb_poly_scalar_mul_2exp_si(arg1,(acb_poly_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1scalar_1mul(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_scalar_mul(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1scalar_1div(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_scalar_div(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1mullow_1classical(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_mullow_classical(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mullow_1classical(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_mullow_classical(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mullow_1transpose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_mullow_transpose(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1mullow_1transpose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_mullow_transpose(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mullow_1transpose_1gauss(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_mullow_transpose_gauss(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1mullow_1transpose_1gauss(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_mullow_transpose_gauss(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mullow(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_mullow(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1mullow(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_mullow(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mul(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_mul(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1mul(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_mul(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mul_1monic(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_mul_monic(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1inv_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_inv_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1inv_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_inv_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1div_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_div_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1div_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_div_series(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1reverse(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_reverse(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1div(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_div(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1divrem(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jobject jarg5_, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  acb_srcptr arg5 = (acb_srcptr) 0 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp4 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg5_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  arg5 = *(acb_srcptr *)&jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_divrem(arg1,arg2,(acb_struct const *)arg3,arg4,(acb_struct const *)arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1rem(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_rem(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1divrem(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5) {
+  jint jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  acb_poly_struct *arg4 ;
+  slong arg5 ;
+  slong *argp5 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  arg4 = *(acb_poly_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg5 = *argp5; 
+  result = (int)acb_poly_divrem(arg1,arg2,(acb_poly_struct const (*))arg3,(acb_poly_struct const (*))arg4,arg5);
+  jresult = (jint)result; 
+  
+  
+  
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1div_1root(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jobject jarg5_, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  acb_struct *arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg5_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  arg5 = *(acb_struct **)&jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_div_root(arg1,arg2,(acb_struct const *)arg3,arg4,(acb_struct const (*))arg5,arg6);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1taylor_1shift_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_taylor_shift_horner(arg1,(acb_struct const (*))arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1taylor_1shift_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_taylor_shift_horner(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1taylor_1shift_1divconquer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_taylor_shift_divconquer(arg1,(acb_struct const (*))arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1taylor_1shift_1divconquer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_taylor_shift_divconquer(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1taylor_1shift_1convolution(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_taylor_shift_convolution(arg1,(acb_struct const (*))arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1taylor_1shift_1convolution(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_taylor_shift_convolution(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1taylor_1shift(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_taylor_shift(arg1,(acb_struct const (*))arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1taylor_1shift(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_taylor_shift(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1compose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_compose(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1compose(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_compose(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1compose_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_compose_horner(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1compose_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_compose_horner(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1compose_1divconquer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_compose_divconquer(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1compose_1divconquer(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_compose_divconquer(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1compose_1series_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_compose_series_horner(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1compose_1series_1horner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_compose_series_horner(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1compose_1series_1brent_1kung(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_compose_series_brent_kung(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1compose_1series_1brent_1kung(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_compose_series_brent_kung(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1compose_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_compose_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1compose_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_compose_series(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1revert_1series_1lagrange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_revert_series_lagrange(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1revert_1series_1lagrange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_revert_series_lagrange(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1revert_1series_1newton(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_revert_series_newton(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1revert_1series_1newton(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_revert_series_newton(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1revert_1series_1lagrange_1fast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_revert_series_lagrange_fast(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1revert_1series_1lagrange_1fast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_revert_series_lagrange_fast(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1revert_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_revert_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1revert_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_revert_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate_1vec_1fast_1precomp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_ptr *arg4 = (acb_ptr *) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_ptr **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_evaluate_vec_fast_precomp(arg1,(acb_struct const *)arg2,arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate_1vec_1fast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_evaluate_vec_fast(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate_1vec_1fast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_poly_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_evaluate_vec_fast(arg1,(acb_poly_struct const (*))arg2,(acb_struct const *)arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1evaluate_1vec_1iter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_evaluate_vec_iter(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1evaluate_1vec_1iter(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_poly_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_evaluate_vec_iter(arg1,(acb_poly_struct const (*))arg2,(acb_struct const *)arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1interpolate_1barycentric(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_interpolate_barycentric(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1interpolate_1barycentric(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_interpolate_barycentric(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1interpolation_1weights(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr *arg2 = (acb_ptr *) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_interpolation_weights(arg1,arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1interpolate_1fast_1precomp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_ptr *arg3 = (acb_ptr *) 0 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_ptr **)&jarg3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_interpolate_fast_precomp(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1interpolate_1fast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_interpolate_fast(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1interpolate_1fast(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_interpolate_fast(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1interpolate_1newton(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_interpolate_newton(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1interpolate_1newton(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_interpolate_newton(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1product_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_product_roots(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1product_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_product_roots(arg1,(acb_struct const *)arg2,arg3,arg4);
+  
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI__1acb_1poly_1tree_1alloc(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+  jlong jresult = 0 ;
+  slong arg1 ;
+  slong *argp1 ;
+  acb_ptr *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  argp1 = *(slong **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg1 = *argp1; 
+  result = (acb_ptr *)_acb_poly_tree_alloc(arg1);
+  *(acb_ptr **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1tree_1free(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2) {
+  acb_ptr *arg1 = (acb_ptr *) 0 ;
+  slong arg2 ;
+  slong *argp2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = *(acb_ptr **)&jarg1; 
+  argp2 = *(slong **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg2 = *argp2; 
+  _acb_poly_tree_free(arg1,arg2);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1tree_1build(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr *arg1 = (acb_ptr *) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  arg1 = *(acb_ptr **)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_tree_build(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1root_1inclusion(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_root_inclusion(arg1,(acb_struct const (*))arg2,(acb_struct const *)arg3,(acb_struct const *)arg4,arg5,arg6);
+  
+  
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI__1acb_1poly_1validate_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  jlong jresult = 0 ;
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg4 = *argp4; 
+  result = _acb_poly_validate_roots(arg1,(acb_struct const *)arg2,arg3,arg4);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1refine_1roots_1durand_1kerner(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  _acb_poly_refine_roots_durand_kerner(arg1,(acb_struct const *)arg2,arg3,arg4);
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI__1acb_1poly_1find_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6) {
+  jlong jresult = 0 ;
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg6 = *argp6; 
+  result = _acb_poly_find_roots(arg1,(acb_struct const *)arg2,(acb_struct const *)arg3,arg4,arg5,arg6);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  return jresult;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1find_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  jlong jresult = 0 ;
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_poly_struct *arg2 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg5 = *argp5; 
+  result = acb_poly_find_roots(arg1,(acb_poly_struct const (*))arg2,(acb_struct const *)arg3,arg4,arg5);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1root_1bound_1fujiwara(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  mag_t arg1 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  mag_t *argp1 ;
+  slong *argp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  argp1 = *(mag_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null mag_t");
+    return ;
+  }
+  arg1 = *argp1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  _acb_poly_root_bound_fujiwara(arg1,(acb_struct const *)arg2,arg3);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1root_1bound_1fujiwara(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_) {
+  mag_t arg1 ;
+  acb_poly_struct *arg2 ;
+  mag_t *argp1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  argp1 = *(mag_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null mag_t");
+    return ;
+  }
+  arg1 = *argp1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  acb_poly_root_bound_fujiwara(arg1,arg2);
+  
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI__1acb_1poly_1validate_1real_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  jint jresult = 0 ;
+  acb_srcptr arg1 = (acb_srcptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_srcptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg4 = *argp4; 
+  result = (int)_acb_poly_validate_real_roots((acb_struct const *)arg1,(acb_struct const *)arg2,arg3,arg4);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1poly_1validate_1real_1roots(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3) {
+  jint jresult = 0 ;
+  acb_srcptr arg1 = (acb_srcptr) 0 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong *argp3 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_srcptr *)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return 0;
+  }
+  arg3 = *argp3; 
+  result = (int)acb_poly_validate_real_roots((acb_struct const *)arg1,(acb_poly_struct const (*))arg2,arg3);
+  jresult = (jint)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1pow_1ui_1trunc_1binexp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  ulong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  ulong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(ulong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_pow_ui_trunc_binexp(arg1,(acb_struct const *)arg2,arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1pow_1ui_1trunc_1binexp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  ulong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  ulong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(ulong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_pow_ui_trunc_binexp(arg1,(acb_poly_struct const (*))arg2,arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1pow_1ui(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  ulong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  ulong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(ulong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_pow_ui(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1pow_1ui(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  ulong arg3 ;
+  slong arg4 ;
+  ulong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(ulong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_pow_ui(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1rsqrt_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_rsqrt_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1rsqrt_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_rsqrt_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sqrt_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_sqrt_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sqrt_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_sqrt_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1log_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_log_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1log_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_log_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1log1p_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_log1p_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1log1p_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_log1p_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1atan_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_atan_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1atan_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_atan_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1exp_1series_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_exp_series_basecase(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1exp_1series_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_exp_series_basecase(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1exp_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_exp_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1exp_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_exp_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1exp_1pi_1i_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_exp_pi_i_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1exp_1pi_1i_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_exp_pi_i_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sinh_1cosh_1series_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) (acb_srcptr)0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_sinh_cosh_series_basecase(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sinh_1cosh_1series_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_sinh_cosh_series_basecase(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sinh_1cosh_1series_1exponential(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) (acb_srcptr)0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_sinh_cosh_series_exponential(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sinh_1cosh_1series_1exponential(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_sinh_cosh_series_exponential(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sinh_1cosh_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) (acb_srcptr)0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_sinh_cosh_series(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sinh_1cosh_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_sinh_cosh_series(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sinh_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_sinh_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sinh_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_sinh_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1cosh_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_cosh_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1cosh_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_cosh_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sin_1cos_1series_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6, jint jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) 0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  int arg7 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  arg7 = (int)jarg7; 
+  _acb_poly_sin_cos_series_basecase(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sin_1cos_1series_1basecase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jint jarg6) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  int arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  arg6 = (int)jarg6; 
+  acb_poly_sin_cos_series_basecase(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sin_1cos_1series_1tangent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6, jint jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) (acb_srcptr)0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  int arg7 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  arg7 = (int)jarg7; 
+  _acb_poly_sin_cos_series_tangent(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sin_1cos_1series_1tangent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jint jarg6) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  int arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  arg6 = (int)jarg6; 
+  acb_poly_sin_cos_series_tangent(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sin_1cos_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) (acb_srcptr)0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_sin_cos_series(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sin_1cos_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_sin_cos_series(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sin_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_sin_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sin_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_sin_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1cos_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_cos_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1cos_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_cos_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sin_1cos_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_ptr arg2 = (acb_ptr) 0 ;
+  acb_srcptr arg3 = (acb_srcptr) (acb_srcptr)0 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_ptr *)&jarg2; 
+  arg3 = *(acb_srcptr *)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_sin_cos_pi_series(arg1,arg2,(acb_struct const *)arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sin_1cos_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_sin_cos_pi_series(arg1,arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sin_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_sin_pi_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sin_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_sin_pi_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1cos_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_cos_pi_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1cos_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_cos_pi_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1cot_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_cot_pi_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1cot_1pi_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_cot_pi_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1tan_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_tan_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1tan_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_tan_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1sinc_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_sinc_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1sinc_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_sinc_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1lambertw_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jint jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  fmpz_t arg4 ;
+  int arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  fmpz_t const *argp4 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(fmpz_t **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_t const");
+    return ;
+  }
+  arg4 = *argp4; 
+  arg5 = (int)jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_lambertw_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1lambertw_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jint jarg4, jlong jarg5, jlong jarg6) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  fmpz_t arg3 ;
+  int arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  fmpz_t const *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(fmpz_t **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null fmpz_t const");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = (int)jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  acb_poly_lambertw_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4,arg5,arg6);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1gamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_gamma_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1gamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_gamma_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1rgamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_rgamma_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1rgamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_rgamma_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1lgamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_lgamma_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1lgamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_lgamma_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1digamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_digamma_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1digamma_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_digamma_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1rising_1ui_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  ulong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  ulong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(ulong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_rising_ui_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5,arg6);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1rising_1ui_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  ulong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  ulong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(ulong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_rising_ui_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1pow_1acb_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_pow_acb_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5,arg6);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1pow_1acb_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_pow_acb_series(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1pow_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_pow_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1pow_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_poly_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_poly_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_pow_series(arg1,(acb_poly_struct const (*))arg2,(acb_poly_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1binomial_1pow_1acb_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_binomial_pow_acb_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5,arg6);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1acb_1pow_1cpx(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_acb_pow_cpx(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1acb_1invpow_1cpx(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_acb_invpow_cpx(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1mullow_1cpx(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_mullow_cpx(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5,arg6);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1powsum_1series_1naive(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_powsum_series_naive(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,(acb_struct const (*))arg4,arg5,arg6,arg7);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1powsum_1series_1naive_1threaded(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_powsum_series_naive_threaded(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,(acb_struct const (*))arg4,arg5,arg6,arg7);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1powsum_1one_1series_1sieved(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_powsum_one_series_sieved(arg1,(acb_struct const (*))arg2,arg3,arg4,arg5);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1em_1sum(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jint jarg4, jlong jarg5, jlong jarg6, jlong jarg7, jlong jarg8) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  int arg4 ;
+  ulong arg5 ;
+  ulong arg6 ;
+  slong arg7 ;
+  slong arg8 ;
+  ulong *argp5 ;
+  ulong *argp6 ;
+  slong *argp7 ;
+  slong *argp8 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = (int)jarg4; 
+  argp5 = *(ulong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(ulong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  argp8 = *(slong **)&jarg8; 
+  if (!argp8) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg8 = *argp8; 
+  _acb_poly_zeta_em_sum(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5,arg6,arg7,arg8);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1em_1choose_1param(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jobject jarg5_, jlong jarg6, jlong jarg7, jlong jarg8) {
+  mag_t arg1 ;
+  ulong *arg2 = (ulong *) 0 ;
+  ulong *arg3 = (ulong *) 0 ;
+  acb_struct *arg4 ;
+  acb_struct *arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong arg8 ;
+  mag_t *argp1 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  slong *argp8 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg4_;
+  (void)jarg5_;
+  argp1 = *(mag_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null mag_t");
+    return ;
+  }
+  arg1 = *argp1; 
+  arg2 = *(ulong **)&jarg2; 
+  arg3 = *(ulong **)&jarg3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  arg5 = *(acb_struct **)&jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  argp8 = *(slong **)&jarg8; 
+  if (!argp8) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg8 = *argp8; 
+  _acb_poly_zeta_em_choose_param(arg1,arg2,arg3,(acb_struct const (*))arg4,(acb_struct const (*))arg5,arg6,arg7,arg8);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1em_1bound1(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6, jlong jarg7) {
+  mag_t arg1 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  mag_t *argp1 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg2_;
+  (void)jarg3_;
+  argp1 = *(mag_t **)&jarg1; 
+  if (!argp1) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null mag_t");
+    return ;
+  }
+  arg1 = *argp1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_zeta_em_bound1(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5,arg6,arg7);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1em_1bound(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5, jlong jarg6, jlong jarg7) {
+  arb_ptr arg1 = (arb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  ulong arg4 ;
+  ulong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  ulong *argp4 ;
+  ulong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(arb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(ulong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(ulong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null ulong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_zeta_em_bound(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5,arg6,arg7);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1em_1tail_1naive(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_zeta_em_tail_naive(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1em_1tail_1bsplit(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  acb_srcptr arg4 = (acb_srcptr) 0 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = *(acb_srcptr *)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_zeta_em_tail_bsplit(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,(acb_struct const *)arg4,arg5,arg6,arg7);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1cpx_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jint jarg4, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  int arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = (int)jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_zeta_cpx_series(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5,arg6);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1zeta_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jint jarg5, jlong jarg6, jlong jarg7) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  int arg5 ;
+  slong arg6 ;
+  slong arg7 ;
+  slong *argp3 ;
+  slong *argp6 ;
+  slong *argp7 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  arg5 = (int)jarg5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  argp7 = *(slong **)&jarg7; 
+  if (!argp7) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg7 = *argp7; 
+  _acb_poly_zeta_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5,arg6,arg7);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1zeta_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jint jarg4, jlong jarg5, jlong jarg6) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  int arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = (int)jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  acb_poly_zeta_series(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1polylog_1cpx_1zeta(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_polylog_cpx_zeta(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1polylog_1cpx_1small(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_polylog_cpx_small(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1polylog_1cpx(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_polylog_cpx(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1polylog_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_polylog_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5,arg6);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1polylog_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_polylog_series(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1agm1_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_agm1_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1agm1_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_agm1_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1elliptic_1k_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_elliptic_k_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1elliptic_1k_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_elliptic_k_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1elliptic_1p_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  acb_struct *arg4 ;
+  slong arg5 ;
+  slong arg6 ;
+  slong *argp3 ;
+  slong *argp5 ;
+  slong *argp6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  arg4 = *(acb_struct **)&jarg4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  argp6 = *(slong **)&jarg6; 
+  if (!argp6) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg6 = *argp6; 
+  _acb_poly_elliptic_p_series(arg1,(acb_struct const *)arg2,arg3,(acb_struct const (*))arg4,arg5,arg6);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1elliptic_1p_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jlong jarg5) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  acb_struct *arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  acb_poly_elliptic_p_series(arg1,(acb_poly_struct const (*))arg2,(acb_struct const (*))arg3,arg4,arg5);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1poly_1erf_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jlong jarg5) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_srcptr arg2 = (acb_srcptr) 0 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong arg5 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  slong *argp5 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_srcptr *)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  argp5 = *(slong **)&jarg5; 
+  if (!argp5) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg5 = *argp5; 
+  _acb_poly_erf_series(arg1,(acb_struct const *)arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1poly_1erf_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
+  slong arg3 ;
+  slong arg4 ;
+  slong *argp3 ;
+  slong *argp4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
+  argp3 = *(slong **)&jarg3; 
+  if (!argp3) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg3 = *argp3; 
+  argp4 = *(slong **)&jarg4; 
+  if (!argp4) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null slong");
+    return ;
+  }
+  arg4 = *argp4; 
+  acb_poly_erf_series(arg1,(acb_poly_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1poly_1allocated_1bytes(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  acb_poly_struct *arg1 ;
+  slong result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  result = acb_poly_allocated_bytes((acb_poly_struct const (*))arg1);
+  {
+    slong * resultptr = (slong *) malloc(sizeof(slong));
+    memmove(resultptr, &result, sizeof(slong));
+    *(slong **)&jresult = resultptr;
+  }
+  
+  return jresult;
+}
+
+
 SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1powsum_1term(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jlong jarg4, jobject jarg4_, jlong jarg5, jint jarg6, jint jarg7, jlong jarg8, jlong jarg9) {
   acb_ptr arg1 = (acb_ptr) 0 ;
   arb_struct *arg2 ;
@@ -19179,35 +27968,25 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1dirichlet_1l_1series(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1l_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jint jarg5, jlong jarg6, jlong jarg7) {
-  acb_poly_t arg1 ;
-  acb_poly_t arg2 ;
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1l_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jint jarg5, jlong jarg6, jlong jarg7) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
   dirichlet_group_struct *arg3 ;
   dirichlet_char_struct *arg4 ;
   int arg5 ;
   slong arg6 ;
   slong arg7 ;
-  acb_poly_t *argp1 ;
-  acb_poly_t const *argp2 ;
   slong *argp6 ;
   slong *argp7 ;
   
   (void)jenv;
   (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
   (void)jarg3_;
   (void)jarg4_;
-  argp1 = *(acb_poly_t **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null acb_poly_t");
-    return ;
-  }
-  arg1 = *argp1; 
-  argp2 = *(acb_poly_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null acb_poly_t const");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
   arg3 = *(dirichlet_group_struct **)&jarg3; 
   arg4 = *(dirichlet_char_struct **)&jarg4; 
   arg5 = (int)jarg5; 
@@ -19223,7 +28002,9 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1l_1series(JNIEnv *
     return ;
   }
   arg7 = *argp7; 
-  acb_dirichlet_l_series(arg1,arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6,arg7);
+  acb_dirichlet_l_series(arg1,(acb_poly_struct const (*))arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6,arg7);
+  
+  
   
   
 }
@@ -19353,34 +28134,24 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1dirichlet_1hardy_1theta_1se
 }
 
 
-SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1theta_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
-  acb_poly_t arg1 ;
-  acb_poly_t arg2 ;
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1theta_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
   dirichlet_group_struct *arg3 ;
   dirichlet_char_struct *arg4 ;
   slong arg5 ;
   slong arg6 ;
-  acb_poly_t *argp1 ;
-  acb_poly_t const *argp2 ;
   slong *argp5 ;
   slong *argp6 ;
   
   (void)jenv;
   (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
   (void)jarg3_;
   (void)jarg4_;
-  argp1 = *(acb_poly_t **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null acb_poly_t");
-    return ;
-  }
-  arg1 = *argp1; 
-  argp2 = *(acb_poly_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null acb_poly_t const");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
   arg3 = *(dirichlet_group_struct **)&jarg3; 
   arg4 = *(dirichlet_char_struct **)&jarg4; 
   argp5 = *(slong **)&jarg5; 
@@ -19395,7 +28166,9 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1theta_1seri
     return ;
   }
   arg6 = *argp6; 
-  acb_dirichlet_hardy_theta_series(arg1,arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6);
+  acb_dirichlet_hardy_theta_series(arg1,(acb_poly_struct const (*))arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6);
+  
+  
   
   
 }
@@ -19447,34 +28220,24 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI__1acb_1dirichlet_1hardy_1z_1series
 }
 
 
-SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1z_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
-  acb_poly_t arg1 ;
-  acb_poly_t arg2 ;
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1z_1series(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jlong jarg5, jlong jarg6) {
+  acb_poly_struct *arg1 ;
+  acb_poly_struct *arg2 ;
   dirichlet_group_struct *arg3 ;
   dirichlet_char_struct *arg4 ;
   slong arg5 ;
   slong arg6 ;
-  acb_poly_t *argp1 ;
-  acb_poly_t const *argp2 ;
   slong *argp5 ;
   slong *argp6 ;
   
   (void)jenv;
   (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
   (void)jarg3_;
   (void)jarg4_;
-  argp1 = *(acb_poly_t **)&jarg1; 
-  if (!argp1) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null acb_poly_t");
-    return ;
-  }
-  arg1 = *argp1; 
-  argp2 = *(acb_poly_t **)&jarg2; 
-  if (!argp2) {
-    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null acb_poly_t const");
-    return ;
-  }
-  arg2 = *argp2; 
+  arg1 = *(acb_poly_struct **)&jarg1; 
+  arg2 = *(acb_poly_struct **)&jarg2; 
   arg3 = *(dirichlet_group_struct **)&jarg3; 
   arg4 = *(dirichlet_char_struct **)&jarg4; 
   argp5 = *(slong **)&jarg5; 
@@ -19489,7 +28252,9 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1z_1series(J
     return ;
   }
   arg6 = *argp6; 
-  acb_dirichlet_hardy_z_series(arg1,arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6);
+  acb_dirichlet_hardy_z_series(arg1,(acb_poly_struct const (*))arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6);
+  
+  
   
   
 }

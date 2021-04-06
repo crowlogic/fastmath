@@ -2431,6 +2431,1043 @@ public class arblib implements arblibConstants {
     return arblibJNI._acb_vec_estimate_allocated_bytes(SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
+  public static void acb_poly_init(acb_poly_struct poly) {
+    arblibJNI.acb_poly_init(acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void acb_poly_init2(acb_poly_struct poly, SWIGTYPE_p_slong len) {
+    arblibJNI.acb_poly_init2(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len));
+  }
+
+  public static void acb_poly_clear(acb_poly_struct poly) {
+    arblibJNI.acb_poly_clear(acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void acb_poly_fit_length(acb_poly_struct poly, SWIGTYPE_p_slong len) {
+    arblibJNI.acb_poly_fit_length(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len));
+  }
+
+  public static void _acb_poly_set_length(acb_poly_struct poly, SWIGTYPE_p_slong len) {
+    arblibJNI._acb_poly_set_length(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len));
+  }
+
+  public static void _acb_poly_normalise(acb_poly_struct poly) {
+    arblibJNI._acb_poly_normalise(acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void acb_poly_swap(acb_poly_struct poly1, acb_poly_struct poly2) {
+    arblibJNI.acb_poly_swap(acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2);
+  }
+
+  public static SWIGTYPE_p_slong acb_poly_length(acb_poly_struct poly) {
+    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_length(acb_poly_struct.getCPtr(poly), poly), true);
+  }
+
+  public static SWIGTYPE_p_slong acb_poly_degree(acb_poly_struct poly) {
+    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_degree(acb_poly_struct.getCPtr(poly), poly), true);
+  }
+
+  public static SWIGTYPE_p_slong acb_poly_valuation(acb_poly_struct poly) {
+    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_valuation(acb_poly_struct.getCPtr(poly), poly), true);
+  }
+
+  public static int acb_poly_is_zero(acb_poly_struct z) {
+    return arblibJNI.acb_poly_is_zero(acb_poly_struct.getCPtr(z), z);
+  }
+
+  public static int acb_poly_is_one(acb_poly_struct z) {
+    return arblibJNI.acb_poly_is_one(acb_poly_struct.getCPtr(z), z);
+  }
+
+  public static int acb_poly_is_x(acb_poly_struct z) {
+    return arblibJNI.acb_poly_is_x(acb_poly_struct.getCPtr(z), z);
+  }
+
+  public static void acb_poly_zero(acb_poly_struct poly) {
+    arblibJNI.acb_poly_zero(acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void acb_poly_one(acb_poly_struct poly) {
+    arblibJNI.acb_poly_one(acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void acb_poly_set_coeff_si(acb_poly_struct poly, SWIGTYPE_p_slong n, SWIGTYPE_p_slong x) {
+    arblibJNI.acb_poly_set_coeff_si(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(x));
+  }
+
+  public static void acb_poly_set_coeff_acb(acb_poly_struct poly, SWIGTYPE_p_slong n, acb_struct x) {
+    arblibJNI.acb_poly_set_coeff_acb(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n), acb_struct.getCPtr(x), x);
+  }
+
+  public static void acb_poly_get_coeff_acb(acb_struct x, acb_poly_struct poly, SWIGTYPE_p_slong n) {
+    arblibJNI.acb_poly_get_coeff_acb(acb_struct.getCPtr(x), x, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void _acb_poly_shift_right(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong n) {
+    arblibJNI._acb_poly_shift_right(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void acb_poly_shift_right(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong n) {
+    arblibJNI.acb_poly_shift_right(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void _acb_poly_shift_left(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong n) {
+    arblibJNI._acb_poly_shift_left(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void acb_poly_shift_left(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong n) {
+    arblibJNI.acb_poly_shift_left(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void acb_poly_truncate(acb_poly_struct poly, SWIGTYPE_p_slong newlen) {
+    arblibJNI.acb_poly_truncate(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(newlen));
+  }
+
+  public static void _acb_poly_majorant(arb_struct res, acb_struct vec, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_majorant(arb_struct.getCPtr(res), res, acb_struct.getCPtr(vec), vec, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_majorant(SWIGTYPE_p_arb_poly_t res, acb_poly_struct poly, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_majorant(SWIGTYPE_p_arb_poly_t.getCPtr(res), acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_fprintd(SWIGTYPE_p_FILE file, acb_poly_struct poly, SWIGTYPE_p_slong digits) {
+    arblibJNI.acb_poly_fprintd(SWIGTYPE_p_FILE.getCPtr(file), acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(digits));
+  }
+
+  public static void acb_poly_printd(acb_poly_struct poly, SWIGTYPE_p_slong digits) {
+    arblibJNI.acb_poly_printd(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(digits));
+  }
+
+  public static void _acb_poly_evaluate_horner(acb_struct res, acb_struct f, SWIGTYPE_p_slong len, acb_struct a, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate_horner(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate_horner(acb_struct res, acb_poly_struct f, acb_struct a, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate_horner(acb_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate_rectangular(acb_struct y, acb_struct poly, SWIGTYPE_p_slong len, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate_rectangular(acb_struct.getCPtr(y), y, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate_rectangular(acb_struct res, acb_poly_struct f, acb_struct a, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate_rectangular(acb_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate(acb_struct res, acb_struct f, SWIGTYPE_p_slong len, acb_struct a, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate(acb_struct res, acb_poly_struct f, acb_struct a, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate(acb_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate2_horner(acb_struct y, acb_struct z, acb_struct f, SWIGTYPE_p_slong len, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate2_horner(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate2_horner(acb_struct y, acb_struct z, acb_poly_struct f, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate2_horner(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate2_rectangular(acb_struct y, acb_struct z, acb_struct f, SWIGTYPE_p_slong len, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate2_rectangular(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate2_rectangular(acb_struct y, acb_struct z, acb_poly_struct f, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate2_rectangular(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate2(acb_struct y, acb_struct z, acb_struct f, SWIGTYPE_p_slong len, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate2(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate2(acb_struct y, acb_struct z, acb_poly_struct f, acb_struct x, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate2(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(x), x, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_derivative(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_derivative(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_derivative(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_derivative(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_integral(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_integral(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_integral(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_integral(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_borel_transform(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_borel_transform(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_borel_transform(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_borel_transform(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_inv_borel_transform(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_inv_borel_transform(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_inv_borel_transform(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_inv_borel_transform(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_binomial_transform_basecase(acb_struct b, acb_struct a, SWIGTYPE_p_slong alen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_binomial_transform_basecase(acb_struct.getCPtr(b), b, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(alen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_binomial_transform_basecase(acb_poly_struct b, acb_poly_struct a, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_binomial_transform_basecase(acb_poly_struct.getCPtr(b), b, acb_poly_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_binomial_transform_convolution(acb_struct b, acb_struct a, SWIGTYPE_p_slong alen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_binomial_transform_convolution(acb_struct.getCPtr(b), b, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(alen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_binomial_transform_convolution(acb_poly_struct b, acb_poly_struct a, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_binomial_transform_convolution(acb_poly_struct.getCPtr(b), b, acb_poly_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_binomial_transform(acb_struct b, acb_struct a, SWIGTYPE_p_slong alen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_binomial_transform(acb_struct.getCPtr(b), b, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(alen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_binomial_transform(acb_poly_struct b, acb_poly_struct a, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_binomial_transform(acb_poly_struct.getCPtr(b), b, acb_poly_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_set(acb_poly_struct dest, acb_poly_struct src) {
+    arblibJNI.acb_poly_set(acb_poly_struct.getCPtr(dest), dest, acb_poly_struct.getCPtr(src), src);
+  }
+
+  public static void acb_poly_set_round(acb_poly_struct dest, acb_poly_struct src, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_set_round(acb_poly_struct.getCPtr(dest), dest, acb_poly_struct.getCPtr(src), src, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_set_trunc(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong n) {
+    arblibJNI.acb_poly_set_trunc(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void acb_poly_set_trunc_round(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_set_trunc_round(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_set_arb_poly(acb_poly_struct poly, SWIGTYPE_p_arb_poly_t re) {
+    arblibJNI.acb_poly_set_arb_poly(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_arb_poly_t.getCPtr(re));
+  }
+
+  public static void acb_poly_set2_arb_poly(acb_poly_struct poly, SWIGTYPE_p_arb_poly_t re, SWIGTYPE_p_arb_poly_t im) {
+    arblibJNI.acb_poly_set2_arb_poly(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_arb_poly_t.getCPtr(re), SWIGTYPE_p_arb_poly_t.getCPtr(im));
+  }
+
+  public static void acb_poly_set_fmpq_poly(acb_poly_struct poly, SWIGTYPE_p_fmpq_poly_t re, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_set_fmpq_poly(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_fmpq_poly_t.getCPtr(re), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_set2_fmpq_poly(acb_poly_struct poly, SWIGTYPE_p_fmpq_poly_t re, SWIGTYPE_p_fmpq_poly_t im, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_set2_fmpq_poly(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_fmpq_poly_t.getCPtr(re), SWIGTYPE_p_fmpq_poly_t.getCPtr(im), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_set_fmpz_poly(acb_poly_struct poly, SWIGTYPE_p_fmpz_poly_t src, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_set_fmpz_poly(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_fmpz_poly_t.getCPtr(src), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_set2_fmpz_poly(acb_poly_struct poly, SWIGTYPE_p_fmpz_poly_t re, SWIGTYPE_p_fmpz_poly_t im, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_set2_fmpz_poly(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_fmpz_poly_t.getCPtr(re), SWIGTYPE_p_fmpz_poly_t.getCPtr(im), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static int acb_poly_get_unique_fmpz_poly(SWIGTYPE_p_fmpz_poly_t res, acb_poly_struct src) {
+    return arblibJNI.acb_poly_get_unique_fmpz_poly(SWIGTYPE_p_fmpz_poly_t.getCPtr(res), acb_poly_struct.getCPtr(src), src);
+  }
+
+  public static void acb_poly_set_acb(acb_poly_struct poly, acb_struct c) {
+    arblibJNI.acb_poly_set_acb(acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c);
+  }
+
+  public static void acb_poly_set_si(acb_poly_struct poly, SWIGTYPE_p_slong c) {
+    arblibJNI.acb_poly_set_si(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(c));
+  }
+
+  public static void acb_poly_randtest(acb_poly_struct poly, SWIGTYPE_p_flint_rand_t state, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec, SWIGTYPE_p_slong mag_bits) {
+    arblibJNI.acb_poly_randtest(acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_flint_rand_t.getCPtr(state), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec), SWIGTYPE_p_slong.getCPtr(mag_bits));
+  }
+
+  public static int acb_poly_equal(acb_poly_struct A, acb_poly_struct B) {
+    return arblibJNI.acb_poly_equal(acb_poly_struct.getCPtr(A), A, acb_poly_struct.getCPtr(B), B);
+  }
+
+  public static int acb_poly_contains_fmpz_poly(acb_poly_struct poly1, SWIGTYPE_p_fmpz_poly_t poly2) {
+    return arblibJNI.acb_poly_contains_fmpz_poly(acb_poly_struct.getCPtr(poly1), poly1, SWIGTYPE_p_fmpz_poly_t.getCPtr(poly2));
+  }
+
+  public static int acb_poly_contains_fmpq_poly(acb_poly_struct poly1, SWIGTYPE_p_fmpq_poly_t poly2) {
+    return arblibJNI.acb_poly_contains_fmpq_poly(acb_poly_struct.getCPtr(poly1), poly1, SWIGTYPE_p_fmpq_poly_t.getCPtr(poly2));
+  }
+
+  public static int _acb_poly_overlaps(acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2) {
+    return arblibJNI._acb_poly_overlaps(acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2));
+  }
+
+  public static int acb_poly_overlaps(acb_poly_struct poly1, acb_poly_struct poly2) {
+    return arblibJNI.acb_poly_overlaps(acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2);
+  }
+
+  public static int acb_poly_contains(acb_poly_struct poly1, acb_poly_struct poly2) {
+    return arblibJNI.acb_poly_contains(acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2);
+  }
+
+  public static int acb_poly_is_real(acb_poly_struct poly) {
+    return arblibJNI.acb_poly_is_real(acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void _acb_poly_add(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_add(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_add(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_add(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_add_si(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_add_si(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(c), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sub(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sub(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sub(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sub(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_add_series(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_add_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sub_series(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sub_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_neg(acb_poly_struct res, acb_poly_struct poly) {
+    arblibJNI.acb_poly_neg(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static void acb_poly_scalar_mul_2exp_si(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_slong c) {
+    arblibJNI.acb_poly_scalar_mul_2exp_si(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(c));
+  }
+
+  public static void acb_poly_scalar_mul(acb_poly_struct res, acb_poly_struct poly, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_scalar_mul(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_scalar_div(acb_poly_struct res, acb_poly_struct poly, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_scalar_div(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_mullow_classical(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_mullow_classical(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mullow_classical(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mullow_classical(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mullow_transpose(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mullow_transpose(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_mullow_transpose(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_mullow_transpose(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mullow_transpose_gauss(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mullow_transpose_gauss(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_mullow_transpose_gauss(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_mullow_transpose_gauss(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mullow(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mullow(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_mullow(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_mullow(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mul(acb_struct C, acb_struct A, SWIGTYPE_p_slong lenA, acb_struct B, SWIGTYPE_p_slong lenB, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mul(acb_struct.getCPtr(C), C, acb_struct.getCPtr(A), A, SWIGTYPE_p_slong.getCPtr(lenA), acb_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(lenB), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_mul(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_mul(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mul_monic(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mul_monic(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_inv_series(acb_struct Qinv, acb_struct Q, SWIGTYPE_p_slong Qlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_inv_series(acb_struct.getCPtr(Qinv), Qinv, acb_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(Qlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_inv_series(acb_poly_struct Qinv, acb_poly_struct Q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_inv_series(acb_poly_struct.getCPtr(Qinv), Qinv, acb_poly_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_div_series(acb_struct Q, acb_struct A, SWIGTYPE_p_slong Alen, acb_struct B, SWIGTYPE_p_slong Blen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_div_series(acb_struct.getCPtr(Q), Q, acb_struct.getCPtr(A), A, SWIGTYPE_p_slong.getCPtr(Alen), acb_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(Blen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_div_series(acb_poly_struct Q, acb_poly_struct A, acb_poly_struct B, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_div_series(acb_poly_struct.getCPtr(Q), Q, acb_poly_struct.getCPtr(A), A, acb_poly_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_reverse(acb_struct res, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong n) {
+    arblibJNI._acb_poly_reverse(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(n));
+  }
+
+  public static void _acb_poly_div(acb_struct Q, acb_struct A, SWIGTYPE_p_slong lenA, acb_struct B, SWIGTYPE_p_slong lenB, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_div(acb_struct.getCPtr(Q), Q, acb_struct.getCPtr(A), A, SWIGTYPE_p_slong.getCPtr(lenA), acb_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(lenB), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_divrem(acb_struct Q, acb_struct R, acb_struct A, SWIGTYPE_p_slong lenA, acb_struct B, SWIGTYPE_p_slong lenB, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_divrem(acb_struct.getCPtr(Q), Q, acb_struct.getCPtr(R), R, acb_struct.getCPtr(A), A, SWIGTYPE_p_slong.getCPtr(lenA), acb_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(lenB), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_rem(acb_struct R, acb_struct A, SWIGTYPE_p_slong lenA, acb_struct B, SWIGTYPE_p_slong lenB, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_rem(acb_struct.getCPtr(R), R, acb_struct.getCPtr(A), A, SWIGTYPE_p_slong.getCPtr(lenA), acb_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(lenB), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static int acb_poly_divrem(acb_poly_struct Q, acb_poly_struct R, acb_poly_struct A, acb_poly_struct B, SWIGTYPE_p_slong prec) {
+    return arblibJNI.acb_poly_divrem(acb_poly_struct.getCPtr(Q), Q, acb_poly_struct.getCPtr(R), R, acb_poly_struct.getCPtr(A), A, acb_poly_struct.getCPtr(B), B, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_div_root(acb_struct Q, acb_struct R, acb_struct A, SWIGTYPE_p_slong len, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_div_root(acb_struct.getCPtr(Q), Q, acb_struct.getCPtr(R), R, acb_struct.getCPtr(A), A, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_taylor_shift_horner(acb_struct poly, acb_struct c, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_taylor_shift_horner(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_taylor_shift_horner(acb_poly_struct g, acb_poly_struct f, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_taylor_shift_horner(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_taylor_shift_divconquer(acb_struct poly, acb_struct c, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_taylor_shift_divconquer(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_taylor_shift_divconquer(acb_poly_struct g, acb_poly_struct f, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_taylor_shift_divconquer(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_taylor_shift_convolution(acb_struct poly, acb_struct c, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_taylor_shift_convolution(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_taylor_shift_convolution(acb_poly_struct g, acb_poly_struct f, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_taylor_shift_convolution(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_taylor_shift(acb_struct poly, acb_struct c, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_taylor_shift(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_taylor_shift(acb_poly_struct g, acb_poly_struct f, acb_struct c, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_taylor_shift(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_compose(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_compose(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_compose(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_compose(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_compose_horner(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_compose_horner(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_compose_horner(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_compose_horner(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_compose_divconquer(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_compose_divconquer(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_compose_divconquer(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_compose_divconquer(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_compose_series_horner(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_compose_series_horner(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_compose_series_horner(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_compose_series_horner(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_compose_series_brent_kung(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_compose_series_brent_kung(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_compose_series_brent_kung(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_compose_series_brent_kung(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_compose_series(acb_struct res, acb_struct poly1, SWIGTYPE_p_slong len1, acb_struct poly2, SWIGTYPE_p_slong len2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_compose_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(poly1), poly1, SWIGTYPE_p_slong.getCPtr(len1), acb_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(len2), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_compose_series(acb_poly_struct res, acb_poly_struct poly1, acb_poly_struct poly2, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_compose_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly1), poly1, acb_poly_struct.getCPtr(poly2), poly2, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_revert_series_lagrange(acb_struct Qinv, acb_struct Q, SWIGTYPE_p_slong Qlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_revert_series_lagrange(acb_struct.getCPtr(Qinv), Qinv, acb_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(Qlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_revert_series_lagrange(acb_poly_struct Qinv, acb_poly_struct Q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_revert_series_lagrange(acb_poly_struct.getCPtr(Qinv), Qinv, acb_poly_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_revert_series_newton(acb_struct Qinv, acb_struct Q, SWIGTYPE_p_slong Qlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_revert_series_newton(acb_struct.getCPtr(Qinv), Qinv, acb_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(Qlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_revert_series_newton(acb_poly_struct Qinv, acb_poly_struct Q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_revert_series_newton(acb_poly_struct.getCPtr(Qinv), Qinv, acb_poly_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_revert_series_lagrange_fast(acb_struct Qinv, acb_struct Q, SWIGTYPE_p_slong Qlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_revert_series_lagrange_fast(acb_struct.getCPtr(Qinv), Qinv, acb_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(Qlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_revert_series_lagrange_fast(acb_poly_struct Qinv, acb_poly_struct Q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_revert_series_lagrange_fast(acb_poly_struct.getCPtr(Qinv), Qinv, acb_poly_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_revert_series(acb_struct Qinv, acb_struct Q, SWIGTYPE_p_slong Qlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_revert_series(acb_struct.getCPtr(Qinv), Qinv, acb_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(Qlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_revert_series(acb_poly_struct Qinv, acb_poly_struct Q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_revert_series(acb_poly_struct.getCPtr(Qinv), Qinv, acb_poly_struct.getCPtr(Q), Q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate_vec_fast_precomp(acb_struct vs, acb_struct poly, SWIGTYPE_p_slong plen, SWIGTYPE_p_p_acb_struct tree, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate_vec_fast_precomp(acb_struct.getCPtr(vs), vs, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(plen), SWIGTYPE_p_p_acb_struct.getCPtr(tree), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate_vec_fast(acb_struct ys, acb_struct poly, SWIGTYPE_p_slong plen, acb_struct xs, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate_vec_fast(acb_struct.getCPtr(ys), ys, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(plen), acb_struct.getCPtr(xs), xs, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate_vec_fast(acb_struct ys, acb_poly_struct poly, acb_struct xs, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate_vec_fast(acb_struct.getCPtr(ys), ys, acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_evaluate_vec_iter(acb_struct ys, acb_struct poly, SWIGTYPE_p_slong plen, acb_struct xs, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_evaluate_vec_iter(acb_struct.getCPtr(ys), ys, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(plen), acb_struct.getCPtr(xs), xs, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_evaluate_vec_iter(acb_struct ys, acb_poly_struct poly, acb_struct xs, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_evaluate_vec_iter(acb_struct.getCPtr(ys), ys, acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_interpolate_barycentric(acb_struct poly, acb_struct xs, acb_struct ys, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_interpolate_barycentric(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_interpolate_barycentric(acb_poly_struct poly, acb_struct xs, acb_struct ys, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_interpolate_barycentric(acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_interpolation_weights(acb_struct w, SWIGTYPE_p_p_acb_struct tree, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_interpolation_weights(acb_struct.getCPtr(w), w, SWIGTYPE_p_p_acb_struct.getCPtr(tree), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_interpolate_fast_precomp(acb_struct poly, acb_struct ys, SWIGTYPE_p_p_acb_struct tree, acb_struct weights, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_interpolate_fast_precomp(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_p_acb_struct.getCPtr(tree), acb_struct.getCPtr(weights), weights, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_interpolate_fast(acb_struct poly, acb_struct xs, acb_struct ys, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_interpolate_fast(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_interpolate_fast(acb_poly_struct poly, acb_struct xs, acb_struct ys, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_interpolate_fast(acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_interpolate_newton(acb_struct poly, acb_struct xs, acb_struct ys, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_interpolate_newton(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_interpolate_newton(acb_poly_struct poly, acb_struct xs, acb_struct ys, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_interpolate_newton(acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, acb_struct.getCPtr(ys), ys, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_product_roots(acb_struct poly, acb_struct xs, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_product_roots(acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_product_roots(acb_poly_struct poly, acb_struct xs, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_product_roots(acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(xs), xs, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static SWIGTYPE_p_p_acb_struct _acb_poly_tree_alloc(SWIGTYPE_p_slong len) {
+    long cPtr = arblibJNI._acb_poly_tree_alloc(SWIGTYPE_p_slong.getCPtr(len));
+    return (cPtr == 0) ? null : new SWIGTYPE_p_p_acb_struct(cPtr, false);
+  }
+
+  public static void _acb_poly_tree_free(SWIGTYPE_p_p_acb_struct tree, SWIGTYPE_p_slong len) {
+    arblibJNI._acb_poly_tree_free(SWIGTYPE_p_p_acb_struct.getCPtr(tree), SWIGTYPE_p_slong.getCPtr(len));
+  }
+
+  public static void _acb_poly_tree_build(SWIGTYPE_p_p_acb_struct tree, acb_struct roots, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_tree_build(SWIGTYPE_p_p_acb_struct.getCPtr(tree), acb_struct.getCPtr(roots), roots, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_root_inclusion(acb_struct r, acb_struct m, acb_struct poly, acb_struct polyder, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_root_inclusion(acb_struct.getCPtr(r), r, acb_struct.getCPtr(m), m, acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(polyder), polyder, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static SWIGTYPE_p_slong _acb_poly_validate_roots(acb_struct roots, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    return new SWIGTYPE_p_slong(arblibJNI._acb_poly_validate_roots(acb_struct.getCPtr(roots), roots, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec)), true);
+  }
+
+  public static void _acb_poly_refine_roots_durand_kerner(acb_struct roots, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_refine_roots_durand_kerner(acb_struct.getCPtr(roots), roots, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static SWIGTYPE_p_slong _acb_poly_find_roots(acb_struct roots, acb_struct poly, acb_struct initial, SWIGTYPE_p_slong len, SWIGTYPE_p_slong maxiter, SWIGTYPE_p_slong prec) {
+    return new SWIGTYPE_p_slong(arblibJNI._acb_poly_find_roots(acb_struct.getCPtr(roots), roots, acb_struct.getCPtr(poly), poly, acb_struct.getCPtr(initial), initial, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(maxiter), SWIGTYPE_p_slong.getCPtr(prec)), true);
+  }
+
+  public static SWIGTYPE_p_slong acb_poly_find_roots(acb_struct roots, acb_poly_struct poly, acb_struct initial, SWIGTYPE_p_slong maxiter, SWIGTYPE_p_slong prec) {
+    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_find_roots(acb_struct.getCPtr(roots), roots, acb_poly_struct.getCPtr(poly), poly, acb_struct.getCPtr(initial), initial, SWIGTYPE_p_slong.getCPtr(maxiter), SWIGTYPE_p_slong.getCPtr(prec)), true);
+  }
+
+  public static void _acb_poly_root_bound_fujiwara(SWIGTYPE_p_mag_t bound, acb_struct poly, SWIGTYPE_p_slong len) {
+    arblibJNI._acb_poly_root_bound_fujiwara(SWIGTYPE_p_mag_t.getCPtr(bound), acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len));
+  }
+
+  public static void acb_poly_root_bound_fujiwara(SWIGTYPE_p_mag_t bound, acb_poly_struct poly) {
+    arblibJNI.acb_poly_root_bound_fujiwara(SWIGTYPE_p_mag_t.getCPtr(bound), acb_poly_struct.getCPtr(poly), poly);
+  }
+
+  public static int _acb_poly_validate_real_roots(acb_struct roots, acb_struct poly, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    return arblibJNI._acb_poly_validate_real_roots(acb_struct.getCPtr(roots), roots, acb_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static int acb_poly_validate_real_roots(acb_struct roots, acb_poly_struct poly, SWIGTYPE_p_slong prec) {
+    return arblibJNI.acb_poly_validate_real_roots(acb_struct.getCPtr(roots), roots, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_pow_ui_trunc_binexp(acb_struct res, acb_struct f, SWIGTYPE_p_slong flen, SWIGTYPE_p_ulong exp, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_pow_ui_trunc_binexp(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), SWIGTYPE_p_ulong.getCPtr(exp), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_pow_ui_trunc_binexp(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_ulong exp, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_pow_ui_trunc_binexp(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_ulong.getCPtr(exp), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_pow_ui(acb_struct res, acb_struct f, SWIGTYPE_p_slong flen, SWIGTYPE_p_ulong exp, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_pow_ui(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), SWIGTYPE_p_ulong.getCPtr(exp), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_pow_ui(acb_poly_struct res, acb_poly_struct poly, SWIGTYPE_p_ulong exp, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_pow_ui(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(poly), poly, SWIGTYPE_p_ulong.getCPtr(exp), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_rsqrt_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_rsqrt_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_rsqrt_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_rsqrt_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sqrt_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sqrt_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sqrt_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sqrt_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_log_series(acb_struct res, acb_struct f, SWIGTYPE_p_slong flen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_log_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_log_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_log_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_log1p_series(acb_struct res, acb_struct f, SWIGTYPE_p_slong flen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_log1p_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_log1p_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_log1p_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_atan_series(acb_struct res, acb_struct f, SWIGTYPE_p_slong flen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_atan_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_atan_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_atan_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_exp_series_basecase(acb_struct f, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_exp_series_basecase(acb_struct.getCPtr(f), f, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_exp_series_basecase(acb_poly_struct f, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_exp_series_basecase(acb_poly_struct.getCPtr(f), f, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_exp_series(acb_struct f, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_exp_series(acb_struct.getCPtr(f), f, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_exp_series(acb_poly_struct f, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_exp_series(acb_poly_struct.getCPtr(f), f, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_exp_pi_i_series(acb_struct f, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_exp_pi_i_series(acb_struct.getCPtr(f), f, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_exp_pi_i_series(acb_poly_struct f, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_exp_pi_i_series(acb_poly_struct.getCPtr(f), f, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sinh_cosh_series_basecase(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sinh_cosh_series_basecase(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sinh_cosh_series_basecase(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sinh_cosh_series_basecase(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sinh_cosh_series_exponential(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sinh_cosh_series_exponential(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sinh_cosh_series_exponential(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sinh_cosh_series_exponential(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sinh_cosh_series(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sinh_cosh_series(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sinh_cosh_series(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sinh_cosh_series(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sinh_series(acb_struct s, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sinh_series(acb_struct.getCPtr(s), s, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sinh_series(acb_poly_struct s, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sinh_series(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_cosh_series(acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_cosh_series(acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_cosh_series(acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_cosh_series(acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sin_cos_series_basecase(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec, int times_pi) {
+    arblibJNI._acb_poly_sin_cos_series_basecase(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec), times_pi);
+  }
+
+  public static void acb_poly_sin_cos_series_basecase(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec, int times_pi) {
+    arblibJNI.acb_poly_sin_cos_series_basecase(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec), times_pi);
+  }
+
+  public static void _acb_poly_sin_cos_series_tangent(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec, int times_pi) {
+    arblibJNI._acb_poly_sin_cos_series_tangent(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec), times_pi);
+  }
+
+  public static void acb_poly_sin_cos_series_tangent(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec, int times_pi) {
+    arblibJNI.acb_poly_sin_cos_series_tangent(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec), times_pi);
+  }
+
+  public static void _acb_poly_sin_cos_series(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sin_cos_series(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sin_cos_series(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sin_cos_series(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sin_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sin_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sin_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sin_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_cos_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_cos_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_cos_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_cos_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sin_cos_pi_series(acb_struct s, acb_struct c, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sin_cos_pi_series(acb_struct.getCPtr(s), s, acb_struct.getCPtr(c), c, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sin_cos_pi_series(acb_poly_struct s, acb_poly_struct c, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sin_cos_pi_series(acb_poly_struct.getCPtr(s), s, acb_poly_struct.getCPtr(c), c, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sin_pi_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sin_pi_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sin_pi_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sin_pi_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_cos_pi_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_cos_pi_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_cos_pi_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_cos_pi_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_cot_pi_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_cot_pi_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_cot_pi_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_cot_pi_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_tan_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_tan_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_tan_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_tan_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_sinc_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_sinc_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_sinc_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_sinc_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_lambertw_series(acb_struct res, acb_struct z, SWIGTYPE_p_slong zlen, SWIGTYPE_p_fmpz_t k, int flags, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_lambertw_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(zlen), SWIGTYPE_p_fmpz_t.getCPtr(k), flags, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_lambertw_series(acb_poly_struct res, acb_poly_struct z, SWIGTYPE_p_fmpz_t k, int flags, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_lambertw_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(z), z, SWIGTYPE_p_fmpz_t.getCPtr(k), flags, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_gamma_series(acb_struct res, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_gamma_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_gamma_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_gamma_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_rgamma_series(acb_struct res, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_rgamma_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_rgamma_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_rgamma_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_lgamma_series(acb_struct res, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_lgamma_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_lgamma_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_lgamma_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_digamma_series(acb_struct res, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_digamma_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_digamma_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_digamma_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_rising_ui_series(acb_struct res, acb_struct f, SWIGTYPE_p_slong flen, SWIGTYPE_p_ulong r, SWIGTYPE_p_slong trunc, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_rising_ui_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), SWIGTYPE_p_ulong.getCPtr(r), SWIGTYPE_p_slong.getCPtr(trunc), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_rising_ui_series(acb_poly_struct res, acb_poly_struct f, SWIGTYPE_p_ulong r, SWIGTYPE_p_slong trunc, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_rising_ui_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, SWIGTYPE_p_ulong.getCPtr(r), SWIGTYPE_p_slong.getCPtr(trunc), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_pow_acb_series(acb_struct h, acb_struct f, SWIGTYPE_p_slong flen, acb_struct g, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_pow_acb_series(acb_struct.getCPtr(h), h, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), acb_struct.getCPtr(g), g, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_pow_acb_series(acb_poly_struct h, acb_poly_struct f, acb_struct g, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_pow_acb_series(acb_poly_struct.getCPtr(h), h, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(g), g, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_pow_series(acb_struct h, acb_struct f, SWIGTYPE_p_slong flen, acb_struct g, SWIGTYPE_p_slong glen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_pow_series(acb_struct.getCPtr(h), h, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), acb_struct.getCPtr(g), g, SWIGTYPE_p_slong.getCPtr(glen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_pow_series(acb_poly_struct h, acb_poly_struct f, acb_poly_struct g, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_pow_series(acb_poly_struct.getCPtr(h), h, acb_poly_struct.getCPtr(f), f, acb_poly_struct.getCPtr(g), g, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_binomial_pow_acb_series(acb_struct h, acb_struct f, SWIGTYPE_p_slong flen, acb_struct g, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_binomial_pow_acb_series(acb_struct.getCPtr(h), h, acb_struct.getCPtr(f), f, SWIGTYPE_p_slong.getCPtr(flen), acb_struct.getCPtr(g), g, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_acb_pow_cpx(acb_struct w, acb_struct a, acb_struct b, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_acb_pow_cpx(acb_struct.getCPtr(w), w, acb_struct.getCPtr(a), a, acb_struct.getCPtr(b), b, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_acb_invpow_cpx(acb_struct res, acb_struct N, acb_struct c, SWIGTYPE_p_slong trunc, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_acb_invpow_cpx(acb_struct.getCPtr(res), res, acb_struct.getCPtr(N), N, acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(trunc), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_mullow_cpx(acb_struct res, acb_struct src, SWIGTYPE_p_slong len, acb_struct c, SWIGTYPE_p_slong trunc, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_mullow_cpx(acb_struct.getCPtr(res), res, acb_struct.getCPtr(src), src, SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(c), c, SWIGTYPE_p_slong.getCPtr(trunc), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_powsum_series_naive(acb_struct z, acb_struct s, acb_struct a, acb_struct q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_powsum_series_naive(acb_struct.getCPtr(z), z, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, acb_struct.getCPtr(q), q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_powsum_series_naive_threaded(acb_struct z, acb_struct s, acb_struct a, acb_struct q, SWIGTYPE_p_slong n, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_powsum_series_naive_threaded(acb_struct.getCPtr(z), z, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, acb_struct.getCPtr(q), q, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_powsum_one_series_sieved(acb_struct z, acb_struct s, SWIGTYPE_p_slong n, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_powsum_one_series_sieved(acb_struct.getCPtr(z), z, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_zeta_em_sum(acb_struct z, acb_struct s, acb_struct a, int deflate, SWIGTYPE_p_ulong N, SWIGTYPE_p_ulong M, SWIGTYPE_p_slong d, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_zeta_em_sum(acb_struct.getCPtr(z), z, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, deflate, SWIGTYPE_p_ulong.getCPtr(N), SWIGTYPE_p_ulong.getCPtr(M), SWIGTYPE_p_slong.getCPtr(d), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_zeta_em_choose_param(SWIGTYPE_p_mag_t bound, SWIGTYPE_p_ulong N, SWIGTYPE_p_ulong M, acb_struct s, acb_struct a, SWIGTYPE_p_slong d, SWIGTYPE_p_slong target, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_zeta_em_choose_param(SWIGTYPE_p_mag_t.getCPtr(bound), SWIGTYPE_p_ulong.getCPtr(N), SWIGTYPE_p_ulong.getCPtr(M), acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(d), SWIGTYPE_p_slong.getCPtr(target), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_zeta_em_bound1(SWIGTYPE_p_mag_t bound, acb_struct s, acb_struct a, SWIGTYPE_p_slong N, SWIGTYPE_p_slong M, SWIGTYPE_p_slong d, SWIGTYPE_p_slong wp) {
+    arblibJNI._acb_poly_zeta_em_bound1(SWIGTYPE_p_mag_t.getCPtr(bound), acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, SWIGTYPE_p_slong.getCPtr(N), SWIGTYPE_p_slong.getCPtr(M), SWIGTYPE_p_slong.getCPtr(d), SWIGTYPE_p_slong.getCPtr(wp));
+  }
+
+  public static void _acb_poly_zeta_em_bound(arb_struct vec, acb_struct s, acb_struct a, SWIGTYPE_p_ulong N, SWIGTYPE_p_ulong M, SWIGTYPE_p_slong d, SWIGTYPE_p_slong wp) {
+    arblibJNI._acb_poly_zeta_em_bound(arb_struct.getCPtr(vec), vec, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, SWIGTYPE_p_ulong.getCPtr(N), SWIGTYPE_p_ulong.getCPtr(M), SWIGTYPE_p_slong.getCPtr(d), SWIGTYPE_p_slong.getCPtr(wp));
+  }
+
+  public static void _acb_poly_zeta_em_tail_naive(acb_struct sum, acb_struct s, acb_struct Na, acb_struct Nasx, SWIGTYPE_p_slong M, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_zeta_em_tail_naive(acb_struct.getCPtr(sum), sum, acb_struct.getCPtr(s), s, acb_struct.getCPtr(Na), Na, acb_struct.getCPtr(Nasx), Nasx, SWIGTYPE_p_slong.getCPtr(M), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_zeta_em_tail_bsplit(acb_struct z, acb_struct s, acb_struct Na, acb_struct Nasx, SWIGTYPE_p_slong M, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_zeta_em_tail_bsplit(acb_struct.getCPtr(z), z, acb_struct.getCPtr(s), s, acb_struct.getCPtr(Na), Na, acb_struct.getCPtr(Nasx), Nasx, SWIGTYPE_p_slong.getCPtr(M), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_zeta_cpx_series(acb_struct z, acb_struct s, acb_struct a, int deflate, SWIGTYPE_p_slong d, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_zeta_cpx_series(acb_struct.getCPtr(z), z, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, deflate, SWIGTYPE_p_slong.getCPtr(d), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_zeta_series(acb_struct res, acb_struct h, SWIGTYPE_p_slong hlen, acb_struct a, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_zeta_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), acb_struct.getCPtr(a), a, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_zeta_series(acb_poly_struct res, acb_poly_struct f, acb_struct a, int deflate, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_zeta_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(f), f, acb_struct.getCPtr(a), a, deflate, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_polylog_cpx_zeta(acb_struct w, acb_struct s, acb_struct z, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_polylog_cpx_zeta(acb_struct.getCPtr(w), w, acb_struct.getCPtr(s), s, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_polylog_cpx_small(acb_struct w, acb_struct s, acb_struct z, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_polylog_cpx_small(acb_struct.getCPtr(w), w, acb_struct.getCPtr(s), s, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_polylog_cpx(acb_struct w, acb_struct s, acb_struct z, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_polylog_cpx(acb_struct.getCPtr(w), w, acb_struct.getCPtr(s), s, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_polylog_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, acb_struct z, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_polylog_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_polylog_series(acb_poly_struct res, acb_poly_struct s, acb_struct z, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_polylog_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(s), s, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_agm1_series(acb_struct res, acb_struct z, SWIGTYPE_p_slong zlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_agm1_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(zlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_agm1_series(acb_poly_struct res, acb_poly_struct z, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_agm1_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_elliptic_k_series(acb_struct res, acb_struct z, SWIGTYPE_p_slong zlen, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_elliptic_k_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(zlen), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_elliptic_k_series(acb_poly_struct res, acb_poly_struct z, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_elliptic_k_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_elliptic_p_series(acb_struct res, acb_struct z, SWIGTYPE_p_slong zlen, acb_struct tau, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_elliptic_p_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(zlen), acb_struct.getCPtr(tau), tau, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_elliptic_p_series(acb_poly_struct res, acb_poly_struct z, acb_struct tau, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_elliptic_p_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(z), z, acb_struct.getCPtr(tau), tau, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void _acb_poly_erf_series(acb_struct g, acb_struct h, SWIGTYPE_p_slong hlen, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_poly_erf_series(acb_struct.getCPtr(g), g, acb_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(hlen), SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static void acb_poly_erf_series(acb_poly_struct g, acb_poly_struct h, SWIGTYPE_p_slong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_poly_erf_series(acb_poly_struct.getCPtr(g), g, acb_poly_struct.getCPtr(h), h, SWIGTYPE_p_slong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  }
+
+  public static SWIGTYPE_p_slong acb_poly_allocated_bytes(acb_poly_struct x) {
+    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_allocated_bytes(acb_poly_struct.getCPtr(x), x), true);
+  }
+
   public static void acb_dirichlet_powsum_term(acb_struct res, arb_struct log_prev, SWIGTYPE_p_ulong prev, acb_struct s, SWIGTYPE_p_ulong k, int integer, int critical_line, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
     arblibJNI.acb_dirichlet_powsum_term(acb_struct.getCPtr(res), res, arb_struct.getCPtr(log_prev), log_prev, SWIGTYPE_p_ulong.getCPtr(prev), acb_struct.getCPtr(s), s, SWIGTYPE_p_ulong.getCPtr(k), integer, critical_line, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
@@ -2675,8 +3712,8 @@ public class arblib implements arblibConstants {
     arblibJNI._acb_dirichlet_l_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, dirichlet_group_struct G, dirichlet_char_struct chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l_series(acb_poly_struct res, acb_poly_struct s, dirichlet_group_struct G, dirichlet_char_struct chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(s), s, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void acb_dirichlet_hardy_theta(acb_struct res, acb_struct t, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
@@ -2691,16 +3728,16 @@ public class arblib implements arblibConstants {
     arblibJNI._acb_dirichlet_hardy_theta_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_hardy_theta_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_theta_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_theta_series(acb_poly_struct res, acb_poly_struct s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_hardy_theta_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(s), s, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void _acb_dirichlet_hardy_z_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
     arblibJNI._acb_dirichlet_hardy_z_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_hardy_z_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_z_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_z_series(acb_poly_struct res, acb_poly_struct s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_hardy_z_series(acb_poly_struct.getCPtr(res), res, acb_poly_struct.getCPtr(s), s, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void acb_dirichlet_gram_point(arb_struct res, SWIGTYPE_p_fmpz_t n, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
