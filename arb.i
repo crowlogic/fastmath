@@ -1,5 +1,7 @@
 %module arblib
 
+%typemap(in) slong = long;
+
 #define TLS_PREFIX
 #define FLINT_DLL
 #define ARB_DLL
