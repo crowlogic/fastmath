@@ -705,8 +705,8 @@ public class arblibJNI {
   public final static native long acb_dirichlet_roots_struct_size_get(long jarg1, acb_dirichlet_roots_struct jarg1_);
   public final static native void acb_dirichlet_roots_struct_depth_set(long jarg1, acb_dirichlet_roots_struct jarg1_, long jarg2);
   public final static native long acb_dirichlet_roots_struct_depth_get(long jarg1, acb_dirichlet_roots_struct jarg1_);
-  public final static native void acb_dirichlet_roots_struct_Z_set(long jarg1, acb_dirichlet_roots_struct jarg1_, long jarg2);
-  public final static native long acb_dirichlet_roots_struct_Z_get(long jarg1, acb_dirichlet_roots_struct jarg1_);
+  public final static native void acb_dirichlet_roots_struct_Zptr_set(long jarg1, acb_dirichlet_roots_struct jarg1_, long jarg2);
+  public final static native long acb_dirichlet_roots_struct_Zptr_get(long jarg1, acb_dirichlet_roots_struct jarg1_);
   public final static native void acb_dirichlet_roots_struct_use_pow_set(long jarg1, acb_dirichlet_roots_struct jarg1_, int jarg2);
   public final static native int acb_dirichlet_roots_struct_use_pow_get(long jarg1, acb_dirichlet_roots_struct jarg1_);
   public final static native long new_acb_dirichlet_roots_struct();

@@ -61,12 +61,6 @@ public class acb_dirichlet_roots_struct {
     return (cPtr == 0) ? null : new acb_struct(cPtr, false);
   }
 
-//
-//  public SWIGTYPE_p_p_acb_struct getZ() {
-//    long cPtr = arblibJNI.acb_dirichlet_roots_struct_Z_get(swigCPtr, this);
-//    return (cPtr == 0) ? null : new SWIGTYPE_p_p_acb_struct(cPtr, false);
-//  }
-
   public void setSize(SWIGTYPE_p_slong value) {
     arblibJNI.acb_dirichlet_roots_struct_size_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
   }
@@ -83,8 +77,13 @@ public class acb_dirichlet_roots_struct {
     return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_roots_struct_depth_get(swigCPtr, this), true);
   }
 
-  public void setZ(SWIGTYPE_p_p_acb_struct value) {
-    arblibJNI.acb_dirichlet_roots_struct_Z_set(swigCPtr, this, SWIGTYPE_p_p_acb_struct.getCPtr(value));
+  public void setZptr(SWIGTYPE_p_p_acb_struct value) {
+    arblibJNI.acb_dirichlet_roots_struct_Zptr_set(swigCPtr, this, SWIGTYPE_p_p_acb_struct.getCPtr(value));
+  }
+
+  public SWIGTYPE_p_p_acb_struct getZptr() {
+    long cPtr = arblibJNI.acb_dirichlet_roots_struct_Zptr_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_p_acb_struct(cPtr, false);
   }
 
   public void setUse_pow(int value) {

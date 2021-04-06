@@ -17956,7 +17956,7 @@ SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1de
 }
 
 
-SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1Z_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1Zptr_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   acb_dirichlet_roots_struct *arg1 = (acb_dirichlet_roots_struct *) 0 ;
   acb_ptr *arg2 = (acb_ptr *) 0 ;
   
@@ -17965,11 +17965,11 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1Z_1
   (void)jarg1_;
   arg1 = *(acb_dirichlet_roots_struct **)&jarg1; 
   arg2 = *(acb_ptr **)&jarg2; 
-  if (arg1) (arg1)->Z = arg2;
+  if (arg1) (arg1)->Zptr = arg2;
 }
 
 
-SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1Z_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1Zptr_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   acb_dirichlet_roots_struct *arg1 = (acb_dirichlet_roots_struct *) 0 ;
   acb_ptr *result = 0 ;
@@ -17978,7 +17978,7 @@ SWIGEXPORT jlong JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1roots_1struct_1Z_
   (void)jcls;
   (void)jarg1_;
   arg1 = *(acb_dirichlet_roots_struct **)&jarg1; 
-  result = (acb_ptr *) ((arg1)->Z);
+  result = (acb_ptr *) ((arg1)->Zptr);
   *(acb_ptr **)&jresult = result; 
   return jresult;
 }
