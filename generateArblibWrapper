@@ -1,0 +1,1 @@
+swig -java -package arblib -outdir src/arblib arb.i
