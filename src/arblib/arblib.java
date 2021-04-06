@@ -2527,12 +2527,12 @@ public class arblib implements arblibConstants {
     arblibJNI.acb_dirichlet_xi(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_pairing(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_ulong m, SWIGTYPE_p_ulong n, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_pairing(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_ulong.getCPtr(m), SWIGTYPE_p_ulong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_pairing(acb_struct res, dirichlet_group_struct G, SWIGTYPE_p_ulong m, SWIGTYPE_p_ulong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_pairing(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(m), SWIGTYPE_p_ulong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_pairing_char(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t a, SWIGTYPE_p_dirichlet_char_t b, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_pairing_char(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(a), SWIGTYPE_p_dirichlet_char_t.getCPtr(b), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_pairing_char(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct a, dirichlet_char_struct b, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_pairing_char(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(a), a, dirichlet_char_struct.getCPtr(b), b, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void acb_dirichlet_roots_init(acb_dirichlet_roots_struct t, SWIGTYPE_p_ulong order, SWIGTYPE_p_slong num, SWIGTYPE_p_slong prec) {
@@ -2547,12 +2547,12 @@ public class arblib implements arblibConstants {
     arblibJNI.acb_dirichlet_root(acb_struct.getCPtr(z), z, acb_dirichlet_roots_struct.getCPtr(t), t, SWIGTYPE_p_ulong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_chi(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_ulong n, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_chi(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_ulong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_chi(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_ulong n, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_chi(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_ulong.getCPtr(n), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_chi_vec(acb_struct v, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong nv, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_chi_vec(acb_struct.getCPtr(v), v, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(nv), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_chi_vec(acb_struct v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong nv, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_chi_vec(acb_struct.getCPtr(v), v, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(nv), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void acb_dirichlet_arb_quadratic_powers(arb_struct v, SWIGTYPE_p_slong nv, arb_struct x, SWIGTYPE_p_slong prec) {
@@ -2587,124 +2587,124 @@ public class arblib implements arblibConstants {
     arblibJNI._acb_dirichlet_theta_argument_at_arb(arb_struct.getCPtr(xt), xt, SWIGTYPE_p_ulong.getCPtr(q), arb_struct.getCPtr(t), t, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_theta_arb(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, arb_struct t, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_theta_arb(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), arb_struct.getCPtr(t), t, SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_theta_arb(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, arb_struct t, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_theta_arb(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, arb_struct.getCPtr(t), t, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_ui_theta_arb(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_ulong a, arb_struct t, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_ui_theta_arb(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_ulong.getCPtr(a), arb_struct.getCPtr(t), t, SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_ui_theta_arb(acb_struct res, dirichlet_group_struct G, SWIGTYPE_p_ulong a, arb_struct t, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_ui_theta_arb(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(a), arb_struct.getCPtr(t), t, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_gauss_sum_naive(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_gauss_sum_naive(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_gauss_sum_naive(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_gauss_sum_naive(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_gauss_sum_factor(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_gauss_sum_factor(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_gauss_sum_factor(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_gauss_sum_factor(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_gauss_sum_order2(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_gauss_sum_order2(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_gauss_sum_order2(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_gauss_sum_order2(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_gauss_sum_theta(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_gauss_sum_theta(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_gauss_sum_theta(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_gauss_sum_theta(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_gauss_sum(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_gauss_sum(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_gauss_sum(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_gauss_sum(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_root_number_theta(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_root_number_theta(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_root_number_theta(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_root_number_theta(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_root_number(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_root_number(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_root_number(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_root_number(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void acb_dirichlet_si_poly_evaluate(acb_struct res, SWIGTYPE_p_slong v, SWIGTYPE_p_slong len, acb_struct z, SWIGTYPE_p_slong prec) {
     arblibJNI.acb_dirichlet_si_poly_evaluate(acb_struct.getCPtr(res), res, SWIGTYPE_p_slong.getCPtr(v), SWIGTYPE_p_slong.getCPtr(len), acb_struct.getCPtr(z), z, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_jacobi_sum_naive(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi1, SWIGTYPE_p_dirichlet_char_t chi2, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_jacobi_sum_naive(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi1), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi2), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_jacobi_sum_naive(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi1, dirichlet_char_struct chi2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_jacobi_sum_naive(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi1), chi1, dirichlet_char_struct.getCPtr(chi2), chi2, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static SWIGTYPE_p_ulong jacobi_one_prime(SWIGTYPE_p_ulong p, SWIGTYPE_p_ulong e, SWIGTYPE_p_ulong pe, SWIGTYPE_p_ulong cond) {
     return new SWIGTYPE_p_ulong(arblibJNI.jacobi_one_prime(SWIGTYPE_p_ulong.getCPtr(p), SWIGTYPE_p_ulong.getCPtr(e), SWIGTYPE_p_ulong.getCPtr(pe), SWIGTYPE_p_ulong.getCPtr(cond)), true);
   }
 
-  public static void acb_dirichlet_jacobi_sum_factor(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi1, SWIGTYPE_p_dirichlet_char_t chi2, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_jacobi_sum_factor(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi1), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi2), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_jacobi_sum_factor(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi1, dirichlet_char_struct chi2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_jacobi_sum_factor(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi1), chi1, dirichlet_char_struct.getCPtr(chi2), chi2, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_jacobi_sum_gauss(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi1, SWIGTYPE_p_dirichlet_char_t chi2, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_jacobi_sum_gauss(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi1), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi2), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_jacobi_sum_gauss(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi1, dirichlet_char_struct chi2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_jacobi_sum_gauss(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi1), chi1, dirichlet_char_struct.getCPtr(chi2), chi2, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_jacobi_sum(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi1, SWIGTYPE_p_dirichlet_char_t chi2, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_jacobi_sum(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi1), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi2), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_jacobi_sum(acb_struct res, dirichlet_group_struct G, dirichlet_char_struct chi1, dirichlet_char_struct chi2, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_jacobi_sum(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi1), chi1, dirichlet_char_struct.getCPtr(chi2), chi2, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_jacobi_sum_ui(acb_struct res, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_ulong a, SWIGTYPE_p_ulong b, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_jacobi_sum_ui(acb_struct.getCPtr(res), res, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_ulong.getCPtr(a), SWIGTYPE_p_ulong.getCPtr(b), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_jacobi_sum_ui(acb_struct res, dirichlet_group_struct G, SWIGTYPE_p_ulong a, SWIGTYPE_p_ulong b, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_jacobi_sum_ui(acb_struct.getCPtr(res), res, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(a), SWIGTYPE_p_ulong.getCPtr(b), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l_euler_product(acb_struct res, acb_struct s, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l_euler_product(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l_euler_product(acb_struct res, acb_struct s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l_euler_product(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l_hurwitz(acb_struct res, acb_struct s, acb_dirichlet_hurwitz_precomp_struct precomp, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l_hurwitz(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, acb_dirichlet_hurwitz_precomp_struct.getCPtr(precomp), precomp, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l_hurwitz(acb_struct res, acb_struct s, acb_dirichlet_hurwitz_precomp_struct precomp, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l_hurwitz(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, acb_dirichlet_hurwitz_precomp_struct.getCPtr(precomp), precomp, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l(acb_struct res, acb_struct s, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l(acb_struct res, acb_struct s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l_vec_hurwitz(acb_struct res, acb_struct s, acb_dirichlet_hurwitz_precomp_struct precomp, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l_vec_hurwitz(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, acb_dirichlet_hurwitz_precomp_struct.getCPtr(precomp), precomp, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l_vec_hurwitz(acb_struct res, acb_struct s, acb_dirichlet_hurwitz_precomp_struct precomp, dirichlet_group_struct G, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l_vec_hurwitz(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, acb_dirichlet_hurwitz_precomp_struct.getCPtr(precomp), precomp, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l_jet(acb_struct res, acb_struct s, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l_jet(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l_jet(acb_struct res, acb_struct s, dirichlet_group_struct G, dirichlet_char_struct chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l_jet(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void _acb_dirichlet_l_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI._acb_dirichlet_l_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void _acb_dirichlet_l_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, dirichlet_group_struct G, dirichlet_char_struct chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_dirichlet_l_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_l_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_l_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_l_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, dirichlet_group_struct G, dirichlet_char_struct chi, int deflate, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_l_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, deflate, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_hardy_theta(acb_struct res, acb_struct t, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_theta(acb_struct.getCPtr(res), res, acb_struct.getCPtr(t), t, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_theta(acb_struct res, acb_struct t, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_hardy_theta(acb_struct.getCPtr(res), res, acb_struct.getCPtr(t), t, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_hardy_z(acb_struct res, acb_struct t, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_z(acb_struct.getCPtr(res), res, acb_struct.getCPtr(t), t, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_z(acb_struct res, acb_struct t, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_hardy_z(acb_struct.getCPtr(res), res, acb_struct.getCPtr(t), t, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void _acb_dirichlet_hardy_theta_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI._acb_dirichlet_hardy_theta_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void _acb_dirichlet_hardy_theta_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_dirichlet_hardy_theta_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_hardy_theta_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_theta_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_theta_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_hardy_theta_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void _acb_dirichlet_hardy_z_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI._acb_dirichlet_hardy_z_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void _acb_dirichlet_hardy_z_series(acb_struct res, acb_struct s, SWIGTYPE_p_slong slen, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI._acb_dirichlet_hardy_z_series(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, SWIGTYPE_p_slong.getCPtr(slen), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_hardy_z_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_z_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_z_series(SWIGTYPE_p_acb_poly_t res, SWIGTYPE_p_acb_poly_t s, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_hardy_z_series(SWIGTYPE_p_acb_poly_t.getCPtr(res), SWIGTYPE_p_acb_poly_t.getCPtr(s), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_gram_point(arb_struct res, SWIGTYPE_p_fmpz_t n, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_gram_point(arb_struct.getCPtr(res), res, SWIGTYPE_p_fmpz_t.getCPtr(n), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_gram_point(arb_struct res, SWIGTYPE_p_fmpz_t n, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_gram_point(arb_struct.getCPtr(res), res, SWIGTYPE_p_fmpz_t.getCPtr(n), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static SWIGTYPE_p_ulong acb_dirichlet_turing_method_bound(SWIGTYPE_p_fmpz_t p) {
@@ -2879,16 +2879,196 @@ public class arblib implements arblibConstants {
     return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_platt_local_hardy_z_zeros(arb_struct.getCPtr(res), res, SWIGTYPE_p_fmpz_t.getCPtr(n), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec)), true);
   }
 
-  public static void acb_dirichlet_dft_index(acb_struct w, acb_struct v, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_dft_index(acb_struct.getCPtr(w), w, acb_struct.getCPtr(v), v, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_dft_index(acb_struct w, acb_struct v, dirichlet_group_struct G, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_dft_index(acb_struct.getCPtr(w), w, acb_struct.getCPtr(v), v, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
-  public static void acb_dirichlet_dft(acb_struct w, acb_struct v, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_dft(acb_struct.getCPtr(w), w, acb_struct.getCPtr(v), v, SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_dft(acb_struct w, acb_struct v, dirichlet_group_struct G, SWIGTYPE_p_slong prec) {
+    arblibJNI.acb_dirichlet_dft(acb_struct.getCPtr(w), w, acb_struct.getCPtr(v), v, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_slong.getCPtr(prec));
   }
 
   public static void acb_vec_printd(acb_struct vec, SWIGTYPE_p_slong len, SWIGTYPE_p_slong digits) {
     arblibJNI.acb_vec_printd(acb_struct.getCPtr(vec), vec, SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(digits));
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_group_size(dirichlet_group_struct G) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_size(dirichlet_group_struct.getCPtr(G), G), true);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_group_num_primitive(dirichlet_group_struct G) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_num_primitive(dirichlet_group_struct.getCPtr(G), G), true);
+  }
+
+  public static void dirichlet_group_init(dirichlet_group_struct G, SWIGTYPE_p_ulong q) {
+    arblibJNI.dirichlet_group_init(dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(q));
+  }
+
+  public static void dirichlet_subgroup_init(dirichlet_group_struct H, dirichlet_group_struct G, SWIGTYPE_p_ulong h) {
+    arblibJNI.dirichlet_subgroup_init(dirichlet_group_struct.getCPtr(H), H, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(h));
+  }
+
+  public static void dirichlet_group_clear(dirichlet_group_struct G) {
+    arblibJNI.dirichlet_group_clear(dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static void dirichlet_group_dlog_precompute(dirichlet_group_struct G, SWIGTYPE_p_ulong num) {
+    arblibJNI.dirichlet_group_dlog_precompute(dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(num));
+  }
+
+  public static void dirichlet_group_dlog_clear(dirichlet_group_struct G) {
+    arblibJNI.dirichlet_group_dlog_clear(dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_conductor_ui(dirichlet_group_struct G, SWIGTYPE_p_ulong a) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_conductor_ui(dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(a)), true);
+  }
+
+  public static int dirichlet_parity_ui(dirichlet_group_struct G, SWIGTYPE_p_ulong a) {
+    return arblibJNI.dirichlet_parity_ui(dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(a));
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_order_ui(dirichlet_group_struct G, SWIGTYPE_p_ulong a) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_order_ui(dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(a)), true);
+  }
+
+  public static void dirichlet_char_init(dirichlet_char_struct x, dirichlet_group_struct G) {
+    arblibJNI.dirichlet_char_init(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static void dirichlet_char_clear(dirichlet_char_struct x) {
+    arblibJNI.dirichlet_char_clear(dirichlet_char_struct.getCPtr(x), x);
+  }
+
+  public static void dirichlet_char_print(dirichlet_group_struct G, dirichlet_char_struct x) {
+    arblibJNI.dirichlet_char_print(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x);
+  }
+
+  public static void dirichlet_char_set(dirichlet_char_struct x, dirichlet_group_struct G, dirichlet_char_struct y) {
+    arblibJNI.dirichlet_char_set(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(y), y);
+  }
+
+  public static int dirichlet_char_eq(dirichlet_char_struct x, dirichlet_char_struct y) {
+    return arblibJNI.dirichlet_char_eq(dirichlet_char_struct.getCPtr(x), x, dirichlet_char_struct.getCPtr(y), y);
+  }
+
+  public static int dirichlet_char_eq_deep(dirichlet_group_struct G, dirichlet_char_struct x, dirichlet_char_struct y) {
+    return arblibJNI.dirichlet_char_eq_deep(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x, dirichlet_char_struct.getCPtr(y), y);
+  }
+
+  public static int dirichlet_parity_char(dirichlet_group_struct G, dirichlet_char_struct x) {
+    return arblibJNI.dirichlet_parity_char(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_conductor_char(dirichlet_group_struct G, dirichlet_char_struct x) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_conductor_char(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x), true);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_order_char(dirichlet_group_struct G, dirichlet_char_struct x) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_order_char(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x), true);
+  }
+
+  public static void dirichlet_char_log(dirichlet_char_struct x, dirichlet_group_struct G, SWIGTYPE_p_ulong m) {
+    arblibJNI.dirichlet_char_log(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(m));
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_char_exp(dirichlet_group_struct G, dirichlet_char_struct x) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_char_exp(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x), true);
+  }
+
+  public static SWIGTYPE_p_ulong _dirichlet_char_exp(dirichlet_char_struct x, dirichlet_group_struct G) {
+    return new SWIGTYPE_p_ulong(arblibJNI._dirichlet_char_exp(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G), true);
+  }
+
+  public static void dirichlet_char_index(dirichlet_char_struct x, dirichlet_group_struct G, SWIGTYPE_p_ulong j) {
+    arblibJNI.dirichlet_char_index(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(j));
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_index_char(dirichlet_group_struct G, dirichlet_char_struct x) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_index_char(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x), true);
+  }
+
+  public static void dirichlet_char_one(dirichlet_char_struct x, dirichlet_group_struct G) {
+    arblibJNI.dirichlet_char_one(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static void dirichlet_char_first_primitive(dirichlet_char_struct x, dirichlet_group_struct G) {
+    arblibJNI.dirichlet_char_first_primitive(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static int dirichlet_char_next(dirichlet_char_struct x, dirichlet_group_struct G) {
+    return arblibJNI.dirichlet_char_next(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static int dirichlet_char_next_primitive(dirichlet_char_struct x, dirichlet_group_struct G) {
+    return arblibJNI.dirichlet_char_next_primitive(dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static void dirichlet_char_mul(dirichlet_char_struct c, dirichlet_group_struct G, dirichlet_char_struct a, dirichlet_char_struct b) {
+    arblibJNI.dirichlet_char_mul(dirichlet_char_struct.getCPtr(c), c, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(a), a, dirichlet_char_struct.getCPtr(b), b);
+  }
+
+  public static void dirichlet_char_pow(dirichlet_char_struct c, dirichlet_group_struct G, dirichlet_char_struct a, SWIGTYPE_p_ulong n) {
+    arblibJNI.dirichlet_char_pow(dirichlet_char_struct.getCPtr(c), c, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(a), a, SWIGTYPE_p_ulong.getCPtr(n));
+  }
+
+  public static void dirichlet_char_lower(dirichlet_char_struct y, dirichlet_group_struct H, dirichlet_char_struct x, dirichlet_group_struct G) {
+    arblibJNI.dirichlet_char_lower(dirichlet_char_struct.getCPtr(y), y, dirichlet_group_struct.getCPtr(H), H, dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(G), G);
+  }
+
+  public static void dirichlet_char_lift(dirichlet_char_struct y, dirichlet_group_struct G, dirichlet_char_struct x, dirichlet_group_struct H) {
+    arblibJNI.dirichlet_char_lift(dirichlet_char_struct.getCPtr(y), y, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(x), x, dirichlet_group_struct.getCPtr(H), H);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_pairing(dirichlet_group_struct G, SWIGTYPE_p_ulong m, SWIGTYPE_p_ulong n) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_pairing(dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_ulong.getCPtr(m), SWIGTYPE_p_ulong.getCPtr(n)), true);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_pairing_char(dirichlet_group_struct G, dirichlet_char_struct a, dirichlet_char_struct b) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_pairing_char(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(a), a, dirichlet_char_struct.getCPtr(b), b), true);
+  }
+
+  public static int dirichlet_char_is_principal(dirichlet_group_struct G, dirichlet_char_struct chi) {
+    return arblibJNI.dirichlet_char_is_principal(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi);
+  }
+
+  public static int dirichlet_char_is_real(dirichlet_group_struct G, dirichlet_char_struct chi) {
+    return arblibJNI.dirichlet_char_is_real(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi);
+  }
+
+  public static int dirichlet_char_is_primitive(dirichlet_group_struct G, dirichlet_char_struct chi) {
+    return arblibJNI.dirichlet_char_is_primitive(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi);
+  }
+
+  public static SWIGTYPE_p_ulong dirichlet_chi(dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_ulong n) {
+    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_chi(dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_ulong.getCPtr(n)), true);
+  }
+
+  public static void dirichlet_vec_set_null(SWIGTYPE_p_ulong v, dirichlet_group_struct G, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_vec_set_null(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, SWIGTYPE_p_slong.getCPtr(nv));
+  }
+
+  public static void dirichlet_chi_vec_loop(SWIGTYPE_p_ulong v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_chi_vec_loop(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(nv));
+  }
+
+  public static void dirichlet_chi_vec_primeloop(SWIGTYPE_p_ulong v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_chi_vec_primeloop(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(nv));
+  }
+
+  public static void dirichlet_chi_vec(SWIGTYPE_p_ulong v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_chi_vec(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_slong.getCPtr(nv));
+  }
+
+  public static void dirichlet_chi_vec_loop_order(SWIGTYPE_p_ulong v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_ulong order, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_chi_vec_loop_order(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_ulong.getCPtr(order), SWIGTYPE_p_slong.getCPtr(nv));
+  }
+
+  public static void dirichlet_chi_vec_primeloop_order(SWIGTYPE_p_ulong v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_ulong order, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_chi_vec_primeloop_order(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_ulong.getCPtr(order), SWIGTYPE_p_slong.getCPtr(nv));
+  }
+
+  public static void dirichlet_chi_vec_order(SWIGTYPE_p_ulong v, dirichlet_group_struct G, dirichlet_char_struct chi, SWIGTYPE_p_ulong order, SWIGTYPE_p_slong nv) {
+    arblibJNI.dirichlet_chi_vec_order(SWIGTYPE_p_ulong.getCPtr(v), dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, SWIGTYPE_p_ulong.getCPtr(order), SWIGTYPE_p_slong.getCPtr(nv));
   }
 
 }
