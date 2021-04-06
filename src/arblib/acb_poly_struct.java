@@ -45,20 +45,20 @@ public class acb_poly_struct {
     return (cPtr == 0) ? null : new acb_struct(cPtr, false);
   }
 
-  public void setLength(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_poly_struct_length_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setLength(int value) {
+    arblibJNI.acb_poly_struct_length_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getLength() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_struct_length_get(swigCPtr, this), true);
+  public int getLength() {
+    return arblibJNI.acb_poly_struct_length_get(swigCPtr, this);
   }
 
-  public void setAlloc(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_poly_struct_alloc_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setAlloc(int value) {
+    arblibJNI.acb_poly_struct_alloc_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getAlloc() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_poly_struct_alloc_get(swigCPtr, this), true);
+  public int getAlloc() {
+    return arblibJNI.acb_poly_struct_alloc_get(swigCPtr, this);
   }
 
   public acb_poly_struct() {

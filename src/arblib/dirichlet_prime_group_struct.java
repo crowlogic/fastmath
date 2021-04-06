@@ -36,12 +36,12 @@ public class dirichlet_prime_group_struct {
     }
   }
 
-  public void setP(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_prime_group_struct_p_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setP(long value) {
+    arblibJNI.dirichlet_prime_group_struct_p_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getP() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_prime_group_struct_p_get(swigCPtr, this), true);
+  public long getP() {
+    return arblibJNI.dirichlet_prime_group_struct_p_get(swigCPtr, this);
   }
 
   public void setE(int value) {
@@ -68,12 +68,12 @@ public class dirichlet_prime_group_struct {
     return new SWIGTYPE_p_nmod_t(arblibJNI.dirichlet_prime_group_struct_phi_get(swigCPtr, this), true);
   }
 
-  public void setG(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_prime_group_struct_g_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setG(long value) {
+    arblibJNI.dirichlet_prime_group_struct_g_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getG() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_prime_group_struct_g_get(swigCPtr, this), true);
+  public long getG() {
+    return arblibJNI.dirichlet_prime_group_struct_g_get(swigCPtr, this);
   }
 
   public void setDlog(SWIGTYPE_p_dlog_precomp_struct value) {

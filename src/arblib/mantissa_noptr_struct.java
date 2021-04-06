@@ -8,16 +8,16 @@
 
 package arblib;
 
-public class dirichlet_char_struct {
+public class mantissa_noptr_struct {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected dirichlet_char_struct(long cPtr, boolean cMemoryOwn) {
+  protected mantissa_noptr_struct(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(dirichlet_char_struct obj) {
+  protected static long getCPtr(mantissa_noptr_struct obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,31 +30,23 @@ public class dirichlet_char_struct {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        arblibJNI.delete_dirichlet_char_struct(swigCPtr);
+        arblibJNI.delete_mantissa_noptr_struct(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void setN(long value) {
-    arblibJNI.dirichlet_char_struct_n_set(swigCPtr, this, value);
+  public void setD(SWIGTYPE_p_unsigned_long value) {
+    arblibJNI.mantissa_noptr_struct_d_set(swigCPtr, this, SWIGTYPE_p_unsigned_long.getCPtr(value));
   }
 
-  public long getN() {
-    return arblibJNI.dirichlet_char_struct_n_get(swigCPtr, this);
-  }
-
-  public void setLog(SWIGTYPE_p_unsigned_long value) {
-    arblibJNI.dirichlet_char_struct_log_set(swigCPtr, this, SWIGTYPE_p_unsigned_long.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_unsigned_long getLog() {
-    long cPtr = arblibJNI.dirichlet_char_struct_log_get(swigCPtr, this);
+  public SWIGTYPE_p_unsigned_long getD() {
+    long cPtr = arblibJNI.mantissa_noptr_struct_d_get(swigCPtr, this);
     return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_long(cPtr, false);
   }
 
-  public dirichlet_char_struct() {
-    this(arblibJNI.new_dirichlet_char_struct(), true);
+  public mantissa_noptr_struct() {
+    this(arblibJNI.new_mantissa_noptr_struct(), true);
   }
 
 }

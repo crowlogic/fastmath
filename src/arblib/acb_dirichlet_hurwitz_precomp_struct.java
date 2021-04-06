@@ -70,28 +70,28 @@ public class acb_dirichlet_hurwitz_precomp_struct {
     return arblibJNI.acb_dirichlet_hurwitz_precomp_struct_deflate_get(swigCPtr, this);
   }
 
-  public void setA(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_A_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setA(int value) {
+    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_A_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getA() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_hurwitz_precomp_struct_A_get(swigCPtr, this), true);
+  public int getA() {
+    return arblibJNI.acb_dirichlet_hurwitz_precomp_struct_A_get(swigCPtr, this);
   }
 
-  public void setN(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_N_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setN(int value) {
+    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_N_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getN() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_hurwitz_precomp_struct_N_get(swigCPtr, this), true);
+  public int getN() {
+    return arblibJNI.acb_dirichlet_hurwitz_precomp_struct_N_get(swigCPtr, this);
   }
 
-  public void setK(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_K_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setK(int value) {
+    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_K_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getK() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_hurwitz_precomp_struct_K_get(swigCPtr, this), true);
+  public int getK() {
+    return arblibJNI.acb_dirichlet_hurwitz_precomp_struct_K_get(swigCPtr, this);
   }
 
   public acb_dirichlet_hurwitz_precomp_struct() {

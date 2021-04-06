@@ -8,16 +8,16 @@
 
 package arblib;
 
-public class arb_struct {
+public class __gmp_randstate_struct__mp_algdata {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected arb_struct(long cPtr, boolean cMemoryOwn) {
+  protected __gmp_randstate_struct__mp_algdata(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(arb_struct obj) {
+  protected static long getCPtr(__gmp_randstate_struct__mp_algdata obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,31 +30,23 @@ public class arb_struct {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        arblibJNI.delete_arb_struct(swigCPtr);
+        arblibJNI.delete___gmp_randstate_struct__mp_algdata(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void setMid(arf_struct value) {
-    arblibJNI.arb_struct_mid_set(swigCPtr, this, arf_struct.getCPtr(value), value);
+  public void set_mp_lc(SWIGTYPE_p_void value) {
+    arblibJNI.__gmp_randstate_struct__mp_algdata__mp_lc_set(swigCPtr, this, SWIGTYPE_p_void.getCPtr(value));
   }
 
-  public arf_struct getMid() {
-    long cPtr = arblibJNI.arb_struct_mid_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arf_struct(cPtr, false);
+  public SWIGTYPE_p_void get_mp_lc() {
+    long cPtr = arblibJNI.__gmp_randstate_struct__mp_algdata__mp_lc_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_void(cPtr, false);
   }
 
-  public void setRad(SWIGTYPE_p_mag_struct value) {
-    arblibJNI.arb_struct_rad_set(swigCPtr, this, SWIGTYPE_p_mag_struct.getCPtr(value));
-  }
-
-  public SWIGTYPE_p_mag_struct getRad() {
-    return new SWIGTYPE_p_mag_struct(arblibJNI.arb_struct_rad_get(swigCPtr, this), true);
-  }
-
-  public arb_struct() {
-    this(arblibJNI.new_arb_struct(), true);
+  public __gmp_randstate_struct__mp_algdata() {
+    this(arblibJNI.new___gmp_randstate_struct__mp_algdata(), true);
   }
 
 }

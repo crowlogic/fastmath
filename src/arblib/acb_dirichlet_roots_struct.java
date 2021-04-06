@@ -36,20 +36,20 @@ public class acb_dirichlet_roots_struct {
     }
   }
 
-  public void setOrder(SWIGTYPE_p_ulong value) {
-    arblibJNI.acb_dirichlet_roots_struct_order_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setOrder(long value) {
+    arblibJNI.acb_dirichlet_roots_struct_order_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getOrder() {
-    return new SWIGTYPE_p_ulong(arblibJNI.acb_dirichlet_roots_struct_order_get(swigCPtr, this), true);
+  public long getOrder() {
+    return arblibJNI.acb_dirichlet_roots_struct_order_get(swigCPtr, this);
   }
 
-  public void setReduced_order(SWIGTYPE_p_ulong value) {
-    arblibJNI.acb_dirichlet_roots_struct_reduced_order_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setReduced_order(long value) {
+    arblibJNI.acb_dirichlet_roots_struct_reduced_order_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getReduced_order() {
-    return new SWIGTYPE_p_ulong(arblibJNI.acb_dirichlet_roots_struct_reduced_order_get(swigCPtr, this), true);
+  public long getReduced_order() {
+    return arblibJNI.acb_dirichlet_roots_struct_reduced_order_get(swigCPtr, this);
   }
 
   public void setZ(acb_struct value) {
@@ -61,20 +61,20 @@ public class acb_dirichlet_roots_struct {
     return (cPtr == 0) ? null : new acb_struct(cPtr, false);
   }
 
-  public void setSize(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_dirichlet_roots_struct_size_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setSize(int value) {
+    arblibJNI.acb_dirichlet_roots_struct_size_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getSize() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_roots_struct_size_get(swigCPtr, this), true);
+  public int getSize() {
+    return arblibJNI.acb_dirichlet_roots_struct_size_get(swigCPtr, this);
   }
 
-  public void setDepth(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_dirichlet_roots_struct_depth_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setDepth(int value) {
+    arblibJNI.acb_dirichlet_roots_struct_depth_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getDepth() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_roots_struct_depth_get(swigCPtr, this), true);
+  public int getDepth() {
+    return arblibJNI.acb_dirichlet_roots_struct_depth_get(swigCPtr, this);
   }
 
   public void setZptr(SWIGTYPE_p_p_acb_struct value) {

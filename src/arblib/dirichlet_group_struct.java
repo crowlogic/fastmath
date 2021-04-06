@@ -36,20 +36,20 @@ public class dirichlet_group_struct {
     }
   }
 
-  public void setQ(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_q_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setQ(long value) {
+    arblibJNI.dirichlet_group_struct_q_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getQ() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_struct_q_get(swigCPtr, this), true);
+  public long getQ() {
+    return arblibJNI.dirichlet_group_struct_q_get(swigCPtr, this);
   }
 
-  public void setQ_even(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_q_even_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setQ_even(long value) {
+    arblibJNI.dirichlet_group_struct_q_even_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getQ_even() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_struct_q_even_get(swigCPtr, this), true);
+  public long getQ_even() {
+    return arblibJNI.dirichlet_group_struct_q_even_get(swigCPtr, this);
   }
 
   public void setMod(SWIGTYPE_p_nmod_t value) {
@@ -60,44 +60,44 @@ public class dirichlet_group_struct {
     return new SWIGTYPE_p_nmod_t(arblibJNI.dirichlet_group_struct_mod_get(swigCPtr, this), true);
   }
 
-  public void setRad_q(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_rad_q_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setRad_q(long value) {
+    arblibJNI.dirichlet_group_struct_rad_q_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getRad_q() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_struct_rad_q_get(swigCPtr, this), true);
+  public long getRad_q() {
+    return arblibJNI.dirichlet_group_struct_rad_q_get(swigCPtr, this);
   }
 
-  public void setPhi_q(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_phi_q_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setPhi_q(long value) {
+    arblibJNI.dirichlet_group_struct_phi_q_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getPhi_q() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_struct_phi_q_get(swigCPtr, this), true);
+  public long getPhi_q() {
+    return arblibJNI.dirichlet_group_struct_phi_q_get(swigCPtr, this);
   }
 
-  public void setNeven(SWIGTYPE_p_slong value) {
-    arblibJNI.dirichlet_group_struct_neven_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setNeven(int value) {
+    arblibJNI.dirichlet_group_struct_neven_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getNeven() {
-    return new SWIGTYPE_p_slong(arblibJNI.dirichlet_group_struct_neven_get(swigCPtr, this), true);
+  public int getNeven() {
+    return arblibJNI.dirichlet_group_struct_neven_get(swigCPtr, this);
   }
 
-  public void setNum(SWIGTYPE_p_slong value) {
-    arblibJNI.dirichlet_group_struct_num_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setNum(int value) {
+    arblibJNI.dirichlet_group_struct_num_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getNum() {
-    return new SWIGTYPE_p_slong(arblibJNI.dirichlet_group_struct_num_get(swigCPtr, this), true);
+  public int getNum() {
+    return arblibJNI.dirichlet_group_struct_num_get(swigCPtr, this);
   }
 
-  public void setExpo(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_expo_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setExpo(long value) {
+    arblibJNI.dirichlet_group_struct_expo_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_ulong getExpo() {
-    return new SWIGTYPE_p_ulong(arblibJNI.dirichlet_group_struct_expo_get(swigCPtr, this), true);
+  public long getExpo() {
+    return arblibJNI.dirichlet_group_struct_expo_get(swigCPtr, this);
   }
 
   public void setP(dirichlet_prime_group_struct value) {
@@ -109,22 +109,22 @@ public class dirichlet_group_struct {
     return (cPtr == 0) ? null : new dirichlet_prime_group_struct(cPtr, false);
   }
 
-  public void setGenerators(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_generators_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setGenerators(SWIGTYPE_p_unsigned_long value) {
+    arblibJNI.dirichlet_group_struct_generators_set(swigCPtr, this, SWIGTYPE_p_unsigned_long.getCPtr(value));
   }
 
-  public SWIGTYPE_p_ulong getGenerators() {
+  public SWIGTYPE_p_unsigned_long getGenerators() {
     long cPtr = arblibJNI.dirichlet_group_struct_generators_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_ulong(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_long(cPtr, false);
   }
 
-  public void setPHI(SWIGTYPE_p_ulong value) {
-    arblibJNI.dirichlet_group_struct_PHI_set(swigCPtr, this, SWIGTYPE_p_ulong.getCPtr(value));
+  public void setPHI(SWIGTYPE_p_unsigned_long value) {
+    arblibJNI.dirichlet_group_struct_PHI_set(swigCPtr, this, SWIGTYPE_p_unsigned_long.getCPtr(value));
   }
 
-  public SWIGTYPE_p_ulong getPHI() {
+  public SWIGTYPE_p_unsigned_long getPHI() {
     long cPtr = arblibJNI.dirichlet_group_struct_PHI_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_ulong(cPtr, false);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_unsigned_long(cPtr, false);
   }
 
   public dirichlet_group_struct() {

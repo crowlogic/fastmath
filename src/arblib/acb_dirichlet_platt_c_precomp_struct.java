@@ -36,12 +36,12 @@ public class acb_dirichlet_platt_c_precomp_struct {
     }
   }
 
-  public void setLen(SWIGTYPE_p_slong value) {
-    arblibJNI.acb_dirichlet_platt_c_precomp_struct_len_set(swigCPtr, this, SWIGTYPE_p_slong.getCPtr(value));
+  public void setLen(int value) {
+    arblibJNI.acb_dirichlet_platt_c_precomp_struct_len_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_slong getLen() {
-    return new SWIGTYPE_p_slong(arblibJNI.acb_dirichlet_platt_c_precomp_struct_len_get(swigCPtr, this), true);
+  public int getLen() {
+    return arblibJNI.acb_dirichlet_platt_c_precomp_struct_len_get(swigCPtr, this);
   }
 
   public void setP(arb_struct value) {
