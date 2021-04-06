@@ -39,4 +39,6 @@ public interface arblibConstants {
   public final static int ARB_SIN_COS_TAB21_BITS = arblibJNI.ARB_SIN_COS_TAB21_BITS_get();
   public final static int ARB_SIN_COS_TAB22_BITS = arblibJNI.ARB_SIN_COS_TAB22_BITS_get();
   public final static int ARB_SIN_COS_TAB2_PREC = arblibJNI.ARB_SIN_COS_TAB2_PREC_get();
+  public final static int ACB_LAMBERTW_LEFT = arblibJNI.ACB_LAMBERTW_LEFT_get();
+  public final static int ACB_LAMBERTW_MIDDLE = arblibJNI.ACB_LAMBERTW_MIDDLE_get();
 }
