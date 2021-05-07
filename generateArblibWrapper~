@@ -1,0 +1,1 @@
+swig -includeall -java -c++ -package arblib -outdir src/arblib -I/usr/include/x86_64-linux-gnu/gmp.h arb.i

@@ -53,11 +53,6 @@ public class __gmp_randstate_struct {
     return gmp_randalg_t.swigToEnum(arblibJNI.__gmp_randstate_struct__mp_alg_get(swigCPtr, this));
   }
 
-  public __gmp_randstate_struct__mp_algdata get_mp_algdata() {
-    long cPtr = arblibJNI.__gmp_randstate_struct__mp_algdata_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new __gmp_randstate_struct__mp_algdata(cPtr, false);
-  }
-
   public __gmp_randstate_struct() {
     this(arblibJNI.new___gmp_randstate_struct(), true);
   }

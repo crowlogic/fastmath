@@ -1,1 +1,1 @@
-swig -java -package arblib -outdir src/arblib arb.i
+swig -includeall -java -c++ -package arblib -outdir src/arblib -I/usr/include/x86_64-linux-gnu arb.i

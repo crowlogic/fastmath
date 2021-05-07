@@ -1,5 +1,8 @@
 %module arblib
 
+#define __fpos_t = long int
+#define fpos_t = long int
+
 %typemap(in) slong = long;
 
 #define TLS_PREFIX

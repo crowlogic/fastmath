@@ -1303,10 +1303,6 @@ public class arblib implements arblibConstants {
     return (cPtr == 0) ? null : new SWIGTYPE_p_void(cPtr, false);
   }
 
-  public static void __gmpz_abs(__mpz_struct arg0, __mpz_struct arg1) {
-    arblibJNI.__gmpz_abs(__mpz_struct.getCPtr(arg0), arg0, __mpz_struct.getCPtr(arg1), arg1);
-  }
-
   public static void __gmpz_add(__mpz_struct arg0, __mpz_struct arg1, __mpz_struct arg2) {
     arblibJNI.__gmpz_add(__mpz_struct.getCPtr(arg0), arg0, __mpz_struct.getCPtr(arg1), arg1, __mpz_struct.getCPtr(arg2), arg2);
   }
@@ -1536,18 +1532,6 @@ public class arblib implements arblibConstants {
     return arblibJNI.__gmpz_fits_sshort_p(__mpz_struct.getCPtr(arg0), arg0);
   }
 
-  public static int __gmpz_fits_uint_p(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_fits_uint_p(__mpz_struct.getCPtr(arg0), arg0);
-  }
-
-  public static int __gmpz_fits_ulong_p(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_fits_ulong_p(__mpz_struct.getCPtr(arg0), arg0);
-  }
-
-  public static int __gmpz_fits_ushort_p(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_fits_ushort_p(__mpz_struct.getCPtr(arg0), arg0);
-  }
-
   public static void __gmpz_gcd(__mpz_struct arg0, __mpz_struct arg1, __mpz_struct arg2) {
     arblibJNI.__gmpz_gcd(__mpz_struct.getCPtr(arg0), arg0, __mpz_struct.getCPtr(arg1), arg1, __mpz_struct.getCPtr(arg2), arg2);
   }
@@ -1574,14 +1558,6 @@ public class arblib implements arblibConstants {
 
   public static String __gmpz_get_str(String arg0, int arg1, __mpz_struct arg2) {
     return arblibJNI.__gmpz_get_str(arg0, arg1, __mpz_struct.getCPtr(arg2), arg2);
-  }
-
-  public static long __gmpz_get_ui(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_get_ui(__mpz_struct.getCPtr(arg0), arg0);
-  }
-
-  public static long __gmpz_getlimbn(__mpz_struct arg0, int arg1) {
-    return arblibJNI.__gmpz_getlimbn(__mpz_struct.getCPtr(arg0), arg0, arg1);
   }
 
   public static long __gmpz_hamdist(__mpz_struct arg0, __mpz_struct arg1) {
@@ -1692,24 +1668,12 @@ public class arblib implements arblibConstants {
     arblibJNI.__gmpz_mul_ui(__mpz_struct.getCPtr(arg0), arg0, __mpz_struct.getCPtr(arg1), arg1, arg2);
   }
 
-  public static void __gmpz_neg(__mpz_struct arg0, __mpz_struct arg1) {
-    arblibJNI.__gmpz_neg(__mpz_struct.getCPtr(arg0), arg0, __mpz_struct.getCPtr(arg1), arg1);
-  }
-
   public static void __gmpz_nextprime(__mpz_struct arg0, __mpz_struct arg1) {
     arblibJNI.__gmpz_nextprime(__mpz_struct.getCPtr(arg0), arg0, __mpz_struct.getCPtr(arg1), arg1);
   }
 
   public static int __gmpz_perfect_power_p(__mpz_struct arg0) {
     return arblibJNI.__gmpz_perfect_power_p(__mpz_struct.getCPtr(arg0), arg0);
-  }
-
-  public static int __gmpz_perfect_square_p(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_perfect_square_p(__mpz_struct.getCPtr(arg0), arg0);
-  }
-
-  public static long __gmpz_popcount(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_popcount(__mpz_struct.getCPtr(arg0), arg0);
   }
 
   public static void __gmpz_pow_ui(__mpz_struct arg0, __mpz_struct arg1, long arg2) {
@@ -1780,10 +1744,6 @@ public class arblib implements arblibConstants {
     arblibJNI.__gmpz_set_f(__mpz_struct.getCPtr(arg0), arg0, __mpf_struct.getCPtr(arg1), arg1);
   }
 
-  public static void __gmpz_set_q(__mpz_struct arg0, __mpq_struct arg1) {
-    arblibJNI.__gmpz_set_q(__mpz_struct.getCPtr(arg0), arg0, __mpq_struct.getCPtr(arg1), arg1);
-  }
-
   public static void __gmpz_set_si(__mpz_struct arg0, int arg1) {
     arblibJNI.__gmpz_set_si(__mpz_struct.getCPtr(arg0), arg0, arg1);
   }
@@ -1798,10 +1758,6 @@ public class arblib implements arblibConstants {
 
   public static void __gmpz_setbit(__mpz_struct arg0, long arg1) {
     arblibJNI.__gmpz_setbit(__mpz_struct.getCPtr(arg0), arg0, arg1);
-  }
-
-  public static long __gmpz_size(__mpz_struct arg0) {
-    return arblibJNI.__gmpz_size(__mpz_struct.getCPtr(arg0), arg0);
   }
 
   public static long __gmpz_sizeinbase(__mpz_struct arg0, int arg1) {
@@ -1920,10 +1876,6 @@ public class arblib implements arblibConstants {
     return (cPtr == 0) ? null : new __mpz_struct(cPtr, false);
   }
 
-  public static void __gmpq_abs(__mpq_struct arg0, __mpq_struct arg1) {
-    arblibJNI.__gmpq_abs(__mpq_struct.getCPtr(arg0), arg0, __mpq_struct.getCPtr(arg1), arg1);
-  }
-
   public static void __gmpq_add(__mpq_struct arg0, __mpq_struct arg1, __mpq_struct arg2) {
     arblibJNI.__gmpq_add(__mpq_struct.getCPtr(arg0), arg0, __mpq_struct.getCPtr(arg1), arg1, __mpq_struct.getCPtr(arg2), arg2);
   }
@@ -2002,10 +1954,6 @@ public class arblib implements arblibConstants {
 
   public static void __gmpq_mul_2exp(__mpq_struct arg0, __mpq_struct arg1, long arg2) {
     arblibJNI.__gmpq_mul_2exp(__mpq_struct.getCPtr(arg0), arg0, __mpq_struct.getCPtr(arg1), arg1, arg2);
-  }
-
-  public static void __gmpq_neg(__mpq_struct arg0, __mpq_struct arg1) {
-    arblibJNI.__gmpq_neg(__mpq_struct.getCPtr(arg0), arg0, __mpq_struct.getCPtr(arg1), arg1);
   }
 
   public static void __gmpq_set(__mpq_struct arg0, __mpq_struct arg1) {
@@ -2316,28 +2264,12 @@ public class arblib implements arblibConstants {
     arblibJNI.__gmpf_urandomb(__mpf_struct.getCPtr(arg0), arg0, __gmp_randstate_struct.getCPtr(arg1), arg1, arg2);
   }
 
-  public static long __gmpn_add(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2, SWIGTYPE_p_unsigned_long arg3, int arg4) {
-    return arblibJNI.__gmpn_add(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2, SWIGTYPE_p_unsigned_long.getCPtr(arg3), arg4);
-  }
-
-  public static long __gmpn_add_1(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2, long arg3) {
-    return arblibJNI.__gmpn_add_1(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2, arg3);
-  }
-
   public static long __gmpn_add_n(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, SWIGTYPE_p_unsigned_long arg2, int arg3) {
     return arblibJNI.__gmpn_add_n(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), SWIGTYPE_p_unsigned_long.getCPtr(arg2), arg3);
   }
 
   public static long __gmpn_addmul_1(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2, long arg3) {
     return arblibJNI.__gmpn_addmul_1(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2, arg3);
-  }
-
-  public static int __gmpn_cmp(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2) {
-    return arblibJNI.__gmpn_cmp(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2);
-  }
-
-  public static int __gmpn_zero_p(SWIGTYPE_p_unsigned_long arg0, int arg1) {
-    return arblibJNI.__gmpn_zero_p(SWIGTYPE_p_unsigned_long.getCPtr(arg0), arg1);
   }
 
   public static void __gmpn_divexact_1(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2, long arg3) {
@@ -2420,10 +2352,6 @@ public class arblib implements arblibConstants {
     arblibJNI.__gmpn_sqr(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2);
   }
 
-  public static long __gmpn_neg(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2) {
-    return arblibJNI.__gmpn_neg(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2);
-  }
-
   public static void __gmpn_com(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2) {
     arblibJNI.__gmpn_com(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2);
   }
@@ -2478,14 +2406,6 @@ public class arblib implements arblibConstants {
 
   public static int __gmpn_sqrtrem(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, SWIGTYPE_p_unsigned_long arg2, int arg3) {
     return arblibJNI.__gmpn_sqrtrem(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), SWIGTYPE_p_unsigned_long.getCPtr(arg2), arg3);
-  }
-
-  public static long __gmpn_sub(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2, SWIGTYPE_p_unsigned_long arg3, int arg4) {
-    return arblibJNI.__gmpn_sub(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2, SWIGTYPE_p_unsigned_long.getCPtr(arg3), arg4);
-  }
-
-  public static long __gmpn_sub_1(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, int arg2, long arg3) {
-    return arblibJNI.__gmpn_sub_1(SWIGTYPE_p_unsigned_long.getCPtr(arg0), SWIGTYPE_p_unsigned_long.getCPtr(arg1), arg2, arg3);
   }
 
   public static long __gmpn_sub_n(SWIGTYPE_p_unsigned_long arg0, SWIGTYPE_p_unsigned_long arg1, SWIGTYPE_p_unsigned_long arg2, int arg3) {
@@ -2622,6 +2542,86 @@ public class arblib implements arblibConstants {
 
   public static int __gmpn_sec_invert_itch(int arg0) {
     return arblibJNI.__gmpn_sec_invert_itch(arg0);
+  }
+
+  public static void __gmpz_abs(__mpz_struct __gmp_w, __mpz_struct __gmp_u) {
+    arblibJNI.__gmpz_abs(__mpz_struct.getCPtr(__gmp_w), __gmp_w, __mpz_struct.getCPtr(__gmp_u), __gmp_u);
+  }
+
+  public static int __gmpz_fits_uint_p(__mpz_struct __gmp_z) {
+    return arblibJNI.__gmpz_fits_uint_p(__mpz_struct.getCPtr(__gmp_z), __gmp_z);
+  }
+
+  public static int __gmpz_fits_ulong_p(__mpz_struct __gmp_z) {
+    return arblibJNI.__gmpz_fits_ulong_p(__mpz_struct.getCPtr(__gmp_z), __gmp_z);
+  }
+
+  public static int __gmpz_fits_ushort_p(__mpz_struct __gmp_z) {
+    return arblibJNI.__gmpz_fits_ushort_p(__mpz_struct.getCPtr(__gmp_z), __gmp_z);
+  }
+
+  public static long __gmpz_get_ui(__mpz_struct __gmp_z) {
+    return arblibJNI.__gmpz_get_ui(__mpz_struct.getCPtr(__gmp_z), __gmp_z);
+  }
+
+  public static long __gmpz_getlimbn(__mpz_struct __gmp_z, int __gmp_n) {
+    return arblibJNI.__gmpz_getlimbn(__mpz_struct.getCPtr(__gmp_z), __gmp_z, __gmp_n);
+  }
+
+  public static void __gmpz_neg(__mpz_struct __gmp_w, __mpz_struct __gmp_u) {
+    arblibJNI.__gmpz_neg(__mpz_struct.getCPtr(__gmp_w), __gmp_w, __mpz_struct.getCPtr(__gmp_u), __gmp_u);
+  }
+
+  public static int __gmpz_perfect_square_p(__mpz_struct __gmp_a) {
+    return arblibJNI.__gmpz_perfect_square_p(__mpz_struct.getCPtr(__gmp_a), __gmp_a);
+  }
+
+  public static long __gmpz_popcount(__mpz_struct __gmp_u) {
+    return arblibJNI.__gmpz_popcount(__mpz_struct.getCPtr(__gmp_u), __gmp_u);
+  }
+
+  public static void __gmpz_set_q(__mpz_struct __gmp_w, __mpq_struct __gmp_u) {
+    arblibJNI.__gmpz_set_q(__mpz_struct.getCPtr(__gmp_w), __gmp_w, __mpq_struct.getCPtr(__gmp_u), __gmp_u);
+  }
+
+  public static long __gmpz_size(__mpz_struct __gmp_z) {
+    return arblibJNI.__gmpz_size(__mpz_struct.getCPtr(__gmp_z), __gmp_z);
+  }
+
+  public static void __gmpq_abs(__mpq_struct __gmp_w, __mpq_struct __gmp_u) {
+    arblibJNI.__gmpq_abs(__mpq_struct.getCPtr(__gmp_w), __gmp_w, __mpq_struct.getCPtr(__gmp_u), __gmp_u);
+  }
+
+  public static void __gmpq_neg(__mpq_struct __gmp_w, __mpq_struct __gmp_u) {
+    arblibJNI.__gmpq_neg(__mpq_struct.getCPtr(__gmp_w), __gmp_w, __mpq_struct.getCPtr(__gmp_u), __gmp_u);
+  }
+
+  public static long __gmpn_add(SWIGTYPE_p_unsigned_long __gmp_wp, SWIGTYPE_p_unsigned_long __gmp_xp, int __gmp_xsize, SWIGTYPE_p_unsigned_long __gmp_yp, int __gmp_ysize) {
+    return arblibJNI.__gmpn_add(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_wp), SWIGTYPE_p_unsigned_long.getCPtr(__gmp_xp), __gmp_xsize, SWIGTYPE_p_unsigned_long.getCPtr(__gmp_yp), __gmp_ysize);
+  }
+
+  public static long __gmpn_add_1(SWIGTYPE_p_unsigned_long __gmp_dst, SWIGTYPE_p_unsigned_long __gmp_src, int __gmp_size, long __gmp_n) {
+    return arblibJNI.__gmpn_add_1(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_dst), SWIGTYPE_p_unsigned_long.getCPtr(__gmp_src), __gmp_size, __gmp_n);
+  }
+
+  public static int __gmpn_cmp(SWIGTYPE_p_unsigned_long __gmp_xp, SWIGTYPE_p_unsigned_long __gmp_yp, int __gmp_size) {
+    return arblibJNI.__gmpn_cmp(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_xp), SWIGTYPE_p_unsigned_long.getCPtr(__gmp_yp), __gmp_size);
+  }
+
+  public static int __gmpn_zero_p(SWIGTYPE_p_unsigned_long __gmp_p, int __gmp_n) {
+    return arblibJNI.__gmpn_zero_p(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_p), __gmp_n);
+  }
+
+  public static long __gmpn_sub(SWIGTYPE_p_unsigned_long __gmp_wp, SWIGTYPE_p_unsigned_long __gmp_xp, int __gmp_xsize, SWIGTYPE_p_unsigned_long __gmp_yp, int __gmp_ysize) {
+    return arblibJNI.__gmpn_sub(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_wp), SWIGTYPE_p_unsigned_long.getCPtr(__gmp_xp), __gmp_xsize, SWIGTYPE_p_unsigned_long.getCPtr(__gmp_yp), __gmp_ysize);
+  }
+
+  public static long __gmpn_sub_1(SWIGTYPE_p_unsigned_long __gmp_dst, SWIGTYPE_p_unsigned_long __gmp_src, int __gmp_size, long __gmp_n) {
+    return arblibJNI.__gmpn_sub_1(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_dst), SWIGTYPE_p_unsigned_long.getCPtr(__gmp_src), __gmp_size, __gmp_n);
+  }
+
+  public static long __gmpn_neg(SWIGTYPE_p_unsigned_long __gmp_rp, SWIGTYPE_p_unsigned_long __gmp_up, int __gmp_n) {
+    return arblibJNI.__gmpn_neg(SWIGTYPE_p_unsigned_long.getCPtr(__gmp_rp), SWIGTYPE_p_unsigned_long.getCPtr(__gmp_up), __gmp_n);
   }
 
   public static void setFlint_version(String value) {
