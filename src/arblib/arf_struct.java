@@ -36,12 +36,12 @@ public class arf_struct {
     }
   }
 
-  public void setExp(SWIGTYPE_p_fmpz value) {
-    arblibJNI.arf_struct_exp_set(swigCPtr, this, SWIGTYPE_p_fmpz.getCPtr(value));
+  public void setExp(int value) {
+    arblibJNI.arf_struct_exp_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_fmpz getExp() {
-    return new SWIGTYPE_p_fmpz(arblibJNI.arf_struct_exp_get(swigCPtr, this), true);
+  public int getExp() {
+    return arblibJNI.arf_struct_exp_get(swigCPtr, this);
   }
 
   public void setSize(int value) {

@@ -1,13 +1,20 @@
 %module arblib
 
-#define __fpos_t = long int
-#define fpos_t = long int
+#define _GLIBCXX_BEGIN_NAMESPACE_VERSION
+#define _GLIBCXX_END_NAMESPACE_VERSION
+#define _GLIBCXX_BEGIN_NAMESPACE_CXX11
+#define _GLIBCXX_END_NAMESPACE_CXX11
+
+//#define __fpos_t = long int
+//#define fpos_t = long int
+
+#define __signed__
 
 %typemap(in) slong = long;
 
-#define TLS_PREFIX
+//#define TLS_PREFIX
 #define FLINT_DLL
-#define ARB_DLL
+//#define ARB_DLL
 #define ARB_INLINES_C
 #define ACB_INLINES_C
 #define ACB_DIRICHLET_INLINES_C

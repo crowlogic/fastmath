@@ -1,1 +1,1 @@
-swig -includeall -java -package arblib -outdir src/arblib -I/usr/include/x86_64-linux-gnu -I/usr/include/linux -I/usr/include/flint -I/usr/include -I/usr/include/i386-linux-gnu -I/usr/lib/gcc/x86_64-linux-gnu/10/include/ arb.i
+swig -includeall -java -c++ -package arblib -outdir src/arblib -I/usr/include/x86_64-linux-gnu -I/usr/include/linux -I/usr/include/flint -I/usr/include -I/usr/include/i386-linux-gnu -I/usr/lib/gcc/x86_64-linux-gnu/10/include/ -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10/ arb.i

@@ -45,12 +45,13 @@ public class acb_dirichlet_hurwitz_precomp_struct {
     return (cPtr == 0) ? null : new acb_struct(cPtr, false);
   }
 
-  public void setErr(SWIGTYPE_p_mag_struct value) {
-    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_err_set(swigCPtr, this, SWIGTYPE_p_mag_struct.getCPtr(value));
+  public void setErr(mag_struct value) {
+    arblibJNI.acb_dirichlet_hurwitz_precomp_struct_err_set(swigCPtr, this, mag_struct.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_mag_struct getErr() {
-    return new SWIGTYPE_p_mag_struct(arblibJNI.acb_dirichlet_hurwitz_precomp_struct_err_get(swigCPtr, this), true);
+  public mag_struct getErr() {
+    long cPtr = arblibJNI.acb_dirichlet_hurwitz_precomp_struct_err_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new mag_struct(cPtr, false);
   }
 
   public void setCoeffs(acb_struct value) {

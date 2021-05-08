@@ -52,20 +52,22 @@ public class dirichlet_prime_group_struct {
     return arblibJNI.dirichlet_prime_group_struct_e_get(swigCPtr, this);
   }
 
-  public void setPe(SWIGTYPE_p_nmod_t value) {
-    arblibJNI.dirichlet_prime_group_struct_pe_set(swigCPtr, this, SWIGTYPE_p_nmod_t.getCPtr(value));
+  public void setPe(nmod_t value) {
+    arblibJNI.dirichlet_prime_group_struct_pe_set(swigCPtr, this, nmod_t.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_nmod_t getPe() {
-    return new SWIGTYPE_p_nmod_t(arblibJNI.dirichlet_prime_group_struct_pe_get(swigCPtr, this), true);
+  public nmod_t getPe() {
+    long cPtr = arblibJNI.dirichlet_prime_group_struct_pe_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new nmod_t(cPtr, false);
   }
 
-  public void setPhi(SWIGTYPE_p_nmod_t value) {
-    arblibJNI.dirichlet_prime_group_struct_phi_set(swigCPtr, this, SWIGTYPE_p_nmod_t.getCPtr(value));
+  public void setPhi(nmod_t value) {
+    arblibJNI.dirichlet_prime_group_struct_phi_set(swigCPtr, this, nmod_t.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_nmod_t getPhi() {
-    return new SWIGTYPE_p_nmod_t(arblibJNI.dirichlet_prime_group_struct_phi_get(swigCPtr, this), true);
+  public nmod_t getPhi() {
+    long cPtr = arblibJNI.dirichlet_prime_group_struct_phi_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new nmod_t(cPtr, false);
   }
 
   public void setG(long value) {
@@ -76,13 +78,13 @@ public class dirichlet_prime_group_struct {
     return arblibJNI.dirichlet_prime_group_struct_g_get(swigCPtr, this);
   }
 
-  public void setDlog(SWIGTYPE_p_dlog_precomp_struct value) {
-    arblibJNI.dirichlet_prime_group_struct_dlog_set(swigCPtr, this, SWIGTYPE_p_dlog_precomp_struct.getCPtr(value));
+  public void setDlog(dlog_precomp_struct value) {
+    arblibJNI.dirichlet_prime_group_struct_dlog_set(swigCPtr, this, dlog_precomp_struct.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_dlog_precomp_struct getDlog() {
+  public dlog_precomp_struct getDlog() {
     long cPtr = arblibJNI.dirichlet_prime_group_struct_dlog_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_dlog_precomp_struct(cPtr, false);
+    return (cPtr == 0) ? null : new dlog_precomp_struct(cPtr, false);
   }
 
   public dirichlet_prime_group_struct() {

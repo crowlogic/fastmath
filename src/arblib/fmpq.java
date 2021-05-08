@@ -8,16 +8,16 @@
 
 package arblib;
 
-public class __gmp_randstate_struct__mp_algdata {
+public class fmpq {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected __gmp_randstate_struct__mp_algdata(long cPtr, boolean cMemoryOwn) {
+  protected fmpq(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(__gmp_randstate_struct__mp_algdata obj) {
+  protected static long getCPtr(fmpq obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,23 +30,30 @@ public class __gmp_randstate_struct__mp_algdata {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        arblibJNI.delete___gmp_randstate_struct__mp_algdata(swigCPtr);
+        arblibJNI.delete_fmpq(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void set_mp_lc(SWIGTYPE_p_void value) {
-    arblibJNI.__gmp_randstate_struct__mp_algdata__mp_lc_set(swigCPtr, this, SWIGTYPE_p_void.getCPtr(value));
+  public void setNum(int value) {
+    arblibJNI.fmpq_num_set(swigCPtr, this, value);
   }
 
-  public SWIGTYPE_p_void get_mp_lc() {
-    long cPtr = arblibJNI.__gmp_randstate_struct__mp_algdata__mp_lc_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_void(cPtr, false);
+  public int getNum() {
+    return arblibJNI.fmpq_num_get(swigCPtr, this);
   }
 
-  public __gmp_randstate_struct__mp_algdata() {
-    this(arblibJNI.new___gmp_randstate_struct__mp_algdata(), true);
+  public void setDen(int value) {
+    arblibJNI.fmpq_den_set(swigCPtr, this, value);
+  }
+
+  public int getDen() {
+    return arblibJNI.fmpq_den_get(swigCPtr, this);
+  }
+
+  public fmpq() {
+    this(arblibJNI.new_fmpq(), true);
   }
 
 }

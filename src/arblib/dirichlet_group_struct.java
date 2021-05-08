@@ -52,12 +52,13 @@ public class dirichlet_group_struct {
     return arblibJNI.dirichlet_group_struct_q_even_get(swigCPtr, this);
   }
 
-  public void setMod(SWIGTYPE_p_nmod_t value) {
-    arblibJNI.dirichlet_group_struct_mod_set(swigCPtr, this, SWIGTYPE_p_nmod_t.getCPtr(value));
+  public void setMod(nmod_t value) {
+    arblibJNI.dirichlet_group_struct_mod_set(swigCPtr, this, nmod_t.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_nmod_t getMod() {
-    return new SWIGTYPE_p_nmod_t(arblibJNI.dirichlet_group_struct_mod_get(swigCPtr, this), true);
+  public nmod_t getMod() {
+    long cPtr = arblibJNI.dirichlet_group_struct_mod_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new nmod_t(cPtr, false);
   }
 
   public void setRad_q(long value) {

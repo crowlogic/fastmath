@@ -45,12 +45,13 @@ public class arb_struct {
     return (cPtr == 0) ? null : new arf_struct(cPtr, false);
   }
 
-  public void setRad(SWIGTYPE_p_mag_struct value) {
-    arblibJNI.arb_struct_rad_set(swigCPtr, this, SWIGTYPE_p_mag_struct.getCPtr(value));
+  public void setRad(mag_struct value) {
+    arblibJNI.arb_struct_rad_set(swigCPtr, this, mag_struct.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_mag_struct getRad() {
-    return new SWIGTYPE_p_mag_struct(arblibJNI.arb_struct_rad_get(swigCPtr, this), true);
+  public mag_struct getRad() {
+    long cPtr = arblibJNI.arb_struct_rad_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new mag_struct(cPtr, false);
   }
 
   public arb_struct() {
