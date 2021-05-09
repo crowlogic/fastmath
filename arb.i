@@ -1,5 +1,16 @@
 %module arblib
 
+%{
+#include <mpfr.h>
+#include <flint/flint.h>
+#include <arf.h>
+#include <arb.h>
+#include <acb.h>
+#include <acb_poly.h>
+#include <acb_dirichlet.h>
+#include <dirichlet.h>
+%}
+
 #define _GLIBCXX_BEGIN_NAMESPACE_VERSION
 #define _GLIBCXX_END_NAMESPACE_VERSION
 #define _GLIBCXX_BEGIN_NAMESPACE_CXX11
@@ -12,6 +23,7 @@
 
 %typemap(in) slong = long;
 
+//#define FLINT_TLS_PREFIX 
 //#define TLS_PREFIX
 #define FLINT_DLL
 //#define ARB_DLL
@@ -21,12 +33,19 @@
 #define DIRICHLET_INLINES_C
 #define ACB_POLY_INLINES_C
 
-%include "/usr/include/mpfr.h"
-%include "/usr/include/x86_64-linux-gnu/gmp.h"
-%include "/usr/include/flint/flint.h"
-%include "/usr/include/arf.h"
-%include "/usr/include/arb.h"
-%include "/usr/include/acb.h"
-%include "/usr/include/acb_poly.h"
-%include "/usr/include/acb_dirichlet.h"
-%include "/usr/include/dirichlet.h"
+typedef struct
+{
+    arb_struct real;
+    arb_struct imag;
+}
+acb_struct;
+
+void acb_set_d(acb_t z, double c);
+
+extern void acb_dirichlet_hardy_z(acb_ptr res, 
+                                  const acb_t t, 
+				  const dirichlet_group_t G, 
+				  const dirichlet_char_t chi,
+				  slong len, 
+				  slong prec);
+				  

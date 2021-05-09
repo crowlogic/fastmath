@@ -8,18 +8,18 @@
 
 package arblib;
 
-public class SWIGTYPE_p_p___locale_data {
+public class SWIGTYPE_p_acb_t {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_p___locale_data(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_acb_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_p___locale_data() {
+  protected SWIGTYPE_p_acb_t() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_p___locale_data obj) {
+  protected static long getCPtr(SWIGTYPE_p_acb_t obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

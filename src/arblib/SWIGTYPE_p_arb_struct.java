@@ -8,18 +8,18 @@
 
 package arblib;
 
-public class SWIGTYPE_p_cpu_set_t {
+public class SWIGTYPE_p_arb_struct {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_cpu_set_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_arb_struct(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_cpu_set_t() {
+  protected SWIGTYPE_p_arb_struct() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_cpu_set_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_arb_struct obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

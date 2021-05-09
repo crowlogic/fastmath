@@ -36,22 +36,20 @@ public class acb_struct {
     }
   }
 
-  public void setReal(arb_struct value) {
-    arblibJNI.acb_struct_real_set(swigCPtr, this, arb_struct.getCPtr(value), value);
+  public void setReal(SWIGTYPE_p_arb_struct value) {
+    arblibJNI.acb_struct_real_set(swigCPtr, this, SWIGTYPE_p_arb_struct.getCPtr(value));
   }
 
-  public arb_struct getReal() {
-    long cPtr = arblibJNI.acb_struct_real_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arb_struct(cPtr, false);
+  public SWIGTYPE_p_arb_struct getReal() {
+    return new SWIGTYPE_p_arb_struct(arblibJNI.acb_struct_real_get(swigCPtr, this), true);
   }
 
-  public void setImag(arb_struct value) {
-    arblibJNI.acb_struct_imag_set(swigCPtr, this, arb_struct.getCPtr(value), value);
+  public void setImag(SWIGTYPE_p_arb_struct value) {
+    arblibJNI.acb_struct_imag_set(swigCPtr, this, SWIGTYPE_p_arb_struct.getCPtr(value));
   }
 
-  public arb_struct getImag() {
-    long cPtr = arblibJNI.acb_struct_imag_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arb_struct(cPtr, false);
+  public SWIGTYPE_p_arb_struct getImag() {
+    return new SWIGTYPE_p_arb_struct(arblibJNI.acb_struct_imag_get(swigCPtr, this), true);
   }
 
   public acb_struct() {
