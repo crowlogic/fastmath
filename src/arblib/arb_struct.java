@@ -8,16 +8,16 @@
 
 package arblib;
 
-public class acb_struct {
+public class arb_struct {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected acb_struct(long cPtr, boolean cMemoryOwn) {
+  protected arb_struct(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(acb_struct obj) {
+  protected static long getCPtr(arb_struct obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,32 +30,31 @@ public class acb_struct {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        arblibJNI.delete_acb_struct(swigCPtr);
+        arblibJNI.delete_arb_struct(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void setReal(arb_struct value) {
-    arblibJNI.acb_struct_real_set(swigCPtr, this, arb_struct.getCPtr(value), value);
+  public void setMid(arf_struct value) {
+    arblibJNI.arb_struct_mid_set(swigCPtr, this, arf_struct.getCPtr(value), value);
   }
 
-  public arb_struct getReal() {
-    long cPtr = arblibJNI.acb_struct_real_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arb_struct(cPtr, false);
+  public arf_struct getMid() {
+    long cPtr = arblibJNI.arb_struct_mid_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new arf_struct(cPtr, false);
   }
 
-  public void setImag(arb_struct value) {
-    arblibJNI.acb_struct_imag_set(swigCPtr, this, arb_struct.getCPtr(value), value);
+  public void setRad(SWIGTYPE_p_mag_struct value) {
+    arblibJNI.arb_struct_rad_set(swigCPtr, this, SWIGTYPE_p_mag_struct.getCPtr(value));
   }
 
-  public arb_struct getImag() {
-    long cPtr = arblibJNI.acb_struct_imag_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arb_struct(cPtr, false);
+  public SWIGTYPE_p_mag_struct getRad() {
+    return new SWIGTYPE_p_mag_struct(arblibJNI.arb_struct_rad_get(swigCPtr, this), true);
   }
 
-  public acb_struct() {
-    this(arblibJNI.new_acb_struct(), true);
+  public arb_struct() {
+    this(arblibJNI.new_arb_struct(), true);
   }
 
 }

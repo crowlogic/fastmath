@@ -8,18 +8,18 @@
 
 package arblib;
 
-public class SWIGTYPE_p_dirichlet_char_t {
+public class SWIGTYPE_p_arf_struct {
   private transient long swigCPtr;
 
-  protected SWIGTYPE_p_dirichlet_char_t(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
+  protected SWIGTYPE_p_arf_struct(long cPtr, @SuppressWarnings("unused") boolean futureUse) {
     swigCPtr = cPtr;
   }
 
-  protected SWIGTYPE_p_dirichlet_char_t() {
+  protected SWIGTYPE_p_arf_struct() {
     swigCPtr = 0;
   }
 
-  protected static long getCPtr(SWIGTYPE_p_dirichlet_char_t obj) {
+  protected static long getCPtr(SWIGTYPE_p_arf_struct obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 }

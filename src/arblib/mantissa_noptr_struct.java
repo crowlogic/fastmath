@@ -8,16 +8,16 @@
 
 package arblib;
 
-public class acb_struct {
+public class mantissa_noptr_struct {
   private transient long swigCPtr;
   protected transient boolean swigCMemOwn;
 
-  protected acb_struct(long cPtr, boolean cMemoryOwn) {
+  protected mantissa_noptr_struct(long cPtr, boolean cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = cPtr;
   }
 
-  protected static long getCPtr(acb_struct obj) {
+  protected static long getCPtr(mantissa_noptr_struct obj) {
     return (obj == null) ? 0 : obj.swigCPtr;
   }
 
@@ -30,32 +30,23 @@ public class acb_struct {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        arblibJNI.delete_acb_struct(swigCPtr);
+        arblibJNI.delete_mantissa_noptr_struct(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
-  public void setReal(arb_struct value) {
-    arblibJNI.acb_struct_real_set(swigCPtr, this, arb_struct.getCPtr(value), value);
+  public void setD(SWIGTYPE_p_mp_limb_t value) {
+    arblibJNI.mantissa_noptr_struct_d_set(swigCPtr, this, SWIGTYPE_p_mp_limb_t.getCPtr(value));
   }
 
-  public arb_struct getReal() {
-    long cPtr = arblibJNI.acb_struct_real_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arb_struct(cPtr, false);
+  public SWIGTYPE_p_mp_limb_t getD() {
+    long cPtr = arblibJNI.mantissa_noptr_struct_d_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new SWIGTYPE_p_mp_limb_t(cPtr, false);
   }
 
-  public void setImag(arb_struct value) {
-    arblibJNI.acb_struct_imag_set(swigCPtr, this, arb_struct.getCPtr(value), value);
-  }
-
-  public arb_struct getImag() {
-    long cPtr = arblibJNI.acb_struct_imag_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new arb_struct(cPtr, false);
-  }
-
-  public acb_struct() {
-    this(arblibJNI.new_acb_struct(), true);
+  public mantissa_noptr_struct() {
+    this(arblibJNI.new_mantissa_noptr_struct(), true);
   }
 
 }

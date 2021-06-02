@@ -9,12 +9,16 @@
 package arblib;
 
 public class arblib {
-  public static void acb_set_d(SWIGTYPE_p_acb_t z, double c) {
-    arblibJNI.acb_set_d(SWIGTYPE_p_acb_t.getCPtr(z), c);
+  public static void acb_set_d(acb_struct z, double c) {
+    arblibJNI.acb_set_d(acb_struct.getCPtr(z), z, c);
   }
 
-  public static void acb_dirichlet_hardy_z(SWIGTYPE_p_acb_ptr res, SWIGTYPE_p_acb_t t, SWIGTYPE_p_dirichlet_group_t G, SWIGTYPE_p_dirichlet_char_t chi, SWIGTYPE_p_slong len, SWIGTYPE_p_slong prec) {
-    arblibJNI.acb_dirichlet_hardy_z(SWIGTYPE_p_acb_ptr.getCPtr(res), SWIGTYPE_p_acb_t.getCPtr(t), SWIGTYPE_p_dirichlet_group_t.getCPtr(G), SWIGTYPE_p_dirichlet_char_t.getCPtr(chi), SWIGTYPE_p_slong.getCPtr(len), SWIGTYPE_p_slong.getCPtr(prec));
+  public static void acb_dirichlet_hardy_z(acb_struct res, acb_struct t, dirichlet_group_struct G, dirichlet_char_struct chi, int len, int prec) {
+    arblibJNI.acb_dirichlet_hardy_z(acb_struct.getCPtr(res), res, acb_struct.getCPtr(t), t, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, len, prec);
+  }
+
+  public static void acb_print(acb_struct x) {
+    arblibJNI.acb_print(acb_struct.getCPtr(x), x);
   }
 
 }
