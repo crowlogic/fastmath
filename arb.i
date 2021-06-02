@@ -135,10 +135,11 @@ extern void acb_set_d(acb_t z, double c);
 
 extern void acb_dirichlet_hardy_z(acb_ptr res, 
                                   const acb_t t, 
-				  const dirichlet_group_t G, 
-				  const dirichlet_char_t chi,
-				  slong len, 
-				  slong prec);
+								  const dirichlet_group_t G, 
+								  const dirichlet_char_t chi,
+								  slong len, 
+								  slong prec);
 	
 extern void acb_print(const acb_t x);
 	 			  
+extern char *arb_get_str(const arb_t x, slong n, ulong flags);

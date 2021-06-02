@@ -1425,6 +1425,26 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1print(JNIEnv *jenv, jclass jc
 }
 
 
+SWIGEXPORT jstring JNICALL Java_arblib_arblibJNI_arb_1get_1str(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
+  jstring jresult = 0 ;
+  arb_struct *arg1 ;
+  long arg2 ;
+  unsigned long arg3 ;
+  char *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(arb_struct **)&jarg1; 
+  arg2 = (long)jarg2; 
+  arg3 = (unsigned long)jarg3; 
+  result = (char *)arb_get_str((arb_struct const (*))arg1,arg2,arg3);
+  if (result) jresult = jenv->NewStringUTF((const char *)result);
+  
+  return jresult;
+}
+
+
 #ifdef __cplusplus
 }
 #endif

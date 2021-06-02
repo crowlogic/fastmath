@@ -21,4 +21,8 @@ public class arblib {
     arblibJNI.acb_print(acb_struct.getCPtr(x), x);
   }
 
+  public static String arb_get_str(arb_struct x, int n, long flags) {
+    return arblibJNI.arb_get_str(arb_struct.getCPtr(x), x, n, flags);
+  }
+
 }
