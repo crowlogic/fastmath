@@ -9,6 +9,10 @@
 package arblib;
 
 public class arblib {
+  public static void color_function(double[] R, double[] G, double[] B, acb_struct z, int mode) {
+    arblibJNI.color_function(R, G, B, acb_struct.getCPtr(z), z, mode);
+  }
+
   public static void arf_init(arf_struct x) {
     arblibJNI.arf_init(arf_struct.getCPtr(x), x);
   }
@@ -67,6 +71,22 @@ public class arblib {
 
   public static int acb_rel_accuracy_bits(acb_struct x) {
     return arblibJNI.acb_rel_accuracy_bits(acb_struct.getCPtr(x), x);
+  }
+
+  public static void acb_pow_ui(acb_struct y, acb_struct b, long e, int prec) {
+    arblibJNI.acb_pow_ui(acb_struct.getCPtr(y), y, acb_struct.getCPtr(b), b, e, prec);
+  }
+
+  public static void acb_add_ui(acb_struct z, acb_struct x, long c, int prec) {
+    arblibJNI.acb_add_ui(acb_struct.getCPtr(z), z, acb_struct.getCPtr(x), x, c, prec);
+  }
+
+  public static void acb_log(acb_struct r, acb_struct z, int prec) {
+    arblibJNI.acb_log(acb_struct.getCPtr(r), r, acb_struct.getCPtr(z), z, prec);
+  }
+
+  public static void acb_tanh(acb_struct y, acb_struct x, int prec) {
+    arblibJNI.acb_tanh(acb_struct.getCPtr(y), y, acb_struct.getCPtr(x), x, prec);
   }
 
 }

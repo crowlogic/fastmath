@@ -1,5 +1,11 @@
 %module arblib
 
+%include typemaps.i
+
+%apply double *OUTPUT { double *R };
+%apply double *OUTPUT { double *G };
+%apply double *OUTPUT { double *B };
+
 
 #define _GLIBCXX_BEGIN_NAMESPACE_VERSION
 #define _GLIBCXX_END_NAMESPACE_VERSION
@@ -38,7 +44,11 @@
 #include <acb_poly.h>
 #include <acb_dirichlet.h>
 #include <dirichlet.h>
+#include "complex_plot.h"
 %}
+
+void
+color_function(double * R, double * G, double * B, const acb_t z, int mode);
 
 typedef struct
 {
@@ -197,3 +207,23 @@ extern slong acb_rel_accuracy_bits(const acb_t x)
 
 extern void acb_dirichlet_hardy_z(acb_ptr res, const acb_t t, const dirichlet_group_t G, const dirichlet_char_t chi, slong len, slong prec);
 
+
+extern void acb_pow_ui(acb_t y, const acb_t b, ulong e, slong prec);
+
+extern void acb_add_ui(acb_t z, const acb_t x, ulong c, slong prec)
+{
+    arb_add_ui(acb_realref(z), acb_realref(x), c, prec);
+    arb_set_round(acb_imagref(z), acb_imagref(x), prec);
+}
+
+extern void acb_log(acb_t r, const acb_t z, slong prec);
+
+extern void acb_tanh(acb_t y, const acb_t x, slong prec)
+{
+    acb_mul_onei(y, x);
+    acb_tan(y, y, prec);
+    acb_div_onei(y, y);
+}
+
+
+extern void color_function(double * R, double * G, double * B, const acb_t z, int mode);

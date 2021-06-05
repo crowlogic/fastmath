@@ -9,6 +9,7 @@
 package arblib;
 
 public class arblibJNI {
+  public final static native void color_function(double[] jarg1, double[] jarg2, double[] jarg3, long jarg4, acb_struct jarg4_, int jarg5);
   public final static native void acb_struct_real_set(long jarg1, acb_struct jarg1_, long jarg2, arb_struct jarg2_);
   public final static native long acb_struct_real_get(long jarg1, acb_struct jarg1_);
   public final static native void acb_struct_imag_set(long jarg1, acb_struct jarg1_, long jarg2, arb_struct jarg2_);
@@ -104,4 +105,8 @@ public class arblibJNI {
   public final static native int arf_div_ui(long jarg1, arf_struct jarg1_, long jarg2, arf_struct jarg2_, long jarg3, int jarg4, int jarg5);
   public final static native int arf_add(long jarg1, arf_struct jarg1_, long jarg2, arf_struct jarg2_, long jarg3, arf_struct jarg3_, int jarg4, int jarg5);
   public final static native int acb_rel_accuracy_bits(long jarg1, acb_struct jarg1_);
+  public final static native void acb_pow_ui(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, int jarg4);
+  public final static native void acb_add_ui(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, int jarg4);
+  public final static native void acb_log(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, int jarg3);
+  public final static native void acb_tanh(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, int jarg3);
 }

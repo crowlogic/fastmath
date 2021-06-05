@@ -240,11 +240,83 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 #include <acb_poly.h>
 #include <acb_dirichlet.h>
 #include <dirichlet.h>
+#include "complex_plot.h"
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_color_1function(JNIEnv *jenv, jclass jcls, jdoubleArray jarg1, jdoubleArray jarg2, jdoubleArray jarg3, jlong jarg4, jobject jarg4_, jint jarg5) {
+  double *arg1 = (double *) 0 ;
+  double *arg2 = (double *) 0 ;
+  double *arg3 = (double *) 0 ;
+  acb_struct *arg4 ;
+  int arg5 ;
+  double temp1 ;
+  double temp2 ;
+  double temp3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg4_;
+  {
+    if (!jarg1) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg1) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp1 = (double)0;
+    arg1 = &temp1; 
+  }
+  {
+    if (!jarg2) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg2) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp2 = (double)0;
+    arg2 = &temp2; 
+  }
+  {
+    if (!jarg3) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "array null");
+      return ;
+    }
+    if (jenv->GetArrayLength(jarg3) == 0) {
+      SWIG_JavaThrowException(jenv, SWIG_JavaIndexOutOfBoundsException, "Array must contain at least 1 element");
+      return ;
+    }
+    temp3 = (double)0;
+    arg3 = &temp3; 
+  }
+  arg4 = *(acb_struct **)&jarg4; 
+  arg5 = (int)jarg5; 
+  color_function(arg1,arg2,arg3,(acb_struct const (*))arg4,arg5);
+  {
+    jdouble jvalue = (jdouble)temp1;
+    jenv->SetDoubleArrayRegion(jarg1, 0, 1, &jvalue);
+  }
+  {
+    jdouble jvalue = (jdouble)temp2;
+    jenv->SetDoubleArrayRegion(jarg2, 0, 1, &jvalue);
+  }
+  {
+    jdouble jvalue = (jdouble)temp3;
+    jenv->SetDoubleArrayRegion(jarg3, 0, 1, &jvalue);
+  }
+  
+  
+  
+  
+}
+
 
 SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1struct_1real_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   acb_struct *arg1 = (acb_struct *) 0 ;
@@ -1644,6 +1716,82 @@ SWIGEXPORT jint JNICALL Java_arblib_arblibJNI_acb_1rel_1accuracy_1bits(JNIEnv *j
   jresult = (jint)result; 
   
   return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1pow_1ui(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jint jarg4) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  unsigned long arg3 ;
+  long arg4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = (unsigned long)jarg3; 
+  arg4 = (long)jarg4; 
+  acb_pow_ui(arg1,(acb_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1add_1ui(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jint jarg4) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  unsigned long arg3 ;
+  long arg4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = (unsigned long)jarg3; 
+  arg4 = (long)jarg4; 
+  acb_add_ui(arg1,(acb_struct const (*))arg2,arg3,arg4);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1log(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  long arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = (long)jarg3; 
+  acb_log(arg1,(acb_struct const (*))arg2,arg3);
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1tanh(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  long arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = (long)jarg3; 
+  acb_tanh(arg1,(acb_struct const (*))arg2,arg3);
+  
+  
 }
 
 
