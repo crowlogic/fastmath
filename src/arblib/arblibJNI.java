@@ -96,6 +96,12 @@ public class arblibJNI {
   public final static native void acb_dirichlet_hardy_z(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, dirichlet_group_struct jarg3_, long jarg4, dirichlet_char_struct jarg4_, int jarg5, int jarg6);
   public final static native void acb_print(long jarg1, acb_struct jarg1_);
   public final static native String arb_get_str(long jarg1, arb_struct jarg1_, int jarg2, long jarg3);
-  public final static native double arf_get_d(long jarg1, arf_struct jarg1_, long jarg2);
+  public final static native double arf_get_d(long jarg1, arf_struct jarg1_, int jarg2);
   public final static native void arf_set_d(long jarg1, arf_struct jarg1_, double jarg2);
+  public final static native int arf_sub(long jarg1, arf_struct jarg1_, long jarg2, arf_struct jarg2_, long jarg3, arf_struct jarg3_, int jarg4, int jarg5);
+  public final static native void arb_mul_ui(long jarg1, arb_struct jarg1_, long jarg2, arb_struct jarg2_, long jarg3, int jarg4);
+  public final static native int arf_mul_ui(long jarg1, arf_struct jarg1_, long jarg2, arf_struct jarg2_, long jarg3, int jarg4, int jarg5);
+  public final static native int arf_div_ui(long jarg1, arf_struct jarg1_, long jarg2, arf_struct jarg2_, long jarg3, int jarg4, int jarg5);
+  public final static native int arf_add(long jarg1, arf_struct jarg1_, long jarg2, arf_struct jarg2_, long jarg3, arf_struct jarg3_, int jarg4, int jarg5);
+  public final static native int acb_rel_accuracy_bits(long jarg1, acb_struct jarg1_);
 }

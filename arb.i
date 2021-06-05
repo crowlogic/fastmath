@@ -16,6 +16,9 @@
 
 %typemap(in) slong = long;
 
+#define fmpr_rnd_t int
+#define arf_rnd_t int
+
 //#define FLINT_TLS_PREFIX 
 //#define TLS_PREFIX
 #define FLINT_DLL
@@ -166,3 +169,31 @@ extern char *arb_get_str(const arb_t x, slong n, ulong flags);
 extern double arf_get_d(const arf_t x, arf_rnd_t rnd);
 
 extern void arf_set_d(arf_t x, double v);
+
+extern int arf_sub(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+
+extern void arb_mul_ui(arb_t z, const arb_t x, ulong y, slong prec);
+
+extern int arf_mul_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd)
+{
+    arf_t t;
+    arf_init_set_ui(t, y); /* no need to free */
+    return arf_mul(z, x, t, prec, rnd);
+}
+
+extern int arf_div_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd)
+{
+    arf_t t;
+    arf_init_set_ui(t, y); /* no need to free */
+    return arf_div(z, x, t, prec, rnd);
+}
+
+extern int arf_add(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+
+extern slong acb_rel_accuracy_bits(const acb_t x)
+{
+    return -acb_rel_error_bits(x);
+}
+
+extern void acb_dirichlet_hardy_z(acb_ptr res, const acb_t t, const dirichlet_group_t G, const dirichlet_char_t chi, slong len, slong prec);
+

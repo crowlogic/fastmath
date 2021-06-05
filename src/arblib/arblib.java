@@ -37,12 +37,36 @@ public class arblib {
     return arblibJNI.arb_get_str(arb_struct.getCPtr(x), x, n, flags);
   }
 
-  public static double arf_get_d(arf_struct x, SWIGTYPE_p_arf_rnd_t rnd) {
-    return arblibJNI.arf_get_d(arf_struct.getCPtr(x), x, SWIGTYPE_p_arf_rnd_t.getCPtr(rnd));
+  public static double arf_get_d(arf_struct x, int rnd) {
+    return arblibJNI.arf_get_d(arf_struct.getCPtr(x), x, rnd);
   }
 
   public static void arf_set_d(arf_struct x, double v) {
     arblibJNI.arf_set_d(arf_struct.getCPtr(x), x, v);
+  }
+
+  public static int arf_sub(arf_struct z, arf_struct x, arf_struct y, int prec, int rnd) {
+    return arblibJNI.arf_sub(arf_struct.getCPtr(z), z, arf_struct.getCPtr(x), x, arf_struct.getCPtr(y), y, prec, rnd);
+  }
+
+  public static void arb_mul_ui(arb_struct z, arb_struct x, long y, int prec) {
+    arblibJNI.arb_mul_ui(arb_struct.getCPtr(z), z, arb_struct.getCPtr(x), x, y, prec);
+  }
+
+  public static int arf_mul_ui(arf_struct z, arf_struct x, long y, int prec, int rnd) {
+    return arblibJNI.arf_mul_ui(arf_struct.getCPtr(z), z, arf_struct.getCPtr(x), x, y, prec, rnd);
+  }
+
+  public static int arf_div_ui(arf_struct z, arf_struct x, long y, int prec, int rnd) {
+    return arblibJNI.arf_div_ui(arf_struct.getCPtr(z), z, arf_struct.getCPtr(x), x, y, prec, rnd);
+  }
+
+  public static int arf_add(arf_struct z, arf_struct x, arf_struct y, int prec, int rnd) {
+    return arblibJNI.arf_add(arf_struct.getCPtr(z), z, arf_struct.getCPtr(x), x, arf_struct.getCPtr(y), y, prec, rnd);
+  }
+
+  public static int acb_rel_accuracy_bits(acb_struct x) {
+    return arblibJNI.acb_rel_accuracy_bits(acb_struct.getCPtr(x), x);
   }
 
 }
