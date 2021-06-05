@@ -99,6 +99,19 @@ typedef arb_struct arb_t[1];
 typedef arb_struct * arb_ptr;
 typedef const arb_struct * arb_srcptr;
 
+void
+arf_init(arf_t x)
+{
+    fmpz_init(ARF_EXPREF(x));
+    ARF_XSIZE(x) = 0;
+}
+
+void acb_init(acb_t x)
+{
+    arb_init(acb_realref(x));
+    arb_init(acb_imagref(x));
+}
+
 typedef struct
 {
     mp_limb_t d[ARF_NOPTR_LIMBS];
@@ -127,6 +140,12 @@ typedef struct
 }
 arf_struct;
 
+void arb_init(arb_t x)
+{
+    arf_init(arb_midref(x));
+    mag_init(arb_radref(x));
+}
+
 typedef arf_struct arf_t[1];
 typedef arf_struct * arf_ptr;
 typedef const arf_struct * arf_srcptr;
@@ -143,3 +162,7 @@ extern void acb_dirichlet_hardy_z(acb_ptr res,
 extern void acb_print(const acb_t x);
 	 			  
 extern char *arb_get_str(const arb_t x, slong n, ulong flags);
+
+extern double arf_get_d(const arf_t x, arf_rnd_t rnd);
+
+extern void arf_set_d(arf_t x, double v);

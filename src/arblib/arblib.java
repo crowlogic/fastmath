@@ -9,6 +9,18 @@
 package arblib;
 
 public class arblib {
+  public static void arf_init(arf_struct x) {
+    arblibJNI.arf_init(arf_struct.getCPtr(x), x);
+  }
+
+  public static void acb_init(acb_struct x) {
+    arblibJNI.acb_init(acb_struct.getCPtr(x), x);
+  }
+
+  public static void arb_init(arb_struct x) {
+    arblibJNI.arb_init(arb_struct.getCPtr(x), x);
+  }
+
   public static void acb_set_d(acb_struct z, double c) {
     arblibJNI.acb_set_d(acb_struct.getCPtr(z), z, c);
   }
@@ -23,6 +35,14 @@ public class arblib {
 
   public static String arb_get_str(arb_struct x, int n, long flags) {
     return arblibJNI.arb_get_str(arb_struct.getCPtr(x), x, n, flags);
+  }
+
+  public static double arf_get_d(arf_struct x, SWIGTYPE_p_arf_rnd_t rnd) {
+    return arblibJNI.arf_get_d(arf_struct.getCPtr(x), x, SWIGTYPE_p_arf_rnd_t.getCPtr(rnd));
+  }
+
+  public static void arf_set_d(arf_struct x, double v) {
+    arblibJNI.arf_set_d(arf_struct.getCPtr(x), x, v);
   }
 
 }

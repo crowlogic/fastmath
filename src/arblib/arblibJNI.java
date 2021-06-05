@@ -65,6 +65,8 @@ public class arblibJNI {
   public final static native long arb_struct_rad_get(long jarg1, arb_struct jarg1_);
   public final static native long new_arb_struct();
   public final static native void delete_arb_struct(long jarg1);
+  public final static native void arf_init(long jarg1, arf_struct jarg1_);
+  public final static native void acb_init(long jarg1, acb_struct jarg1_);
   public final static native void mantissa_noptr_struct_d_set(long jarg1, mantissa_noptr_struct jarg1_, long jarg2);
   public final static native long mantissa_noptr_struct_d_get(long jarg1, mantissa_noptr_struct jarg1_);
   public final static native long new_mantissa_noptr_struct();
@@ -89,8 +91,11 @@ public class arblibJNI {
   public final static native long arf_struct_d_get(long jarg1, arf_struct jarg1_);
   public final static native long new_arf_struct();
   public final static native void delete_arf_struct(long jarg1);
+  public final static native void arb_init(long jarg1, arb_struct jarg1_);
   public final static native void acb_set_d(long jarg1, acb_struct jarg1_, double jarg2);
   public final static native void acb_dirichlet_hardy_z(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, dirichlet_group_struct jarg3_, long jarg4, dirichlet_char_struct jarg4_, int jarg5, int jarg6);
   public final static native void acb_print(long jarg1, acb_struct jarg1_);
   public final static native String arb_get_str(long jarg1, arb_struct jarg1_, int jarg2, long jarg3);
+  public final static native double arf_get_d(long jarg1, arf_struct jarg1_, long jarg2);
+  public final static native void arf_set_d(long jarg1, arf_struct jarg1_, double jarg2);
 }

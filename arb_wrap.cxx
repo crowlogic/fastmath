@@ -1028,6 +1028,30 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_delete_1arb_1struct(JNIEnv *jenv, 
 }
 
 
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_arf_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  arf_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(arf_struct **)&jarg1; 
+  arf_init(arg1);
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  acb_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(acb_struct **)&jarg1; 
+  acb_init(arg1);
+  
+}
+
+
 SWIGEXPORT void JNICALL Java_arblib_arblibJNI_mantissa_1noptr_1struct_1d_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   mantissa_noptr_struct *arg1 = (mantissa_noptr_struct *) 0 ;
   mp_limb_t *arg2 ;
@@ -1372,6 +1396,18 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_delete_1arf_1struct(JNIEnv *jenv, 
 }
 
 
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_arb_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  arb_struct *arg1 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(arb_struct **)&jarg1; 
+  arb_init(arg1);
+  
+}
+
+
 SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1set_1d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   acb_struct *arg1 ;
   double arg2 ;
@@ -1442,6 +1478,44 @@ SWIGEXPORT jstring JNICALL Java_arblib_arblibJNI_arb_1get_1str(JNIEnv *jenv, jcl
   if (result) jresult = jenv->NewStringUTF((const char *)result);
   
   return jresult;
+}
+
+
+SWIGEXPORT jdouble JNICALL Java_arblib_arblibJNI_arf_1get_1d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  jdouble jresult = 0 ;
+  arf_struct *arg1 ;
+  arf_rnd_t arg2 ;
+  arf_rnd_t *argp2 ;
+  double result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(arf_struct **)&jarg1; 
+  argp2 = *(arf_rnd_t **)&jarg2; 
+  if (!argp2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "Attempt to dereference null arf_rnd_t");
+    return 0;
+  }
+  arg2 = *argp2; 
+  result = (double)arf_get_d((arf_struct const (*))arg1,arg2);
+  jresult = (jdouble)result; 
+  
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_arf_1set_1d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  arf_struct *arg1 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(arf_struct **)&jarg1; 
+  arg2 = (double)jarg2; 
+  arf_set_d(arg1,arg2);
+  
 }
 
 
