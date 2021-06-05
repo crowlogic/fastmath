@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.stream.IntStream;
 
 public class ComplexPlot
 {
@@ -28,8 +27,8 @@ public class ComplexPlot
   double G[] = new double[1];
   double B[] = new double[1];
 
-  int ynum = 512;
-  int xnum = 512;
+  int ynum = 1024;
+  int xnum = 2048;
 
   acb_struct z = new acb_struct();
   acb_struct w = new acb_struct();
@@ -43,7 +42,7 @@ public class ComplexPlot
 
     ax = 13;
     ay = -2;
-    bx = 16;
+    bx = 27;
     by = 2;
     color_mode = 0;
 
@@ -92,36 +91,26 @@ public class ComplexPlot
       if (y % (ynum / 16) == 0)
         System.out.printf("row %d\n", y);
 
-      IntStream.range(0, xnum).forEachOrdered(x ->
+      for (x = 0; x < xnum; x++)
       {
-
         evaluateFunction();
 
         colorizeAndRecordPoint(fos);
-      });
+      }
     }
     pw.close();
   }
 
-  private void colorizeAndRecordPoint(FileOutputStream fos)
+  private void colorizeAndRecordPoint(FileOutputStream fos) throws IOException
   {
     arblib.color_function(R, G, B, w, color_mode);
 
     int red = (int) min(255, floor(R[0] * 255));
     int green = (int) min(255, floor(G[0] * 255));
     int blue = (int) min(255, floor(B[0] * 255));
-    try
-    {
-      fos.write(red);
-      fos.write(green);
-      fos.write(blue);
-    }
-    catch (IOException e)
-    {
-      throw new RuntimeException(e.getMessage(),
-                                 e);
-    }
-
+    fos.write(red);
+    fos.write(green);
+    fos.write(blue);
   }
 
   private void evaluateFunction()
