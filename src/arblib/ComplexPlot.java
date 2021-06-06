@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.stream.IntStream;
 
 public class ComplexPlot
 {
@@ -20,18 +21,42 @@ public class ComplexPlot
 
   int color_mode = 0;
   int prec = 256;
-  long x, y, i;
+
   double ax, ay, bx, by;
 
-  double R[] = new double[1];
-  double G[] = new double[1];
-  double B[] = new double[1];
+  ThreadLocal<double[]> R = new ThreadLocal<>()
+  {
 
-  int ynum = 1024;
-  int xnum = 2048;
+    @Override
+    protected double[] initialValue()
+    {
+      return new double[1];
+    }
+  };
 
-  acb_struct z = new acb_struct();
-  acb_struct w = new acb_struct();
+  ThreadLocal<double[]> G = new ThreadLocal<>()
+  {
+
+    @Override
+    protected double[] initialValue()
+    {
+      return new double[1];
+    }
+  };
+
+  ThreadLocal<double[]> B = new ThreadLocal<>()
+  {
+
+    @Override
+    protected double[] initialValue()
+    {
+      return new double[1];
+    }
+  };
+
+  int ynum = 2000;
+  int xnum = 2000;
+
   arf_struct xa = new arf_struct();
   arf_struct xb = new arf_struct();
   arf_struct ya = new arf_struct();
@@ -41,13 +66,10 @@ public class ComplexPlot
   {
 
     ax = 13;
-    ay = -2;
-    bx = 27;
-    by = 2;
+    ay = -3;
+    bx = 55;
+    by = 3;
     color_mode = 0;
-
-    acb_init(z);
-    acb_init(w);
 
     arf_init(xa);
     arf_init(xb);
@@ -70,6 +92,7 @@ public class ComplexPlot
     acb_add_ui(res, res, 1, prec);
     acb_log(res, res, prec);
     acb_tanh(res, res, prec);
+    arb_set_d(res.getImag(), 0);
   }
 
   public static void main(String args[]) throws IOException
@@ -86,35 +109,90 @@ public class ComplexPlot
     pw.format("P6\n%d %d 255\n", xnum, ynum);
     pw.flush();
 
-    for (y = ynum - 1; y >= 0; y--)
+    IntStream.range(0, ynum).parallel().forEach(y ->
     {
       if (y % (ynum / 16) == 0)
         System.out.printf("row %d\n", y);
 
-      for (x = 0; x < xnum; x++)
+      for (int x = 0; x < xnum; x++)
       {
-        evaluateFunction();
+        acb_struct w = evaluateFunction(x, y);
 
-        colorizeAndRecordPoint(fos);
+        colorizeAndRecordPoint(x, y, w);
+      }
+    });
+
+    for (int y = ynum - 1; y >= 0; y--)
+    {
+
+      for (int x = 0; x < xnum; x++)
+      {
+        writeToFile(x, y, fos);
       }
     }
     pw.close();
   }
 
-  private void colorizeAndRecordPoint(FileOutputStream fos) throws IOException
+  int grid[][] = new int[xnum][ynum];
+
+  private void colorizeAndRecordPoint(int x, int y, acb_struct w)
   {
+    double R[] = this.R.get();
+    double G[] = this.G.get();
+    double B[] = this.B.get();
+
     arblib.color_function(R, G, B, w, color_mode);
 
     int red = (int) min(255, floor(R[0] * 255));
     int green = (int) min(255, floor(G[0] * 255));
     int blue = (int) min(255, floor(B[0] * 255));
+    grid[x][y] = red | (green << 8) | (blue << 16);
+    // System.out.println( "grid[" + x + "][" + y + "]=" + grid[x][y] );
+//    fos.write(red);
+//    fos.write(green);
+//    fos.write(blue);
+  }
+
+  private void writeToFile(int x, int y, FileOutputStream fos) throws IOException
+  {
+    int val = grid[x][y];
+    int red = val & 255;
+    int green = (val >> 8) & 255;
+    int blue = (val >> 16) & 255;
+
     fos.write(red);
     fos.write(green);
     fos.write(blue);
   }
 
-  private void evaluateFunction()
+  ThreadLocal<acb_struct> z = new ThreadLocal<>()
   {
+
+    @Override
+    protected acb_struct initialValue()
+    {
+      acb_struct a = new acb_struct();
+      acb_init(a);
+      return a;
+    }
+  };
+  ThreadLocal<acb_struct> w = new ThreadLocal<>()
+  {
+
+    @Override
+    protected acb_struct initialValue()
+    {
+      acb_struct a = new acb_struct();
+      acb_init(a);
+      return a;
+    }
+  };
+
+  private acb_struct evaluateFunction(long x, long y)
+  {
+    acb_struct z = this.z.get();
+    acb_struct w = this.w.get();
+
     for (prec = 30; prec < 500; prec *= 2)
     {
       arf_struct zr = arb_midref(acb_realref(z));
@@ -136,11 +214,13 @@ public class ComplexPlot
         break;
 
     }
+
+    return w;
   }
 
-  public static arf_struct arb_midref(arb_struct acb_imagref)
+  public static arf_struct arb_midref(arb_struct z)
   {
-    return acb_imagref.getMid();
+    return z.getMid();
   }
 
   public static arb_struct acb_realref(acb_struct z)

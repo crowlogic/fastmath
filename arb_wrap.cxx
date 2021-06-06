@@ -1795,6 +1795,20 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1tanh(JNIEnv *jenv, jclass jcl
 }
 
 
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_arb_1set_1d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+  arb_struct *arg1 ;
+  double arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(arb_struct **)&jarg1; 
+  arg2 = (double)jarg2; 
+  arb_set_d(arg1,arg2);
+  
+}
+
+
 #ifdef __cplusplus
 }
 #endif

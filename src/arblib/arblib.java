@@ -89,4 +89,8 @@ public class arblib {
     arblibJNI.acb_tanh(acb_struct.getCPtr(y), y, acb_struct.getCPtr(x), x, prec);
   }
 
+  public static void arb_set_d(arb_struct x, double y) {
+    arblibJNI.arb_set_d(arb_struct.getCPtr(x), x, y);
+  }
+
 }

@@ -109,4 +109,5 @@ public class arblibJNI {
   public final static native void acb_add_ui(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, int jarg4);
   public final static native void acb_log(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, int jarg3);
   public final static native void acb_tanh(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, int jarg3);
+  public final static native void arb_set_d(long jarg1, arb_struct jarg1_, double jarg2);
 }

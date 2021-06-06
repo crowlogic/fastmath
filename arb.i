@@ -227,3 +227,6 @@ extern void acb_tanh(acb_t y, const acb_t x, slong prec)
 
 
 extern void color_function(double * R, double * G, double * B, const acb_t z, int mode);
+
+extern void arb_set_d(arb_t x, double y);
+        
