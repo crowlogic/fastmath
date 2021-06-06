@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class ComplexPlot
@@ -54,8 +55,8 @@ public class ComplexPlot
     }
   };
 
-  int ynum = 2000;
-  int xnum = 2000;
+  int ynum = 2500;
+  int xnum = 2500;
 
   arf_struct xa = new arf_struct();
   arf_struct xb = new arf_struct();
@@ -65,10 +66,10 @@ public class ComplexPlot
   public ComplexPlot()
   {
 
-    ax = 13;
-    ay = -3;
-    bx = 55;
-    by = 3;
+    ax = -25;
+    ay = -25;
+    bx = 25;
+    by = 25;
     color_mode = 0;
 
     arf_init(xa);
@@ -109,10 +110,11 @@ public class ComplexPlot
     pw.format("P6\n%d %d 255\n", xnum, ynum);
     pw.flush();
 
+    AtomicInteger counter = new AtomicInteger(ynum);
     IntStream.range(0, ynum).parallel().forEach(y ->
     {
-      if (y % (ynum / 16) == 0)
-        System.out.printf("row %d\n", y);
+      if (counter.getAndDecrement() % 10 == 0)
+        System.out.printf("row %d\n", counter.get() );
 
       for (int x = 0; x < xnum; x++)
       {
