@@ -230,3 +230,5 @@ extern void color_function(double * R, double * G, double * B, const acb_t z, in
 
 extern void arb_set_d(arb_t x, double y);
         
+extern void acb_dirichlet_hurwitz(acb_t res, const acb_t s, const acb_t a, slong prec);
+

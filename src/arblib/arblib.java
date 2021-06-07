@@ -93,4 +93,8 @@ public class arblib {
     arblibJNI.arb_set_d(arb_struct.getCPtr(x), x, y);
   }
 
+  public static void acb_dirichlet_hurwitz(acb_struct res, acb_struct s, acb_struct a, int prec) {
+    arblibJNI.acb_dirichlet_hurwitz(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, prec);
+  }
+
 }

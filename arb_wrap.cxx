@@ -1809,6 +1809,28 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_arb_1set_1d(JNIEnv *jenv, jclass j
 }
 
 
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hurwitz(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jint jarg4) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  long arg4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = (long)jarg4; 
+  acb_dirichlet_hurwitz(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
 #ifdef __cplusplus
 }
 #endif
