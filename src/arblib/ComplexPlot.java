@@ -1,12 +1,24 @@
 package arblib;
 
 import static arblib.Constants.ARF_RND_DOWN;
-import static arblib.arblib.*;
+import static arblib.arblib.acb_add_ui;
+import static arblib.arblib.acb_dirichlet_hardy_z;
+import static arblib.arblib.acb_init;
+import static arblib.arblib.acb_log;
+import static arblib.arblib.acb_pow_ui;
+import static arblib.arblib.acb_rel_accuracy_bits;
+import static arblib.arblib.acb_tanh;
+import static arblib.arblib.arb_set_d;
+import static arblib.arblib.arf_add;
+import static arblib.arblib.arf_div_ui;
+import static arblib.arblib.arf_init;
+import static arblib.arblib.arf_mul_ui;
+import static arblib.arblib.arf_set_d;
+import static arblib.arblib.arf_sub;
 import static java.lang.Math.floor;
 import static java.lang.Math.min;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,45 +27,43 @@ import java.util.stream.IntStream;
 
 public class ComplexPlot
 {
+  public static final class ComplexReference extends
+                                             ThreadLocal<acb_struct>
+  {
+    @Override
+    protected acb_struct initialValue()
+    {
+      acb_struct a = new acb_struct();
+      acb_init(a);
+      return a;
+    }
+  }
+
+  public static final class DoubleReference extends
+                                            ThreadLocal<double[]>
+  {
+    @Override
+    protected double[] initialValue()
+    {
+      return new double[1];
+    }
+  }
+
   static
   {
     System.loadLibrary("arblib");
   }
 
   int color_mode = 0;
-  int prec = 256;
+  int prec = 128;
 
   double ax, ay, bx, by;
 
-  ThreadLocal<double[]> R = new ThreadLocal<>()
-  {
+  DoubleReference R = new DoubleReference();
 
-    @Override
-    protected double[] initialValue()
-    {
-      return new double[1];
-    }
-  };
+  DoubleReference G = new DoubleReference();
 
-  ThreadLocal<double[]> G = new ThreadLocal<>()
-  {
-
-    @Override
-    protected double[] initialValue()
-    {
-      return new double[1];
-    }
-  };
-
-  ThreadLocal<double[]> B = new ThreadLocal<>()
-  {
-
-    @Override
-    protected double[] initialValue()
-    {
-      return new double[1];
-    }
-  };
+  DoubleReference B = new DoubleReference();
 
   int ynum = 2500;
   int xnum = 2500;
@@ -114,7 +124,7 @@ public class ComplexPlot
     IntStream.range(0, ynum).parallel().forEach(y ->
     {
       if (counter.getAndDecrement() % 10 == 0)
-        System.out.printf("row %d\n", counter.get() );
+        System.out.printf("row %d\n", counter.get());
 
       for (int x = 0; x < xnum; x++)
       {
@@ -149,10 +159,7 @@ public class ComplexPlot
     int green = (int) min(255, floor(G[0] * 255));
     int blue = (int) min(255, floor(B[0] * 255));
     grid[x][y] = red | (green << 8) | (blue << 16);
-    // System.out.println( "grid[" + x + "][" + y + "]=" + grid[x][y] );
-//    fos.write(red);
-//    fos.write(green);
-//    fos.write(blue);
+
   }
 
   private void writeToFile(int x, int y, FileOutputStream fos) throws IOException
@@ -167,28 +174,8 @@ public class ComplexPlot
     fos.write(blue);
   }
 
-  ThreadLocal<acb_struct> z = new ThreadLocal<>()
-  {
-
-    @Override
-    protected acb_struct initialValue()
-    {
-      acb_struct a = new acb_struct();
-      acb_init(a);
-      return a;
-    }
-  };
-  ThreadLocal<acb_struct> w = new ThreadLocal<>()
-  {
-
-    @Override
-    protected acb_struct initialValue()
-    {
-      acb_struct a = new acb_struct();
-      acb_init(a);
-      return a;
-    }
-  };
+  ComplexReference z = new ComplexReference();
+  ComplexReference w = new ComplexReference();
 
   private acb_struct evaluateFunction(long x, long y)
   {
