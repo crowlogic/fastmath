@@ -3,7 +3,6 @@ package arblib;
 import static arblib.Constants.ARF_RND_DOWN;
 import static arblib.arblib.acb_add_ui;
 import static arblib.arblib.acb_dirichlet_hardy_z;
-import static arblib.arblib.acb_init;
 import static arblib.arblib.acb_log;
 import static arblib.arblib.acb_pow_ui;
 import static arblib.arblib.acb_rel_accuracy_bits;
@@ -27,28 +26,6 @@ import java.util.stream.IntStream;
 
 public class ComplexPlot
 {
-  public static final class ComplexReference extends
-                                             ThreadLocal<acb_struct>
-  {
-    @Override
-    protected acb_struct initialValue()
-    {
-      acb_struct a = new acb_struct();
-      acb_init(a);
-      return a;
-    }
-  }
-
-  public static final class DoubleReference extends
-                                            ThreadLocal<double[]>
-  {
-    @Override
-    protected double[] initialValue()
-    {
-      return new double[1];
-    }
-  }
-
   static
   {
     System.loadLibrary("arblib");
@@ -126,12 +103,14 @@ public class ComplexPlot
       if (counter.getAndDecrement() % 10 == 0)
         System.out.printf("row %d\n", counter.get());
 
-      for (int x = 0; x < xnum; x++)
+      IntStream.range(0, xnum).parallel().forEach(x ->
+
+      //for (int x = 0; x < xnum; x++)
       {
         acb_struct w = evaluateFunction(x, y);
 
         colorizeAndRecordPoint(x, y, w);
-      }
+      } );
     });
 
     for (int y = ynum - 1; y >= 0; y--)
