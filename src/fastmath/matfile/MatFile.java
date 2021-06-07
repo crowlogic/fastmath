@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package fastmath.matfile;
 
 import static java.lang.System.out;

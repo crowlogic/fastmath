@@ -1,11 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- * 
- * Could not load the following classes:
- *  com.sun.jna.Library
- *  com.sun.jna.Native
- *  com.sun.jna.Pointer
- */
 package fastmath;
 
 import com.sun.jna.Library;

@@ -1,9 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- * 
- * Could not load the following classes:
- *  dnl.utils.text.table.TextTable
- */
 package fastmath;
 
 import java.io.ByteArrayOutputStream;

@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package fastmath;
 
 public class ExpandableVector extends

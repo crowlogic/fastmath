@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- * 
- * Could not load the following classes:
- *  com.sun.jna.Native
- *  com.sun.jna.Pointer
- */
 package fastmath;
 
 import java.io.IOException;

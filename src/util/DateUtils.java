@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package util;
 
 import static java.time.LocalDateTime.now;

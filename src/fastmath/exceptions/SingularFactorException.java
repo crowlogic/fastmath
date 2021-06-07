@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.144.
- */
 package fastmath.exceptions;
 
 import fastmath.AbstractMatrix;
