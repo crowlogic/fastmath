@@ -103,7 +103,7 @@ public class ComplexPlot
       if (counter.getAndDecrement() % 10 == 0)
         System.out.printf("row %d\n", counter.get());
 
-      IntStream.range(0, xnum).parallel().forEach(x ->
+      IntStream.range(0, xnum).forEach(x ->
 
       //for (int x = 0; x < xnum; x++)
       {
