@@ -1831,6 +1831,73 @@ SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hurwitz(JNIEnv *je
 }
 
 
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1dirichlet_1hardy_1theta(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jlong jarg4, jobject jarg4_, jint jarg5, jint jarg6) {
+  acb_ptr arg1 = (acb_ptr) 0 ;
+  acb_struct *arg2 ;
+  dirichlet_group_struct *arg3 ;
+  dirichlet_char_struct *arg4 ;
+  long arg5 ;
+  long arg6 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  (void)jarg4_;
+  arg1 = *(acb_ptr *)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(dirichlet_group_struct **)&jarg3; 
+  arg4 = *(dirichlet_char_struct **)&jarg4; 
+  arg5 = (long)jarg5; 
+  arg6 = (long)jarg6; 
+  acb_dirichlet_hardy_theta(arg1,(acb_struct const (*))arg2,(dirichlet_group_struct const (*))arg3,(dirichlet_char_struct const (*))arg4,arg5,arg6);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1mul(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jlong jarg3, jobject jarg3_, jint jarg4) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  acb_struct *arg3 ;
+  long arg4 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  (void)jarg3_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = *(acb_struct **)&jarg3; 
+  arg4 = (long)jarg4; 
+  acb_mul(arg1,(acb_struct const (*))arg2,(acb_struct const (*))arg3,arg4);
+  
+  
+  
+}
+
+
+SWIGEXPORT void JNICALL Java_arblib_arblibJNI_acb_1exp(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jint jarg3) {
+  acb_struct *arg1 ;
+  acb_struct *arg2 ;
+  long arg3 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(acb_struct **)&jarg1; 
+  arg2 = *(acb_struct **)&jarg2; 
+  arg3 = (long)jarg3; 
+  acb_exp(arg1,(acb_struct const (*))arg2,arg3);
+  
+  
+}
+
+
 #ifdef __cplusplus
 }
 #endif

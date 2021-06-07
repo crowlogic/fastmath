@@ -232,3 +232,10 @@ extern void arb_set_d(arb_t x, double y);
         
 extern void acb_dirichlet_hurwitz(acb_t res, const acb_t s, const acb_t a, slong prec);
 
+extern void acb_dirichlet_hardy_theta(acb_ptr res, const acb_t t, const dirichlet_group_t G, const dirichlet_char_t chi, slong len, slong prec);
+
+extern void acb_mul(acb_t z, const acb_t x, const acb_t y, slong prec);
+
+
+ extern void acb_exp(acb_t y, const acb_t z, slong prec);
+  

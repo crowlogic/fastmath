@@ -111,4 +111,7 @@ public class arblibJNI {
   public final static native void acb_tanh(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, int jarg3);
   public final static native void arb_set_d(long jarg1, arb_struct jarg1_, double jarg2);
   public final static native void acb_dirichlet_hurwitz(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, acb_struct jarg3_, int jarg4);
+  public final static native void acb_dirichlet_hardy_theta(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, dirichlet_group_struct jarg3_, long jarg4, dirichlet_char_struct jarg4_, int jarg5, int jarg6);
+  public final static native void acb_mul(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, long jarg3, acb_struct jarg3_, int jarg4);
+  public final static native void acb_exp(long jarg1, acb_struct jarg1_, long jarg2, acb_struct jarg2_, int jarg3);
 }

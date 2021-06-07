@@ -97,4 +97,16 @@ public class arblib {
     arblibJNI.acb_dirichlet_hurwitz(acb_struct.getCPtr(res), res, acb_struct.getCPtr(s), s, acb_struct.getCPtr(a), a, prec);
   }
 
+  public static void acb_dirichlet_hardy_theta(acb_struct res, acb_struct t, dirichlet_group_struct G, dirichlet_char_struct chi, int len, int prec) {
+    arblibJNI.acb_dirichlet_hardy_theta(acb_struct.getCPtr(res), res, acb_struct.getCPtr(t), t, dirichlet_group_struct.getCPtr(G), G, dirichlet_char_struct.getCPtr(chi), chi, len, prec);
+  }
+
+  public static void acb_mul(acb_struct z, acb_struct x, acb_struct y, int prec) {
+    arblibJNI.acb_mul(acb_struct.getCPtr(z), z, acb_struct.getCPtr(x), x, acb_struct.getCPtr(y), y, prec);
+  }
+
+  public static void acb_exp(acb_struct y, acb_struct z, int prec) {
+    arblibJNI.acb_exp(acb_struct.getCPtr(y), y, acb_struct.getCPtr(z), z, prec);
+  }
+
 }

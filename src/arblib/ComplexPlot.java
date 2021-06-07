@@ -1,19 +1,7 @@
 package arblib;
 
 import static arblib.Constants.ARF_RND_DOWN;
-import static arblib.arblib.acb_add_ui;
-import static arblib.arblib.acb_dirichlet_hardy_z;
-import static arblib.arblib.acb_log;
-import static arblib.arblib.acb_pow_ui;
-import static arblib.arblib.acb_rel_accuracy_bits;
-import static arblib.arblib.acb_tanh;
-import static arblib.arblib.arb_set_d;
-import static arblib.arblib.arf_add;
-import static arblib.arblib.arf_div_ui;
-import static arblib.arblib.arf_init;
-import static arblib.arblib.arf_mul_ui;
-import static arblib.arblib.arf_set_d;
-import static arblib.arblib.arf_sub;
+import static arblib.arblib.*;
 import static java.lang.Math.floor;
 import static java.lang.Math.min;
 
@@ -42,8 +30,8 @@ public class ComplexPlot
 
   DoubleReference B = new DoubleReference();
 
-  int ynum = 2500;
-  int xnum = 2500;
+  int ynum = 1000;
+  int xnum = 1000;
 
   arf_struct xa = new arf_struct();
   arf_struct xb = new arf_struct();
@@ -83,6 +71,61 @@ public class ComplexPlot
     arb_set_d(res.getImag(), 0);
   }
 
+  public static final arb_struct HALF = new arb_struct();
+
+  public static final arb_struct ONE = new arb_struct();
+  public static final acb_struct COMPLEX_ONE = new acb_struct();
+  public static final acb_struct IMAGINARY_UNIT = new acb_struct();
+  public static final acb_struct COMPLEX_ONE_POINT_OH_FIVE = new acb_struct();
+
+  static
+  {
+    arb_init(HALF);
+    arb_init(ONE);
+    acb_init(COMPLEX_ONE);
+    acb_init(IMAGINARY_UNIT);
+    acb_init(COMPLEX_ONE_POINT_OH_FIVE);
+    arb_set_d(HALF,0.5);
+    arb_set_d(ONE,1);
+    arb_set_d(COMPLEX_ONE.getReal(),1);
+    arb_set_d(IMAGINARY_UNIT.getImag(),1);
+
+  }
+  
+  static ComplexReference phase = new ComplexReference();
+  
+  public static String toString( acb_struct c) 
+  {
+    return arb_get_str(c.getReal(), 10, 0) + "+I" + arb_get_str(c.getImag(), 10, 0);
+  }
+  
+  /**
+   * tanh(ln(1+Z(t)^2))
+   */
+  static void Yhurwitz(acb_struct res, acb_struct z, acb_struct v, int prec)
+  {
+    acb_struct faze = phase.get();
+    
+    acb_dirichlet_hardy_theta(faze, z, null, null, 1, prec);
+    acb_mul( faze, faze, IMAGINARY_UNIT, prec );
+    System.out.println( "faze " + toString(faze) + "cuntz=" + toString( z ) );
+
+    acb_exp(faze, faze, prec);
+
+    acb_dirichlet_hurwitz(res, z, v, prec);
+    acb_mul( res, res, faze, prec );
+    System.out.println( "fuck " + toString(res));
+    acb_dirichlet_hardy_z(res, z, null, null, 1, prec);
+    System.out.println( "shouldbe " + toString(res));
+    System.out.println();
+    
+    acb_pow_ui(res, res, 2, prec);
+    acb_add_ui(res, res, 1, prec);
+    acb_log(res, res, prec);
+    acb_tanh(res, res, prec);
+    arb_set_d(res.getImag(), 0);
+  }
+  
   public static void main(String args[]) throws IOException
   {
     ComplexPlot plotter = new ComplexPlot();
@@ -98,19 +141,19 @@ public class ComplexPlot
     pw.flush();
 
     AtomicInteger counter = new AtomicInteger(ynum);
-    IntStream.range(0, ynum).parallel().forEach(y ->
+    IntStream.range(0, ynum).forEach(y ->
     {
       if (counter.getAndDecrement() % 10 == 0)
         System.out.printf("row %d\n", counter.get());
 
-      IntStream.range(0, xnum).forEach(x ->
+      //IntStream.range(0, xnum).forEach(x ->
 
-      //for (int x = 0; x < xnum; x++)
+      for (int x = 0; x < xnum; x++)
       {
         acb_struct w = evaluateFunction(x, y);
 
         colorizeAndRecordPoint(x, y, w);
-      } );
+      } ;
     });
 
     for (int y = ynum - 1; y >= 0; y--)
@@ -176,7 +219,11 @@ public class ComplexPlot
 
       arf_add(zr, zr, xa, prec, ARF_RND_DOWN);
 
-      Y(w, z, prec);
+      z.setImag(z.getReal());
+      z.setReal(HALF);
+      System.out.println( "COCKS " + toString(z));
+      Yhurwitz(w, z, COMPLEX_ONE, prec);
+      System.out.println( "SHIT " + toString(w));
 
       if (acb_rel_accuracy_bits(w) > 4)
         break;
