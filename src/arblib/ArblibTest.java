@@ -32,7 +32,7 @@ public class ArblibTest extends
     acb_set_d(input, 13.2);
 
     acb_dirichlet_hardy_z(result, input, null, null, 1, prec);
-    double res = toString(result);
+    double res = point(result);
     assertEquals(-0.6699771881103516, res, 0.000001);
 
     // TODO: check that this is equal to ((-351261 * 2^-19) +/- (690458335 * 2^-45),
@@ -50,7 +50,7 @@ public class ArblibTest extends
     acb_set_d(z, 13.2);
     acb_dirichlet_hardy_theta(faze, z, null, null, 1, prec);
     double result = point(faze);
-    out.println("theta(" + toString(z) + ")=" + result );
+    out.println("theta(" + point(z) + ")=" + result );
     assertEquals( -2.0916778325102459547, result );
   }
 
@@ -59,9 +59,5 @@ public class ArblibTest extends
     return arf_get_d(faze.getReal().getMid(), prec );
   }
 
-  private double toString(acb_struct z)
-  {
-    return arf_get_d(z.getReal().getMid(), ARF_RND_UP);
-  }
 
 }
