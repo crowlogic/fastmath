@@ -1,5 +1,6 @@
 package arblib;
 
+import static arblib.Functions.*;
 import static arblib.Constants.*;
 import static arblib.arblib.*;
 import static java.lang.Math.floor;
@@ -23,7 +24,7 @@ public class ArblibTest extends
 
   public static final int prec = 128;
 
-  public void testHardyZFunction()
+  public static void testHardyZFunction()
   {
 
     acb_struct result = new acb_struct();
@@ -41,7 +42,12 @@ public class ArblibTest extends
 
   }
 
-  public void testHardyTheta()
+  public static void testHurwitzZeta()
+  {
+    //acb_dirichlet_hurwitz(res, z, v, prec);
+
+  }
+  public static void testHardyTheta()
   {
     acb_struct z = new acb_struct();
     acb_struct faze = new acb_struct();
@@ -64,14 +70,5 @@ public class ArblibTest extends
 
   }
 
-  public static String point(acb_struct faze)
-  {
-    return point(faze.getReal()) + " + I" + point(faze.getImag());
-  }
-
-  public static double point(arb_struct faze)
-  {
-    return arf_get_d(faze.getMid(), prec);
-  }
 
 }

@@ -1,10 +1,10 @@
 package arblib;
 
-import static arblib.Constants.ARF_RND_DOWN;
+import static arblib.Constants.*;
 import static arblib.arblib.*;
+import static arblib.Functions.*;
 import static java.lang.Math.floor;
 import static java.lang.Math.min;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class ComplexPlot
   }
 
   int color_mode = 0;
-  int prec = 128;
+  int prec = 256;
 
   double ax, ay, bx, by;
 
@@ -30,8 +30,8 @@ public class ComplexPlot
 
   DoubleReference B = new DoubleReference();
 
-  int ynum = 1000;
-  int xnum = 1000;
+  int xnum = 2560;
+  int ynum = 1280;
 
   arf_struct xa = new arf_struct();
   arf_struct xb = new arf_struct();
@@ -41,10 +41,10 @@ public class ComplexPlot
   public ComplexPlot()
   {
 
-    ax = -25;
-    ay = -25;
-    bx = 25;
-    by = 25;
+    bx = 38;
+    by = 19;
+    ax = -bx;
+    ay = -by;
     color_mode = 0;
 
     arf_init(xa);
@@ -85,47 +85,48 @@ public class ComplexPlot
     acb_init(COMPLEX_ONE);
     acb_init(IMAGINARY_UNIT);
     acb_init(COMPLEX_ONE_POINT_OH_FIVE);
-    arb_set_d(HALF,0.5);
-    arb_set_d(ONE,1);
-    arb_set_d(COMPLEX_ONE.getReal(),1);
-    arb_set_d(IMAGINARY_UNIT.getImag(),1);
+    arb_set_d(HALF, 0.5);
+    arb_set_d(ONE, 1);
+    arb_set_d(COMPLEX_ONE.getReal(), 1);
+    arb_set_d(IMAGINARY_UNIT.getImag(), 1);
 
   }
-  
+
   static ComplexReference phase = new ComplexReference();
-  
-  public static String toString( acb_struct c) 
-  {
-    return arb_get_str(c.getReal(), 10, 0) + "+I" + arb_get_str(c.getImag(), 10, 0);
-  }
-  
+
   /**
    * tanh(ln(1+Z(t)^2))
    */
   static void Yhurwitz(acb_struct res, acb_struct z, acb_struct v, int prec)
   {
     acb_struct faze = phase.get();
-    
-    acb_dirichlet_hardy_theta(faze, z, null, null, 1, prec);
-    acb_mul( faze, faze, IMAGINARY_UNIT, prec );
-    System.out.println( "faze " + toString(faze) + "cuntz=" + toString( z ) );
 
-    acb_exp(faze, faze, prec);
+    expIHardyTheta(faze, z, prec);
 
+    z.setImag(z.getReal());
+    z.setReal(HALF);
     acb_dirichlet_hurwitz(res, z, v, prec);
-    acb_mul( res, res, faze, prec );
-    System.out.println( "fuck " + toString(res));
+    acb_mul(res, res, faze, prec);
+    System.out.println("fuck " + point(res));
     acb_dirichlet_hardy_z(res, z, null, null, 1, prec);
-    System.out.println( "shouldbe " + toString(res));
+    System.out.println("shouldbe " + point(res));
     System.out.println();
-    
+
     acb_pow_ui(res, res, 2, prec);
     acb_add_ui(res, res, 1, prec);
     acb_log(res, res, prec);
     acb_tanh(res, res, prec);
     arb_set_d(res.getImag(), 0);
   }
-  
+
+  private static void expIHardyTheta(acb_struct faze, acb_struct z, int prec)
+  {
+    acb_dirichlet_hardy_theta(faze, z, null, null, 1, prec);
+    faze.setImag(faze.getReal());
+    arb_set_d(faze.getReal(), 0);
+    acb_exp(faze, faze, prec);
+  }
+
   public static void main(String args[]) throws IOException
   {
     ComplexPlot plotter = new ComplexPlot();
@@ -141,19 +142,20 @@ public class ComplexPlot
     pw.flush();
 
     AtomicInteger counter = new AtomicInteger(ynum);
-    IntStream.range(0, ynum).forEach(y ->
+    IntStream.range(0, ynum).parallel().forEach(y ->
     {
       if (counter.getAndDecrement() % 10 == 0)
         System.out.printf("row %d\n", counter.get());
 
-      //IntStream.range(0, xnum).forEach(x ->
+      // IntStream.range(0, xnum).forEach(x ->
 
       for (int x = 0; x < xnum; x++)
       {
         acb_struct w = evaluateFunction(x, y);
 
         colorizeAndRecordPoint(x, y, w);
-      } ;
+      }
+      ;
     });
 
     for (int y = ynum - 1; y >= 0; y--)
@@ -219,16 +221,15 @@ public class ComplexPlot
 
       arf_add(zr, zr, xa, prec, ARF_RND_DOWN);
 
-      z.setImag(z.getReal());
-      z.setReal(HALF);
-      System.out.println( "COCKS " + toString(z));
-      Yhurwitz(w, z, COMPLEX_ONE, prec);
-      System.out.println( "SHIT " + toString(w));
+      // Y(w, z, COMPLEX_ONE, prec);
+      Y(w, z, prec);
 
       if (acb_rel_accuracy_bits(w) > 4)
         break;
 
     }
+    //System.out.println("z=" + point(z));
+    //System.out.println("Y(z)= " + point(w));
 
     return w;
   }
